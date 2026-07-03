@@ -1,0 +1,16 @@
+from groq import Groq
+
+from app.core.config import settings
+
+_client = Groq(api_key=settings.groq_api_key)
+
+
+def chat_completion(system_prompt: str, user_prompt: str) -> str:
+    response = _client.chat.completions.create(
+        model=settings.groq_model,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ],
+    )
+    return response.choices[0].message.content or ""
