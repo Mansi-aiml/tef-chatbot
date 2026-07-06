@@ -1,0 +1,14 @@
+[
+  {
+    "question": "How do I reset my password?",
+    "answer": "Go to Settings > Account > Reset Password and follow the emailed link."
+  },
+  {
+    "question": "What are your support hours?",
+    "answer": "Our support team is available Monday to Friday, 9am to 6pm."
+  },
+  {
+    "question": "How do I contact support?",
+    "answer": "You can reach us via the in-app chat or by emailing support@example.com."
+  }
+]

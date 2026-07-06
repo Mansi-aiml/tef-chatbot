@@ -7,3 +7,5 @@ groq
 chromadb
 sqlalchemy
 psycopg2-binary
+pypdf
+python-docx

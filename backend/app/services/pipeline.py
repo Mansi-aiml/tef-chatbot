@@ -35,11 +35,18 @@ def handle_message(db: Session, user_id: str, message: str) -> ChatResult:
     confidence = score_confidence(message, answer)
 
     if confidence < settings.confidence_threshold:
-        support.create_support_ticket(db, user_id, message, answer, confidence)
-        return ChatResult(
-            answer="Thanks for reaching out — I've escalated this to our support team, who will follow up with you shortly.",
-            confidence=confidence,
-            escalated=True,
-        )
+     return ChatResult(
+        answer=answer,
+        confidence=confidence,
+        escalated=False,
+    )
+
+    # if confidence < settings.confidence_threshold:
+    #     support.create_support_ticket(db, user_id, message, answer, confidence)
+    #     return ChatResult(
+    #         answer="Thanks for reaching out — I've escalated this to our support team, who will follow up with you shortly.",
+    #         confidence=confidence,
+    #         escalated=True,
+    #     )
 
     return ChatResult(answer=answer, confidence=confidence, escalated=False)
