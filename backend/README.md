@@ -56,7 +56,7 @@ backend/
   knowledgebase/<Category>/*.docx|.pdf|.txt|.md
 ```
 
-Category folders currently present in both trees: `Audit/`, `Common/`, `Entrepreneur Onboarding/`, `LMS/`, `M&E/`, `Mentorship/`, `Pitching/` — each `knowledgebase/<Category>` holds the real manuals, each `faq/<Category>` should hold that category's FAQ JSON file(s) (`Common/` is for general, cross-category FAQs like "How do I reset my password?"). Only `faq/Common/general.json` has real content today; the other category folders just have an empty `readme.md` placeholder — add a `.json` file there (any filename, `*.json`) in this shape:
+Category folders currently present in both trees: `audit/`, `common/`, `entrepreneur Onboarding/`, `lms/`, `m&e/`, `mentorship/`, `pitching/` — each `knowledgebase/<Category>` holds the real manuals, each `faq/<Category>` should hold that category's FAQ JSON file(s) (`common/` is for general, cross-category FAQs like "How do I reset my password?"). Only `faq/common/general.json` has real content today; the other category folders just have an empty `readme.md` placeholder — add a `.json` file there (any filename, `*.json`) in this shape:
 
 ```json
 [
@@ -92,7 +92,7 @@ uvicorn app.main:app --reload
     "answered_by": "faq",
     "support_email": null,
     "support_phone": null,
-    "sources": ["faq/Common/general.json"]
+    "sources": ["common/general.json"]
   }
   ```
   `confidence` is `null` for FAQ answers (not confidence-gated). `answered_by` is `null` and `support_email`/`support_phone` are populated when `escalated` is `true`.
@@ -108,9 +108,9 @@ curl -s localhost:8000/chat -H 'content-type: application/json' \
 
 - `app/services/graph/state.py` — the shared `ChatState` schema threaded through every node
 - `app/services/graph/pipeline_graph.py` — the LangGraph `StateGraph` wiring (nodes + conditional edges)
-- `app/services/query_refiner.py`, `intent_extractor.py` — pre-processing nodes
-- `app/services/faq_layer.py`, `kb_layer.py` — the two retrieval layers (each retries up to `MAX_LAYER_ATTEMPTS` times via `app/services/retrieval.py`)
-- `app/services/confidence.py` — KB-only confidence gate (retrieval similarity + LLM context-sufficiency hybrid)
+- `app/services/query_refiner.py`, `intent_extractor.py` — pre-processing nodes (intent is classified against the live category folders under `faq/`)
+- `app/services/retrieval/faq_layer.py`, `kb_layer.py` — the two retrieval layers (each retries up to `MAX_LAYER_ATTEMPTS` times via `app/services/retrieval/shared.py`, scoped to the classified intent's category on the first attempt)
+- `app/services/retrieval/confidence.py` — KB-only confidence gate (retrieval similarity + LLM context-sufficiency hybrid)
 - `app/services/synthesis.py` — shared final-answer generation, used by both the FAQ-hit and KB-pass paths
 - `app/services/support.py` — support ticket creation + escalation message
 - `app/services/pipeline.py` — builds/invokes the graph per request, maps the result to a `ChatResult`

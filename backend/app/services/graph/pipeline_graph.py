@@ -1,11 +1,11 @@
 from langgraph.graph import END, StateGraph
 from sqlalchemy.orm import Session
 
-from app.services.confidence import confidence_router, score_confidence
-from app.services.faq_layer import faq_router, faq_search
 from app.services.graph.state import ChatState
 from app.services.intent_extractor import extract_intent_entities
-from app.services.kb_layer import kb_router, kb_search
+from app.services.retrieval.confidence import confidence_router, score_confidence
+from app.services.retrieval.faq_layer import faq_router, faq_search
+from app.services.retrieval.kb_layer import kb_router, kb_search
 from app.services.query_refiner import refine_query
 from app.services.support import make_escalate_node
 from app.services.synthesis import synthesize

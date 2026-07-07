@@ -31,10 +31,10 @@ When working on any stage of this pipeline, preserve this routing order (FAQ →
 - `backend/app/services/graph/state.py` — the shared `ChatState` TypedDict schema
 - `backend/app/services/graph/pipeline_graph.py` — graph wiring (nodes + conditional edges)
 - `backend/app/services/query_refiner.py` — refine node
-- `backend/app/services/intent_extractor.py` — intent/entity extraction node
-- `backend/app/services/faq_layer.py`, `kb_layer.py` — the two retrieval layers (search node + router fn each)
-- `backend/app/services/retrieval.py` — shared query-with-retry / query-reformulation helpers used by both layers
-- `backend/app/services/confidence.py` — KB-only confidence gate (retrieval similarity + LLM context-sufficiency hybrid)
+- `backend/app/services/intent_extractor.py` — intent/entity extraction node, constrained to the category folders under `backend/faq/`
+- `backend/app/services/retrieval/faq_layer.py`, `kb_layer.py` — the two retrieval layers (search node + router fn each), scoped to the classified intent's category on the first attempt
+- `backend/app/services/retrieval/shared.py` — shared query-with-retry / query-reformulation helpers used by both layers
+- `backend/app/services/retrieval/confidence.py` — KB-only confidence gate (retrieval similarity + LLM context-sufficiency hybrid)
 - `backend/app/services/synthesis.py` — shared answer-synthesis node (used by both FAQ and KB success paths)
 - `backend/app/services/support.py` — support ticket creation + escalation node
 - `backend/app/db/models.py` — `SupportTicket` table

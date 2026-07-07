@@ -26,11 +26,17 @@ def search_with_retry(
         query = state["refined_query"]
         threshold = base_threshold
         top_k = base_top_k
+        # First pass is scoped to the classified intent's category so retrieval
+        # doesn't compete with unrelated categories' near-duplicate phrasing.
+        category = state.get("intent")
     else:
         query = reformulate(state)
         threshold = base_threshold * loosen_factor
         top_k = base_top_k + 2
+        # Retry widens the search across all categories before giving up on
+        # this layer entirely, in case the intent was misclassified.
+        category = None
 
-    hits = query_collection(collection, query, top_k)
+    hits = query_collection(collection, query, top_k, category=category)
     hits = [h for h in hits if h["distance"] <= threshold]
     return query, hits
