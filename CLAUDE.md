@@ -7,7 +7,7 @@ A chatbot that answers user queries using FAQs and a knowledge base (RAG), orche
 1. User sends a message from the frontend.
 2. **Refine**: the raw message is rewritten into a clear, self-contained query (typo/spelling correction).
 3. **Intent + entity extraction**: an LLM call tags the refined query with an intent label and any entities.
-4. **FAQ layer** (Layer 1): semantic search against a dedicated FAQ Chroma collection, files stored under `backend/faqdata/`. Retried up to 2 attempts (query reformulation + loosened threshold on the 2nd try). On a hit, skips straight to synthesis — **FAQ answers are not confidence-gated**.
+4. **FAQ layer** (Layer 1): semantic search against a dedicated FAQ Chroma collection, files stored under `backend/faq/`. Retried up to 2 attempts (query reformulation + loosened threshold on the 2nd try). On a hit, skips straight to synthesis — **FAQ answers are not confidence-gated**.
 5. **Knowledge base layer** (Layer 2, reached only if FAQ misses both attempts): semantic search against the KB Chroma collection, files under `backend/knowledgebase/`. Also retried up to 2 attempts.
 6. **Confidence gate** (KB-only): a hybrid of retrieval similarity + an LLM context-sufficiency score. This is the *only* point in the pipeline where confidence is scored.
 7. **Synthesis**: on an FAQ hit or a passing KB confidence score, the top-k retrieved chunks + refined query are sent to the LLM to produce the final answer (one shared node for both success paths).
@@ -38,11 +38,11 @@ When working on any stage of this pipeline, preserve this routing order (FAQ →
 - `backend/app/services/synthesis.py` — shared answer-synthesis node (used by both FAQ and KB success paths)
 - `backend/app/services/support.py` — support ticket creation + escalation node
 - `backend/app/db/models.py` — `SupportTicket` table
-- `backend/faqdata/<Category>/*.json` — FAQ content, one JSON array of `{question, answer}` per file, category folders mirror `backend/knowledgebase/`
+- `backend/faq/<Category>/*.json` — FAQ content, one JSON array of `{question, answer}` per file, category folders mirror `backend/knowledgebase/`
 - `backend/knowledgebase/<Category>/...` — knowledge-base source documents (.docx/.pdf/.txt/.md)
-- `backend/scripts/ingest.py` — ingestion script for both collections: `python -m scripts.ingest --collection knowledge_base --path ./knowledgebase` / `--collection faq --path ./faqdata`
+- `backend/scripts/ingest.py` — ingestion script for both collections: `python -m scripts.ingest --collection knowledge_base --path ./knowledgebase` / `--collection faq --path ./faq`
 
-`backend/faqdata/` currently only has placeholder/general FAQ content — real FAQ authoring per category is an ongoing content task, not a code task.
+`backend/faq/` currently only has placeholder/general FAQ content (`Common/general.json`) plus empty per-category `readme.md` markers — real FAQ authoring per category is an ongoing content task, not a code task. After adding/editing a `.json` file there, re-run the `faq` ingestion command above (add `--reset` first if you edited existing entries rather than just adding new ones).
 
 ## Conventions
 

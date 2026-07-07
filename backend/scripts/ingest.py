@@ -2,7 +2,7 @@
 
 Usage:
     python -m scripts.ingest --collection knowledge_base --path ./knowledgebase
-    python -m scripts.ingest --collection faq             --path ./faqdata
+    python -m scripts.ingest --collection faq             --path ./faq
     python -m scripts.ingest --collection knowledge_base --path ./knowledgebase --reset
 """
 
