@@ -8,5 +8,9 @@ chromadb
 sqlalchemy
 psycopg2-binary
 pypdf
-python-docx
+docx2txt
 pysqlite3-binary
+langgraph
+langchain
+langchain-community
+langchain-text-splitters

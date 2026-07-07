@@ -1,42 +1,48 @@
 # TEF Chatbot
 
-A chatbot that answers user queries using FAQs, user data, and a knowledge base (RAG). Low-confidence answers are escalated to support instead of being sent to the user.
+A chatbot that answers user queries using FAQs and a knowledge base (RAG), orchestrated as a LangGraph pipeline. Low-confidence answers are escalated to a human support agent instead of being sent to the user.
 
 ## Architecture / request flow
 
 1. User sends a message from the frontend.
-2. The query is refined, classified, and routed.
-3. Depending on the query type, it looks up one of:
-   - FAQ (direct match)
-   - User data (via backend API)
-   - Knowledge base (vector search / RAG)
-4. If no direct FAQ answer is found, it falls back to RAG search.
-5. A response is generated from the retrieved info.
-6. Confidence check on the generated response:
-   - High confidence → answer sent to user
-   - Low confidence → support ticket created + user notified
+2. **Refine**: the raw message is rewritten into a clear, self-contained query (typo/spelling correction).
+3. **Intent + entity extraction**: an LLM call tags the refined query with an intent label and any entities.
+4. **FAQ layer** (Layer 1): semantic search against a dedicated FAQ Chroma collection, files stored under `backend/faqdata/`. Retried up to 2 attempts (query reformulation + loosened threshold on the 2nd try). On a hit, skips straight to synthesis — **FAQ answers are not confidence-gated**.
+5. **Knowledge base layer** (Layer 2, reached only if FAQ misses both attempts): semantic search against the KB Chroma collection, files under `backend/knowledgebase/`. Also retried up to 2 attempts.
+6. **Confidence gate** (KB-only): a hybrid of retrieval similarity + an LLM context-sufficiency score. This is the *only* point in the pipeline where confidence is scored.
+7. **Synthesis**: on an FAQ hit or a passing KB confidence score, the top-k retrieved chunks + refined query are sent to the LLM to produce the final answer (one shared node for both success paths).
+8. **Escalation** (Layer 3, fallback): reached if neither layer finds a match, or KB confidence is below threshold. Creates a `SupportTicket` row and returns a message with the configured support email/phone.
 
-When working on any stage of this pipeline, preserve this routing order (FAQ → user data → RAG fallback) and the confidence-gate before a response reaches the user — never send a low-confidence answer directly to the user.
+When working on any stage of this pipeline, preserve this routing order (FAQ → knowledge base → escalation), the 2-attempt retry on each of the FAQ/KB layers, and the fact that confidence scoring only gates the KB layer — never send a low-confidence KB answer directly to the user, and never gate FAQ answers on confidence.
 
 ## Tech stack
 
 - Frontend: React (Vite) — `frontend/`
 - Backend: Python (FastAPI) — `backend/`
+- Orchestration: LangGraph (`backend/app/services/graph/`) — the pipeline is a `StateGraph` with retry loops (FAQ/KB) and conditional edges (confidence gate, escalation). LangChain is used only inside the ingestion script for document loaders/text splitting, not for the graph itself.
 - LLM: Groq (`backend/app/services/llm.py`)
-- Vector DB: Chroma, persisted to `backend/chroma_data/` (`backend/app/vectorstore/`)
-- Database: PostgreSQL via SQLAlchemy (`backend/app/db/`)
+- Vector DB: Chroma, persisted to `backend/chroma_data/`, two collections (`faqs`, `knowledge_base`) via `backend/app/services/vectorstore/chroma_client.py`. Embeddings are Chroma's bundled local default (no external embeddings API).
+- Database: PostgreSQL via SQLAlchemy (`backend/app/db/`) — used only for `SupportTicket` rows now (FAQs moved to files, see below).
 
 ## Code layout
 
 - `backend/app/api/routes/chat.py` — the single `POST /chat` endpoint
-- `backend/app/services/pipeline.py` — orchestrates the request flow above: classify → faq/user_data/rag lookup → confidence check → support escalation
-- `backend/app/services/router.py` — query classification (faq / user_data / rag)
-- `backend/app/services/faq.py`, `user_data.py`, `rag.py` — the three lookup paths
-- `backend/app/services/confidence.py` — confidence scoring gate
-- `backend/app/services/support.py` — support ticket creation on low confidence
-- `backend/app/db/models.py` — `FAQ` and `SupportTicket` tables
+- `backend/app/services/pipeline.py` — builds the LangGraph, invokes it, maps the result to a `ChatResult`
+- `backend/app/services/graph/state.py` — the shared `ChatState` TypedDict schema
+- `backend/app/services/graph/pipeline_graph.py` — graph wiring (nodes + conditional edges)
+- `backend/app/services/query_refiner.py` — refine node
+- `backend/app/services/intent_extractor.py` — intent/entity extraction node
+- `backend/app/services/faq_layer.py`, `kb_layer.py` — the two retrieval layers (search node + router fn each)
+- `backend/app/services/retrieval.py` — shared query-with-retry / query-reformulation helpers used by both layers
+- `backend/app/services/confidence.py` — KB-only confidence gate (retrieval similarity + LLM context-sufficiency hybrid)
+- `backend/app/services/synthesis.py` — shared answer-synthesis node (used by both FAQ and KB success paths)
+- `backend/app/services/support.py` — support ticket creation + escalation node
+- `backend/app/db/models.py` — `SupportTicket` table
+- `backend/faqdata/<Category>/*.json` — FAQ content, one JSON array of `{question, answer}` per file, category folders mirror `backend/knowledgebase/`
+- `backend/knowledgebase/<Category>/...` — knowledge-base source documents (.docx/.pdf/.txt/.md)
+- `backend/scripts/ingest.py` — ingestion script for both collections: `python -m scripts.ingest --collection knowledge_base --path ./knowledgebase` / `--collection faq --path ./faqdata`
 
-`user_data.lookup_user_data` and the FAQ fuzzy-matching in `faq.lookup_faq` are stubs/TODOs — they need real backend API wiring and FAQ content respectively before the pipeline is fully functional.
+`backend/faqdata/` currently only has placeholder/general FAQ content — real FAQ authoring per category is an ongoing content task, not a code task.
 
 ## Conventions
 
