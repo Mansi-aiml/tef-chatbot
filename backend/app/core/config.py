@@ -11,7 +11,7 @@ class Settings(BaseSettings):
 
     chroma_persist_dir: str = "./chroma_data"
 
-    faq_data_dir: str = "./faqdata"
+    faq_data_dir: str = "./faq"
     kb_data_dir: str = "./knowledgebase"
     faq_collection_name: str = "faqs"
     kb_collection_name: str = "knowledge_base"

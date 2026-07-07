@@ -1,6 +1,18 @@
 # TEF Chatbot — Backend
 
-FastAPI service exposing `POST /chat`, backed by a LangGraph pipeline (refine → intent/entities → FAQ layer → knowledge-base layer → confidence gate → synthesis/escalation). See the root [`README.md`](../README.md) for the overall architecture and [`CLAUDE.md`](../CLAUDE.md) for the full reference.
+FastAPI service exposing `POST /chat`, backed by a LangGraph pipeline:
+
+```
+refine query → extract intent/entities → FAQ layer (≤2 attempts)
+  ├─ hit  → synthesize final answer
+  └─ miss → KB layer (≤2 attempts)
+              ├─ miss            → escalate to support
+              └─ hit → confidence gate (KB-only)
+                          ├─ pass → synthesize final answer
+                          └─ fail → escalate to support
+```
+
+See the root [`README.md`](../README.md) for the overall project and [`CLAUDE.md`](../CLAUDE.md) for the full architecture reference.
 
 ## Setup
 
@@ -19,7 +31,7 @@ Fill in `.env`:
 | `GROQ_MODEL` | Groq model id (default `llama-3.3-70b-versatile`) |
 | `DATABASE_URL` | Postgres connection string, used only for `support_tickets` |
 | `CHROMA_PERSIST_DIR` | Local folder Chroma persists to (default `./chroma_data`) |
-| `FAQ_DATA_DIR` / `KB_DATA_DIR` | Source folders for ingestion (default `./faqdata`, `./knowledgebase`) |
+| `FAQ_DATA_DIR` / `KB_DATA_DIR` | Source folders for ingestion (default `./faq`, `./knowledgebase`) |
 | `FAQ_COLLECTION_NAME` / `KB_COLLECTION_NAME` | Chroma collection names |
 | `FAQ_TOP_K` / `KB_TOP_K` | How many chunks to retrieve per layer |
 | `FAQ_DISTANCE_THRESHOLD` / `KB_DISTANCE_THRESHOLD` | Cosine-distance cutoff for a "match" (lower = stricter) |
@@ -32,17 +44,26 @@ Fill in `.env`:
 
 `GROQ_API_KEY` and `DATABASE_URL` are secrets — `.env` is gitignored, never commit it.
 
+You also need a reachable Postgres database matching `DATABASE_URL` (only used for `support_tickets` — create the role/db yourself if they don't exist yet, e.g. `createuser <user> && createdb -O <user> tef_chatbot`). Tables are created automatically on app startup (`Base.metadata.create_all` in `app/main.py`), no migration step needed.
+
 ## Content layout
 
 FAQs and knowledge-base documents live in parallel, per-category folder trees:
 
 ```
 backend/
-  faqdata/<Category>/*.json        # [{ "question": ..., "answer": ... }, ...]
+  faq/<Category>/*.json             # [{ "question": "...", "answer": "..." }, ...]
   knowledgebase/<Category>/*.docx|.pdf|.txt|.md
 ```
 
-Category names should match across both trees (e.g. `Audit/`, `LMS/`, `Mentorship/`, `M&E/`, `Pitching/`, `Entrepreneur Onboarding/`, `Common/` for general items). `backend/faqdata/` currently only has placeholder/general content — writing real FAQ entries per category is a content task.
+Category folders currently present in both trees: `Audit/`, `Common/`, `Entrepreneur Onboarding/`, `LMS/`, `M&E/`, `Mentorship/`, `Pitching/` — each `knowledgebase/<Category>` holds the real manuals, each `faq/<Category>` should hold that category's FAQ JSON file(s) (`Common/` is for general, cross-category FAQs like "How do I reset my password?"). Only `faq/Common/general.json` has real content today; the other category folders just have an empty `readme.md` placeholder — add a `.json` file there (any filename, `*.json`) in this shape:
+
+```json
+[
+  { "question": "How do I pair a mentor with an entrepreneur?", "answer": "..." },
+  { "question": "...", "answer": "..." }
+]
+```
 
 ## Ingestion
 
@@ -50,10 +71,10 @@ Run after adding/changing content in either folder:
 
 ```
 python -m scripts.ingest --collection knowledge_base --path ./knowledgebase
-python -m scripts.ingest --collection faq             --path ./faqdata
+python -m scripts.ingest --collection faq             --path ./faq
 ```
 
-Add `--reset` to clear a collection before re-ingesting (e.g. after editing existing docs).
+Add `--reset` to clear a collection before re-ingesting (needed if you edited or removed existing entries, not just added new ones — otherwise stale chunks stay in Chroma alongside the new ones).
 
 ## Running
 
@@ -61,14 +82,35 @@ Add `--reset` to clear a collection before re-ingesting (e.g. after editing exis
 uvicorn app.main:app --reload
 ```
 
-`GET /health` for a liveness check, `POST /chat` with `{"user_id": "...", "message": "..."}` returning `{answer, confidence, escalated, answered_by, support_email, support_phone, sources}` (`confidence`/`support_*` are `null` unless the KB layer or escalation applies respectively).
+- `GET /health` — liveness check
+- `POST /chat` — body `{"user_id": "...", "message": "..."}`, returns:
+  ```json
+  {
+    "answer": "...",
+    "confidence": 0.82,
+    "escalated": false,
+    "answered_by": "faq",
+    "support_email": null,
+    "support_phone": null,
+    "sources": ["faq/Common/general.json"]
+  }
+  ```
+  `confidence` is `null` for FAQ answers (not confidence-gated). `answered_by` is `null` and `support_email`/`support_phone` are populated when `escalated` is `true`.
+
+Quick manual check once the server is up:
+
+```
+curl -s localhost:8000/chat -H 'content-type: application/json' \
+  -d '{"user_id": "dev", "message": "How do I reset my password?"}' | python -m json.tool
+```
 
 ## Pipeline internals
 
-- `app/services/graph/state.py` — the shared state schema threaded through every node
+- `app/services/graph/state.py` — the shared `ChatState` schema threaded through every node
 - `app/services/graph/pipeline_graph.py` — the LangGraph `StateGraph` wiring (nodes + conditional edges)
 - `app/services/query_refiner.py`, `intent_extractor.py` — pre-processing nodes
 - `app/services/faq_layer.py`, `kb_layer.py` — the two retrieval layers (each retries up to `MAX_LAYER_ATTEMPTS` times via `app/services/retrieval.py`)
-- `app/services/confidence.py` — KB-only confidence gate
-- `app/services/synthesis.py` — shared final-answer generation for both success paths
+- `app/services/confidence.py` — KB-only confidence gate (retrieval similarity + LLM context-sufficiency hybrid)
+- `app/services/synthesis.py` — shared final-answer generation, used by both the FAQ-hit and KB-pass paths
 - `app/services/support.py` — support ticket creation + escalation message
+- `app/services/pipeline.py` — builds/invokes the graph per request, maps the result to a `ChatResult`

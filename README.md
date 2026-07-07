@@ -10,7 +10,7 @@ User → React chat UI → POST /chat → LangGraph pipeline → answer / escala
 
 1. **Refine** — the raw message is rewritten into a clear, self-contained query (spelling/typo correction).
 2. **Intent + entity extraction** — an LLM call tags the query with an intent and any entities.
-3. **FAQ layer** — semantic search against a Chroma collection built from `backend/faqdata/`. Up to 2 attempts (the 2nd reformulates the query and loosens the match threshold). On a hit, goes straight to answer synthesis — FAQ answers are **not** confidence-gated.
+3. **FAQ layer** — semantic search against a Chroma collection built from `backend/faq/`. Up to 2 attempts (the 2nd reformulates the query and loosens the match threshold). On a hit, goes straight to answer synthesis — FAQ answers are **not** confidence-gated.
 4. **Knowledge base layer** — reached only if the FAQ layer misses both attempts. Semantic search against a Chroma collection built from `backend/knowledgebase/`, also up to 2 attempts.
 5. **Confidence gate** — the *only* point confidence is scored, and only for the KB layer: a hybrid of retrieval similarity + an LLM context-sufficiency score.
 6. **Synthesis or escalation** — a passing FAQ/KB match is sent (top-k chunks + refined query) to the LLM for a final answer. A miss on both layers, or a low KB confidence score, creates a support ticket and returns a message with a support email/phone instead.
@@ -36,7 +36,7 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env   # fill in GROQ_API_KEY, DATABASE_URL, support contact info
 python -m scripts.ingest --collection knowledge_base --path ./knowledgebase
-python -m scripts.ingest --collection faq --path ./faqdata
+python -m scripts.ingest --collection faq --path ./faq
 uvicorn app.main:app --reload
 ```
 
