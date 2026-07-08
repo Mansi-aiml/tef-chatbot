@@ -5,7 +5,7 @@ from pathlib import Path
 from app.core.config import settings
 from app.services.llm import chat_completion
 
-logger = logging.getLogger("app.services.intent_extractor")
+logger = logging.getLogger("app.services.query_understanding")
 
 # "common" is the catch-all bucket (general/account-support FAQs live there),
 # so it's always a valid fallback even if the folder listing below is empty.
@@ -25,33 +25,46 @@ def list_categories() -> list[str]:
 
 def _build_system_prompt(categories: list[str]) -> str:
     return (
-        "Classify the user's message into exactly one of these categories: "
+        "You will be given a raw user message. Do two things with it:\n"
+        "1. Rewrite it into a clear, unambiguous, self-contained query: expand "
+        "abbreviations, fix typos, and make any implicit intent explicit, but do "
+        "not add information the user didn't imply.\n"
+        "2. Classify the ORIGINAL message into exactly one of these categories: "
         f"{', '.join(categories)}. If nothing else fits, use '{_FALLBACK_CATEGORY}'. "
-        "Also extract any clear entities. "
+        "Also extract any clear entities.\n"
         "Respond with ONLY a JSON object of the exact shape "
-        '{"intent": "<one_of_the_categories_above>", "entities": {"<name>": "<value>", ...}}. '
+        '{"refined_query": "<rewritten query>", "intent": "<one_of_the_categories_above>", '
+        '"entities": {"<name>": "<value>", ...}}. '
         "If there are no clear entities, use an empty object. Do not add commentary."
     )
 
 
-def extract_intent_entities(message: str) -> tuple[str, dict[str, str]]:
+def refine_and_classify(message: str) -> tuple[str, str, dict[str, str]]:
+    """Single LLM call that both rewrites the raw message into a refined query
+    and classifies it into an intent category with entities, replacing what
+    used to be two sequential LLM round-trips (refine, then extract)."""
     categories = list_categories()
-    logger.info("IntentExtractor: Requesting intent/entity extraction from LLM...")
+    logger.info("QueryUnderstanding: Requesting refined query + intent/entities from LLM...")
     raw = chat_completion(_build_system_prompt(categories), message).strip()
     try:
         # Tolerate accidental markdown code fences around the JSON.
         cleaned = raw.strip("`").removeprefix("json").strip() if raw.startswith("```") else raw
         parsed = json.loads(cleaned)
+
+        refined_query = str(parsed.get("refined_query") or "").strip() or message
+
         intent = str(parsed.get("intent") or "").strip()
         if intent not in categories:
-            logger.warning("IntentExtractor: intent '%s' not in known categories %s. Falling back to '%s'.", intent, categories, _FALLBACK_CATEGORY)
+            logger.warning("QueryUnderstanding: intent '%s' not in known categories %s. Falling back to '%s'.", intent, categories, _FALLBACK_CATEGORY)
             intent = _FALLBACK_CATEGORY
+
         entities = parsed.get("entities") or {}
         if not isinstance(entities, dict):
             entities = {}
         entities = {str(k): str(v) for k, v in entities.items()}
-        logger.info("IntentExtractor: intent='%s' entities=%s", intent, entities)
-        return intent, entities
+
+        logger.info("QueryUnderstanding: refined_query='%s' intent='%s' entities=%s", refined_query, intent, entities)
+        return refined_query, intent, entities
     except (json.JSONDecodeError, AttributeError, TypeError) as e:
-        logger.warning("IntentExtractor: Failed to parse LLM response '%s' (%s). Defaulting to '%s'.", raw, e, _FALLBACK_CATEGORY)
-        return _FALLBACK_CATEGORY, {}
+        logger.warning("QueryUnderstanding: Failed to parse LLM response '%s' (%s). Falling back to raw message / '%s'.", raw, e, _FALLBACK_CATEGORY)
+        return message, _FALLBACK_CATEGORY, {}
