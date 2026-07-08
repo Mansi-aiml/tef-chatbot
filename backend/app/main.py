@@ -4,6 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes.chat import router as chat_router
 from app.core.config import settings
+from app.db.session import Base, engine
+from app.db import models  # noqa: F401 (registers SupportTicket on Base.metadata)
 
 # Configure logging
 logging.basicConfig(
@@ -14,6 +16,8 @@ logger = logging.getLogger("app.main")
 logger.info("Initializing TEF Chatbot backend application...")
 
 app = FastAPI(title="TEF Chatbot")
+
+Base.metadata.create_all(engine)
 
 app.add_middleware(
     CORSMiddleware,

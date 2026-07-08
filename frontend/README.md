@@ -1,16 +1,28 @@
-# React + Vite
+# TEF Chatbot — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React (Vite) chat UI for the TEF Chatbot. Talks to the FastAPI backend's `POST /chat` endpoint (see [`../backend/README.md`](../backend/README.md)).
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```
+cd frontend
+npm install
+npm run dev
+```
 
-## React Compiler
+Backend must be running at `http://127.0.0.1:8000` (hardcoded in `src/App.jsx` — there's no build-time env var for this yet).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## What it does
 
-## Expanding the Oxlint configuration
+- Single-page chat window (`src/App.jsx`): suggestion cards on the empty state, a message list, and an input box.
+- Shows a connection badge based on `GET /health`.
+- Each bot reply displays:
+  - a **layer badge** — "Answered from FAQ" for FAQ-layer answers (not confidence-scored), or a confidence pill for knowledge-base-layer answers
+  - an **escalation banner** with the support email/phone (from the backend response) when the query was escalated to a human agent instead of answered
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Scripts
+
+- `npm run dev` — dev server with HMR
+- `npm run build` — production build to `dist/`
+- `npm run lint` — oxlint
+- `npm run preview` — preview the production build locally

@@ -107,6 +107,10 @@ function App() {
         isUser: false,
         confidence: data.confidence,
         escalated: data.escalated,
+        answeredBy: data.answered_by,
+        supportEmail: data.support_email,
+        supportPhone: data.support_phone,
+        sources: data.sources,
         time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       };
 
@@ -209,18 +213,24 @@ function App() {
                       <span className="escalation-icon">⚠️</span>
                       <div>
                         <div className="escalation-title">Escalated to Support Ticket</div>
-                        This answer has lower confidence. A support ticket has been created automatically for human review.
+                        A support ticket has been created automatically for human review.
+                        {(msg.supportEmail || msg.supportPhone) && (
+                          <> Contact {msg.supportEmail}{msg.supportEmail && msg.supportPhone ? " or " : ""}{msg.supportPhone} for immediate help.</>
+                        )}
                       </div>
                     </div>
                   )}
                 </div>
                 
-                {/* Message Meta (time & confidence) */}
+                {/* Message Meta (time, layer & confidence) */}
                 <div className="message-meta">
                   <span>{msg.time}</span>
-                  {!msg.isUser && msg.confidence !== undefined && (
+                  {!msg.isUser && msg.answeredBy === "faq" && (
+                    <span className="layer-pill">Answered from FAQ</span>
+                  )}
+                  {!msg.isUser && msg.answeredBy === "kb" && msg.confidence != null && (
                     <span className={`confidence-pill ${msg.confidence < 0.6 ? "low" : ""}`}>
-                      Confidence: {Math.round(msg.confidence * 100)}%
+                      Knowledge Base · Confidence: {Math.round(msg.confidence * 100)}%
                     </span>
                   )}
                 </div>
