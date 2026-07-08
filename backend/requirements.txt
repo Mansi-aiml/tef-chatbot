@@ -9,4 +9,3 @@ sqlalchemy
 psycopg2-binary
 pypdf
 python-docx
-pysqlite3-binary
