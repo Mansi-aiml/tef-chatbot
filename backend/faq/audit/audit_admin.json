@@ -1,0 +1,63 @@
+[
+  {
+    "question": "What is the role of an Audit Admin?",
+    "answer": "An Audit Admin manages the audit verification stage by creating audit users, assigning audit work, reviewing auditor findings, and making final decisions to endorse, disqualify, or move applications back for review."
+  },
+  {
+    "question": "How do I sign in as an Audit Admin?",
+    "answer": "Open the TEFConnect Admin Portal, select Audit Admin as the profile type, enter your email address and password, and click Sign In."
+  },
+  {
+    "question": "What dashboard cards are available for an Audit Admin?",
+    "answer": "The dashboard includes Total Applications, Not Started, In Progress, Endorsed Applications, Disqualified Applications, Queried Applications, Auditor Reviewed Applications, and Admin Responded Query."
+  },
+  {
+    "question": "How do I create a new Audit User?",
+    "answer": "Navigate to Manage Audit Users, click Add, enter the required user details, save the account, and securely share the login credentials with the user."
+  },
+  {
+    "question": "Who can create Audit User accounts?",
+    "answer": "Only an Audit Admin can create and manage Audit User accounts."
+  },
+  {
+    "question": "How do I assign applications to an auditor?",
+    "answer": "Open Application Management, filter applications with the Not Started status, select the applications, click Assign Audit User, choose the appropriate country, language, and auditor, then confirm the assignment."
+  },
+  {
+    "question": "Can I reassign an application to another auditor?",
+    "answer": "Yes. Filter applications with the In Progress status, select the application, choose Reassign Audit User, select the new auditor, and confirm the reassignment."
+  },
+  {
+    "question": "What information is available in the Audit Overview?",
+    "answer": "The Audit Overview displays application details, entrepreneur information, assigned auditor, audit status, review criteria, comments, action history, audit logs, and links to related records such as LMS, M&E, pitching, and application phases."
+  },
+  {
+    "question": "What decisions can an Audit Admin make after an auditor completes the review?",
+    "answer": "Once the auditor submits the review, the Audit Admin can Endorse the application, Disqualify it, or Move Back to Review for additional work."
+  },
+  {
+    "question": "What happens when an auditor raises a query?",
+    "answer": "The application moves to the Queried status. TEF Admin or Super Admin may respond to the query, after which the auditor can continue the review process."
+  },
+  {
+    "question": "Can an Audit Admin reply to audit queries?",
+    "answer": "No. Responses to operational audit queries are handled by TEF Admin or Super Admin when that functionality is enabled."
+  },
+  {
+    "question": "What entrepreneur reference lists are available to an Audit Admin?",
+    "answer": "Audit Admins can access Shortlisted Entrepreneurs, Previously Funded Entrepreneurs, and Previously Disqualified Entrepreneurs as read-only reference lists."
+  },
+  {
+    "question": "Can TEF Admin or Super Admin assign audit users?",
+    "answer": "No. Although they can view audit information for oversight, only the Audit Admin can assign or reassign audit users."
+  },
+  {
+    "question": "What should I do if I cannot see the Audit menu after logging in?",
+    "answer": "The Audit module may not be enabled for your organization. Contact your platform administrator or Super Admin to verify that the Audit module is available."
+  },
+  {
+    "question": "When should I use the Audit Log?",
+    "answer": "Use the Audit Log to review the complete history of audit activities, application lifecycle events, external reviews, enumerator reviews, pitching activities, and LMS records for troubleshooting or decision-making."
+  }
+]
+ 
