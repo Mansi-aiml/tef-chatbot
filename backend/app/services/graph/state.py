@@ -9,6 +9,7 @@ class ChatState(TypedDict, total=False):
     refined_query: str
     intent: str
     entities: dict[str, str]
+    is_chitchat: bool
 
     faq_attempt: int
     faq_query: str

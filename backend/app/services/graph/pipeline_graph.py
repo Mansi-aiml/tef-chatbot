@@ -1,6 +1,7 @@
 from langgraph.graph import END, StateGraph
 from sqlalchemy.orm import Session
 
+from app.services.chitchat import chitchat_reply
 from app.services.graph.state import ChatState
 from app.services.query_understanding import refine_and_classify
 from app.services.retrieval.confidence import confidence_router, score_confidence
@@ -11,8 +12,17 @@ from app.services.synthesis import synthesize
 
 
 def _refine_and_classify_node(state: ChatState) -> dict:
-    refined_query, intent, entities = refine_and_classify(state["raw_message"])
-    return {"refined_query": refined_query, "intent": intent, "entities": entities}
+    refined_query, intent, entities, is_chitchat = refine_and_classify(state["raw_message"])
+    return {
+        "refined_query": refined_query,
+        "intent": intent,
+        "entities": entities,
+        "is_chitchat": is_chitchat,
+    }
+
+
+def _chitchat_router(state: ChatState) -> str:
+    return "chitchat" if state.get("is_chitchat") else "question"
 
 
 def build_graph(db: Session):
@@ -22,6 +32,7 @@ def build_graph(db: Session):
     graph = StateGraph(ChatState)
 
     graph.add_node("refine_and_classify", _refine_and_classify_node)
+    graph.add_node("chitchat", chitchat_reply)
     graph.add_node("faq_search", faq_search)
     graph.add_node("kb_search", kb_search)
     graph.add_node("score_confidence", score_confidence)
@@ -29,7 +40,11 @@ def build_graph(db: Session):
     graph.add_node("escalate", make_escalate_node(db))
 
     graph.set_entry_point("refine_and_classify")
-    graph.add_edge("refine_and_classify", "faq_search")
+    graph.add_conditional_edges(
+        "refine_and_classify",
+        _chitchat_router,
+        {"chitchat": "chitchat", "question": "faq_search"},
+    )
 
     graph.add_conditional_edges(
         "faq_search",
@@ -47,6 +62,7 @@ def build_graph(db: Session):
         {"pass": "synthesize", "fail": "escalate"},
     )
 
+    graph.add_edge("chitchat", END)
     graph.add_edge("synthesize", END)
     graph.add_edge("escalate", END)
 
