@@ -1,0 +1,14 @@
+[
+  {
+    "id": "module_001",
+    "question": "How do I sign in?",
+    "answer": "Open the portal, enter your email and password, and click Sign In.",
+    "keywords": ["login", "authentication", "sign in"]
+  },
+  {
+    "id": "module_002",
+    "question": "How do I create a new user?",
+    "answer": "Navigate to User Management, click Add User, complete the required fields, and save.",
+    "keywords": ["create user", "add user", "user management"]
+  }
+]
