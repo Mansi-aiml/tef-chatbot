@@ -23,3 +23,4 @@ def synthesize(state: ChatState) -> dict:
 
     sources = sorted({c["metadata"].get("source", "") for c in chunks if c["metadata"].get("source")})
     return {"answer": answer, "escalated": False, "sources": sources}
+

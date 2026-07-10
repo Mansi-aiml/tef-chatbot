@@ -2,7 +2,7 @@ import logging
 
 from app.core.config import settings
 from app.services.graph.state import ChatState
-from app.services.retrieval import search_with_retry
+from app.services.retrieval.shared import search_with_retry
 from app.services.vectorstore.chroma_client import faqs
 
 logger = logging.getLogger("app.services.faq_layer")

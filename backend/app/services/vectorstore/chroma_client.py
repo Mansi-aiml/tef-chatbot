@@ -22,11 +22,16 @@ class RetrievedChunk(TypedDict):
     distance: float
 
 
-def query_collection(collection, query_text: str, n_results: int) -> list[RetrievedChunk]:
+def query_collection(
+    collection, query_text: str, n_results: int, category: str | None = None
+) -> list[RetrievedChunk]:
     count = collection.count()
     if count == 0:
         return []
-    results = collection.query(query_texts=[query_text], n_results=min(n_results, count))
+    where = {"category": category} if category else None
+    results = collection.query(
+        query_texts=[query_text], n_results=min(n_results, count), where=where
+    )
     documents = results.get("documents", [[]])[0]
     metadatas = results.get("metadatas", [[]])[0]
     distances = results.get("distances", [[]])[0]
