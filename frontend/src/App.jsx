@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import ReactMarkdown from "react-markdown";
 import "./App.css";
 
 function App() {
@@ -9,12 +10,12 @@ function App() {
   const chatEndRef = useRef(null);
   const textareaRef = useRef(null);
 
-  // Suggestions for empty state
+  // Suggestions for empty state — real questions verified against the FAQ/KB content
   const suggestions = [
-    { text: "How do I create a new mentor?", label: "Create Mentor" },
-    { text: "What is the confidence score threshold?", label: "Threshold Info" },
-    { text: "Can you help me submit a support ticket?", label: "Support Ticket" },
-    { text: "How does the RAG search pipeline work?", label: "Pipeline Details" }
+    { text: "How do I reset my password?", label: "Reset Password" },
+    { text: "How does a Mentor Admin pair an entrepreneur with a mentor?", label: "Mentor Pairing" },
+    { text: "How does an M&E Admin onboard a new enumerator?", label: "Enumerator Onboarding" },
+    { text: "What is the difference between an External Reviewer and a QA reviewer?", label: "Reviewer vs QA" }
   ];
 
   // Auto-scroll to the bottom of the chat
@@ -205,7 +206,13 @@ function App() {
               </div>
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <div className={`message-bubble ${msg.isUser ? "user-bubble" : "bot-bubble"}`} style={msg.isError ? { borderLeft: "4px solid #e71d36" } : {}}>
-                  {msg.text}
+                  {msg.isUser ? (
+                    msg.text
+                  ) : (
+                    <div className="markdown-content">
+                      <ReactMarkdown>{msg.text}</ReactMarkdown>
+                    </div>
+                  )}
 
                   {/* Escalation warning */}
                   {!msg.isUser && msg.escalated && (

@@ -25,24 +25,31 @@ def list_categories() -> list[str]:
 
 def _build_system_prompt(categories: list[str]) -> str:
     return (
-        "You will be given a raw user message. Do two things with it:\n"
-        "1. Rewrite it into a clear, unambiguous, self-contained query: expand "
-        "abbreviations, fix typos, and make any implicit intent explicit, but do "
-        "not add information the user didn't imply.\n"
-        "2. Classify the ORIGINAL message into exactly one of these categories: "
-        f"{', '.join(categories)}. If nothing else fits, use '{_FALLBACK_CATEGORY}'. "
-        "Also extract any clear entities.\n"
+        "You will be given a raw user message, which may contain spelling "
+        "mistakes, typos, or shorthand. Process it in this order:\n"
+        "1. First, correct it: fix spelling and typos, expand abbreviations, and "
+        "make any implicit intent explicit, producing a clear, unambiguous, "
+        "self-contained query. Do not add information the user didn't imply.\n"
+        "2. Decide whether it is chitchat (greetings, thanks, farewells, small "
+        "talk, or anything else that isn't actually asking for information) as "
+        "opposed to a real question that needs an answer.\n"
+        "3. Then, using that corrected query (not the raw original), classify it "
+        f"into exactly one of these categories: {', '.join(categories)}. If "
+        f"nothing else fits, or if it's chitchat, use '{_FALLBACK_CATEGORY}'. "
+        "Also extract any clear entities from the corrected query, spelled "
+        "correctly (chitchat messages have no entities).\n"
         "Respond with ONLY a JSON object of the exact shape "
-        '{"refined_query": "<rewritten query>", "intent": "<one_of_the_categories_above>", '
-        '"entities": {"<name>": "<value>", ...}}. '
+        '{"refined_query": "<corrected query>", "intent": "<one_of_the_categories_above>", '
+        '"entities": {"<name>": "<value>", ...}, "is_chitchat": <true or false>}. '
         "If there are no clear entities, use an empty object. Do not add commentary."
     )
 
 
-def refine_and_classify(message: str) -> tuple[str, str, dict[str, str]]:
-    """Single LLM call that both rewrites the raw message into a refined query
-    and classifies it into an intent category with entities, replacing what
-    used to be two sequential LLM round-trips (refine, then extract)."""
+def refine_and_classify(message: str) -> tuple[str, str, dict[str, str], bool]:
+    """Single LLM call that rewrites the raw message into a refined query,
+    classifies it into an intent category with entities, and flags whether
+    it's chitchat rather than a real question — replacing what used to be
+    two sequential LLM round-trips (refine, then extract)."""
     categories = list_categories()
     logger.info("QueryUnderstanding: Requesting refined query + intent/entities from LLM...")
     raw = chat_completion(_build_system_prompt(categories), message).strip()
@@ -63,8 +70,13 @@ def refine_and_classify(message: str) -> tuple[str, str, dict[str, str]]:
             entities = {}
         entities = {str(k): str(v) for k, v in entities.items()}
 
-        logger.info("QueryUnderstanding: refined_query='%s' intent='%s' entities=%s", refined_query, intent, entities)
-        return refined_query, intent, entities
+        is_chitchat = bool(parsed.get("is_chitchat", False))
+
+        logger.info(
+            "QueryUnderstanding: refined_query='%s' intent='%s' entities=%s is_chitchat=%s",
+            refined_query, intent, entities, is_chitchat,
+        )
+        return refined_query, intent, entities, is_chitchat
     except (json.JSONDecodeError, AttributeError, TypeError) as e:
         logger.warning("QueryUnderstanding: Failed to parse LLM response '%s' (%s). Falling back to raw message / '%s'.", raw, e, _FALLBACK_CATEGORY)
-        return message, _FALLBACK_CATEGORY, {}
+        return message, _FALLBACK_CATEGORY, {}, False

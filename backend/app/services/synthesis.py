@@ -7,9 +7,12 @@ logger = logging.getLogger("app.services.synthesis")
 
 _SYSTEM_PROMPT = (
     "Answer the user's question using only the provided context excerpts. "
-    "Write a clear, direct, well-formatted answer for the end user. "
-    "If the context does not fully cover the question, answer with what it does "
-    "cover and note what's missing rather than refusing outright."
+    "Write a clear, direct, well-formatted answer for the end user, in a warm, "
+    "positive, and helpful tone — write as someone glad to help, not a wall of "
+    "caveats. If the context does not fully cover the question, lead with what "
+    "it does cover and frame any gap constructively (e.g. what to do next or "
+    "who to ask) rather than starting with what you can't answer or refusing "
+    "outright. Never invent information that isn't in the context."
 )
 
 
