@@ -1,0 +1,107 @@
+[
+  {
+    "id": "SA001",
+    "category": "Authentication",
+    "question": "How do I log in as a Super Admin?",
+    "answer": "Open the TEFConnect Admin Portal, select 'Super Admin' as the Profile Type, enter your email and password, then click Sign In.",
+    "keywords": ["login", "super admin", "sign in", "authentication"]
+  },
+  {
+    "id": "SA002",
+    "category": "Authentication",
+    "question": "How do I log out of the Admin Portal?",
+    "answer": "Open the profile menu in the top-right corner, select Logout, and confirm.",
+    "keywords": ["logout", "sign out", "profile"]
+  },
+  {
+    "id": "SA003",
+    "category": "Dashboard",
+    "question": "What does the Applications Dashboard show?",
+    "answer": "The dashboard displays Total Applications, Applications in Progress, and Applications Submitted, along with shortcuts to LMS and Pitching Dashboard.",
+    "keywords": ["dashboard", "applications", "statistics"]
+  },
+  {
+    "id": "SA004",
+    "category": "Dashboard",
+    "question": "How do I send reminders to entrepreneurs?",
+    "answer": "Open the Applications in Progress card and click the Send Reminder button.",
+    "keywords": ["reminder", "application", "dashboard"]
+  },
+  {
+    "id": "SA005",
+    "category": "User Management",
+    "question": "How do I approve a new admin user?",
+    "answer": "Go to User Management → Admin, locate the pending user, and click Approve.",
+    "keywords": ["approve", "admin", "user management"]
+  },
+  {
+    "id": "SA006",
+    "category": "User Management",
+    "question": "How do I deactivate an admin account?",
+    "answer": "Navigate to User Management → Admin and select Deactivate Admin for the approved account.",
+    "keywords": ["deactivate", "admin", "account"]
+  },
+  {
+    "id": "SA007",
+    "category": "User Management",
+    "question": "How do I add a new intern?",
+    "answer": "Go to User Management → Intern, click Add New Intern, enter the required details, and save.",
+    "keywords": ["intern", "add", "user"]
+  },
+  {
+    "id": "SA008",
+    "category": "Programme Management",
+    "question": "How do I create a new programme?",
+    "answer": "Open Programme Management, select Add New Programme, complete the setup wizard, and save.",
+    "keywords": ["programme", "create", "management"]
+  },
+  {
+    "id": "SA009",
+    "category": "Programme Management",
+    "question": "Can I duplicate an existing programme?",
+    "answer": "Yes. Use the Copy option available for the programme you want to duplicate.",
+    "keywords": ["copy", "programme", "duplicate"]
+  },
+  {
+    "id": "SA010",
+    "category": "Application Management",
+    "question": "How do I assign an intern to an application?",
+    "answer": "Open Application Management → Application List, select the application, and choose Assign Intern.",
+    "keywords": ["assign", "intern", "application"]
+  },
+  {
+    "id": "SA011",
+    "category": "Application Management",
+    "question": "How do I approve an entrepreneur application?",
+    "answer": "Open the application, review all feedback tabs, then click Approve.",
+    "keywords": ["approve", "application", "entrepreneur"]
+  },
+  {
+    "id": "SA012",
+    "category": "Pitching",
+    "question": "How do I request a pitching resubmission?",
+    "answer": "Open the entrepreneur's pitching record and select Ask for Resubmission when corrections are required.",
+    "keywords": ["pitching", "resubmission", "review"]
+  },
+  {
+    "id": "SA013",
+    "category": "FAQ Management",
+    "question": "How do I add a new FAQ?",
+    "answer": "Go to FAQ Management, select Add New FAQ, enter the question and answer, choose a category, and save.",
+    "keywords": ["faq", "help", "knowledge base"]
+  },
+  {
+    "id": "SA014",
+    "category": "Notice Board",
+    "question": "How do I publish a notice?",
+    "answer": "Open Notice Board Management, click Add New Notice Board, enter the required information, and save the notice.",
+    "keywords": ["notice", "announcement", "publish"]
+  },
+  {
+    "id": "SA015",
+    "category": "Permissions",
+    "question": "Can a Super Admin assign audit field auditors?",
+    "answer": "No. Assigning audit field auditors is the responsibility of the Audit Admin role.",
+    "keywords": ["audit", "permissions", "audit admin"]
+  }
+]

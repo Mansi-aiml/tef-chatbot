@@ -17,7 +17,12 @@ logger.info("Initializing TEF Chatbot backend application...")
 
 app = FastAPI(title="TEF Chatbot")
 
-Base.metadata.create_all(engine)
+# TEMP: Postgres is only used for SupportTicket (escalation); not needed for RAG/Chroma work.
+# Don't let a missing/unreachable DB block startup. Revert once Postgres is available again.
+try:
+    Base.metadata.create_all(engine)
+except Exception:
+    logger.warning("Skipping DB table creation - PostgreSQL unavailable (escalation/SupportTicket will not work)", exc_info=True)
 
 app.add_middleware(
     CORSMiddleware,

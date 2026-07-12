@@ -1,63 +1,122 @@
 [
   {
+    "id": "audit_001",
+    "question": "Hi",
+    "answer": "Hello! Welcome to the TEFConnect Audit Admin Support Assistant. How can I assist you today?",
+    "keywords": ["hi", "hello", "greetings", "welcome", "audit", "audit admin"]
+  },
+  {
+    "id": "audit_002",
     "question": "What is the role of an Audit Admin?",
-    "answer": "An Audit Admin manages the audit verification stage by creating audit users, assigning audit work, reviewing auditor findings, and making final decisions to endorse, disqualify, or move applications back for review."
+    "answer": "An Audit Admin manages audit users, assigns entrepreneur applications to auditors, reviews completed audits, and makes the final endorse or disqualify decision.",
+    "keywords": ["audit admin", "role", "responsibilities", "audit user", "assign auditors", "endorse", "disqualify"]
   },
   {
+    "id": "audit_003",
     "question": "How do I sign in as an Audit Admin?",
-    "answer": "Open the TEFConnect Admin Portal, select Audit Admin as the profile type, enter your email address and password, and click Sign In."
+    "answer": "Open the TEFConnect Admin Portal, select 'Audit Admin' as your profile type, enter your email address and password, and click Sign In.",
+    "keywords": ["login", "sign in", "audit admin", "admin portal", "email", "password"]
   },
   {
-    "question": "What dashboard cards are available for an Audit Admin?",
-    "answer": "The dashboard includes Total Applications, Not Started, In Progress, Endorsed Applications, Disqualified Applications, Queried Applications, Auditor Reviewed Applications, and Admin Responded Query."
+    "id": "audit_004",
+    "question": "Why can't I see the Audit module after logging in?",
+    "answer": "The Audit module may not be enabled for your organization's environment. Contact your Super Admin or platform administrator.",
+    "keywords": ["audit module", "module missing", "cannot access", "permissions", "super admin"]
   },
   {
-    "question": "How do I create a new Audit User?",
-    "answer": "Navigate to Manage Audit Users, click Add, enter the required user details, save the account, and securely share the login credentials with the user."
+    "id": "audit_005",
+    "question": "What can I see on the Audit Admin Dashboard?",
+    "answer": "The dashboard displays summary cards for Total Applications, Not Started, In Progress, Endorsed, Disqualified, Queried, Auditor Reviewed, and Admin Responded Query.",
+    "keywords": ["dashboard", "summary cards", "total applications", "not started", "in progress", "endorsed", "disqualified", "queried"]
   },
   {
+    "id": "audit_006",
+    "question": "Can I filter dashboard statistics?",
+    "answer": "Yes. You can filter dashboard statistics by programme.",
+    "keywords": ["dashboard", "filter", "programme", "statistics"]
+  },
+  {
+    "id": "audit_007",
+    "question": "How do I create an Audit User?",
+    "answer": "Go to Manage Audit Users, click Add, enter the required details, save the account, and securely share the login credentials.",
+    "keywords": ["create audit user", "manage audit users", "add auditor", "user account", "audit user"]
+  },
+  {
+    "id": "audit_008",
     "question": "Who can create Audit User accounts?",
-    "answer": "Only an Audit Admin can create and manage Audit User accounts."
+    "answer": "Only the Audit Admin role can create Audit User accounts.",
+    "keywords": ["create audit user", "audit admin", "permissions", "user management"]
   },
   {
-    "question": "How do I assign applications to an auditor?",
-    "answer": "Open Application Management, filter applications with the Not Started status, select the applications, click Assign Audit User, choose the appropriate country, language, and auditor, then confirm the assignment."
+    "id": "audit_009",
+    "question": "How do I assign an auditor to an application?",
+    "answer": "Filter applications by Not Started, select the application, choose Assign Audit User, select the country, language, and auditor, then confirm.",
+    "keywords": ["assign auditor", "assign audit user", "application assignment", "not started", "auditor"]
   },
   {
-    "question": "Can I reassign an application to another auditor?",
-    "answer": "Yes. Filter applications with the In Progress status, select the application, choose Reassign Audit User, select the new auditor, and confirm the reassignment."
+    "id": "audit_010",
+    "question": "How do I reassign an application to another auditor?",
+    "answer": "Filter applications by In Progress, select the application, choose Reassign Audit User, select a new auditor, and confirm.",
+    "keywords": ["reassign application", "change auditor", "reassign audit user", "in progress"]
   },
   {
-    "question": "What information is available in the Audit Overview?",
-    "answer": "The Audit Overview displays application details, entrepreneur information, assigned auditor, audit status, review criteria, comments, action history, audit logs, and links to related records such as LMS, M&E, pitching, and application phases."
+    "id": "audit_011",
+    "question": "Which filters are available in Application Management?",
+    "answer": "You can filter by Programme, Country, Language, Application Status, Audit Result, and Search.",
+    "keywords": ["application management", "filters", "programme", "country", "language", "application status", "audit result", "search"]
   },
   {
-    "question": "What decisions can an Audit Admin make after an auditor completes the review?",
-    "answer": "Once the auditor submits the review, the Audit Admin can Endorse the application, Disqualify it, or Move Back to Review for additional work."
+    "id": "audit_012",
+    "question": "What happens when I click View on an application?",
+    "answer": "The Audit Overview page opens, allowing you to review audit details and make final decisions.",
+    "keywords": ["view application", "audit overview", "application details", "review application"]
   },
   {
-    "question": "What happens when an auditor raises a query?",
-    "answer": "The application moves to the Queried status. TEF Admin or Super Admin may respond to the query, after which the auditor can continue the review process."
+    "id": "audit_013",
+    "question": "What actions can I take after an auditor completes a review?",
+    "answer": "You can Endorse, Disqualify, or Move Back to Review.",
+    "keywords": ["endorse", "disqualify", "move back to review", "audit decision", "review actions"]
   },
   {
-    "question": "Can an Audit Admin reply to audit queries?",
-    "answer": "No. Responses to operational audit queries are handled by TEF Admin or Super Admin when that functionality is enabled."
+    "id": "audit_014",
+    "question": "Can I reopen an endorsed or disqualified application?",
+    "answer": "Yes. You can use Move Back to Review if corrections are required.",
+    "keywords": ["reopen application", "move back to review", "endorsed", "disqualified", "corrections"]
   },
   {
-    "question": "What entrepreneur reference lists are available to an Audit Admin?",
-    "answer": "Audit Admins can access Shortlisted Entrepreneurs, Previously Funded Entrepreneurs, and Previously Disqualified Entrepreneurs as read-only reference lists."
+    "id": "audit_015",
+    "question": "What is the Audit Log used for?",
+    "answer": "The Audit Log provides a read-only history of audit activities, application lifecycle, reviews, pitching, and LMS activities.",
+    "keywords": ["audit log", "history", "audit activities", "application lifecycle", "reviews", "pitching", "LMS", "read only"]
   },
   {
-    "question": "Can TEF Admin or Super Admin assign audit users?",
-    "answer": "No. Although they can view audit information for oversight, only the Audit Admin can assign or reassign audit users."
+    "id": "audit_016",
+    "question": "What are the entrepreneur reference lists?",
+    "answer": "They are read-only lists of shortlisted, previously funded, and previously disqualified entrepreneurs used for audit reference.",
+    "keywords": ["reference list", "shortlisted entrepreneurs", "funded entrepreneurs", "disqualified entrepreneurs", "audit reference"]
   },
   {
-    "question": "What should I do if I cannot see the Audit menu after logging in?",
-    "answer": "The Audit module may not be enabled for your organization. Contact your platform administrator or Super Admin to verify that the Audit module is available."
+    "id": "audit_017",
+    "question": "What does Queried status mean?",
+    "answer": "It means an auditor has requested clarification on one or more audit criteria.",
+    "keywords": ["queried status", "query", "clarification", "audit criteria", "application status"]
   },
   {
-    "question": "When should I use the Audit Log?",
-    "answer": "Use the Audit Log to review the complete history of audit activities, application lifecycle events, external reviews, enumerator reviews, pitching activities, and LMS records for troubleshooting or decision-making."
+    "id": "audit_018",
+    "question": "Can TEF Admin assign auditors?",
+    "answer": "No. Only the Audit Admin can assign or reassign auditors.",
+    "keywords": ["TEF admin", "assign auditor", "audit admin", "permissions", "reassign auditor"]
+  },
+  {
+    "id": "audit_019",
+    "question": "What should I do if auditors cannot be assigned?",
+    "answer": "Verify that Audit Users exist and required filters are available. Contact the Super Admin if the issue persists.",
+    "keywords": ["cannot assign auditor", "assignment issue", "audit users", "super admin", "troubleshooting"]
+  },
+  {
+    "id": "audit_020",
+    "question": "Who should I contact for Audit module issues?",
+    "answer": "Contact the Super Admin or platform support team if the Audit module is unavailable or technical issues occur.",
+    "keywords": ["audit support", "audit module", "technical issue", "super admin", "platform support", "help"]
   }
 ]
- 

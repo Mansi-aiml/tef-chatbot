@@ -1,0 +1,107 @@
+[
+  {
+    "id": "AUD001",
+    "category": "Audit",
+    "question": "How do I sign in to the TEFConnect Admin Portal as an External Reviewer?",
+    "answer": "Open the TEFConnect Admin Portal, select 'External Reviewer User/QA' as the Profile Type, enter your registered email address and password, then click 'Sign In'. After successful login, the dashboard displays the Reviewer role.",
+    "keywords": ["login", "sign in", "external reviewer", "reviewer account", "profile type", "dashboard"]
+  },
+  {
+    "id": "AUD002",
+    "category": "Audit",
+    "question": "Why can't I see all entrepreneur applications in the portal?",
+    "answer": "External Reviewers can only view applications and pitching submissions assigned to their account by the External Reviewer Admin. They cannot access applications assigned to other reviewers or the complete application pool.",
+    "keywords": ["assigned applications", "visibility", "review assignments", "application access", "external reviewer"]
+  },
+  {
+    "id": "AUD003",
+    "category": "Audit",
+    "question": "What menu options are available to an External Reviewer?",
+    "answer": "External Reviewers have access to the Dashboard with Application and, when enabled, Pitching sections. Administrative menus such as user management, assignment management, and review criteria configuration are not available.",
+    "keywords": ["navigation", "dashboard", "application", "pitching", "menu", "permissions"]
+  },
+  {
+    "id": "AUD004",
+    "category": "Audit",
+    "question": "How do I review an assigned application?",
+    "answer": "Open the Pending Applications list, click 'View' for the assigned application, review the entrepreneur's submission, complete all review criteria and comments, then click 'Submit'. The application moves to the Reviewed list after submission.",
+    "keywords": ["application review", "submit review", "pending applications", "review criteria", "comments"]
+  },
+  {
+    "id": "AUD005",
+    "category": "Audit",
+    "question": "What happens after I submit an application review?",
+    "answer": "After submission, the application moves from the Pending list to the Reviewed list on your dashboard. Depending on the workflow, the submission may then be reviewed by a QA user.",
+    "keywords": ["review submitted", "reviewed status", "QA review", "pending", "workflow"]
+  },
+  {
+    "id": "AUD006",
+    "category": "Audit",
+    "question": "How do I review a pitching submission?",
+    "answer": "Open the Pending Pitching assignments, select 'View', review the pitching details and documents, open the Review/Feedback section, answer every review criterion, add comments where required, and submit the review.",
+    "keywords": ["pitching review", "review feedback", "pitching assignment", "submit pitching", "review criteria"]
+  },
+  {
+    "id": "AUD007",
+    "category": "Audit",
+    "question": "Why don't I see the Pitching menu in my dashboard?",
+    "answer": "The Pitching section only appears when pitching has been enabled for the programme. If pitching is not active, only the Application section will be available.",
+    "keywords": ["pitching menu", "dashboard", "programme settings", "feature availability", "pitching enabled"]
+  },
+  {
+    "id": "AUD008",
+    "category": "Audit",
+    "question": "Can I assign or reassign applications to another reviewer?",
+    "answer": "No. Assigning and reassigning applications is the responsibility of the External Reviewer Admin. External Reviewers can only review work assigned to them.",
+    "keywords": ["assign applications", "reassign reviewer", "permissions", "external reviewer admin", "assignments"]
+  },
+  {
+    "id": "AUD009",
+    "category": "Audit",
+    "question": "Can I change the review criteria used for applications or pitching?",
+    "answer": "No. Review criteria are managed by the EY Admin. External Reviewers cannot create, edit, or modify review criteria.",
+    "keywords": ["review criteria", "edit criteria", "EY admin", "permissions", "configuration"]
+  },
+  {
+    "id": "AUD010",
+    "category": "Audit",
+    "question": "What should I do if my Pending queue is empty?",
+    "answer": "An empty Pending queue is normal when there are no assignments available. If you expect work but see no pending items, contact your External Reviewer Admin.",
+    "keywords": ["pending queue", "no assignments", "empty dashboard", "external reviewer admin", "pending"]
+  },
+  {
+    "id": "AUD011",
+    "category": "Audit",
+    "question": "What is the difference between the Reviewer and QA roles?",
+    "answer": "The Reviewer performs the first review of applications and pitching submissions, while the QA role performs a quality assurance review after the Reviewer submits their work. QA users see 'Pending Review' instead of 'Pending' on their dashboard.",
+    "keywords": ["reviewer", "QA", "role difference", "pending review", "quality assurance"]
+  },
+  {
+    "id": "AUD012",
+    "category": "Audit",
+    "question": "Can an External Reviewer approve entrepreneur applications?",
+    "answer": "No. External Reviewers only evaluate assigned applications and pitching submissions. Final approvals are handled by administrator-level roles.",
+    "keywords": ["approve applications", "admin approval", "review responsibilities", "permissions", "reviewer role"]
+  },
+  {
+    "id": "AUD013",
+    "category": "Audit",
+    "question": "What should I do if I cannot submit my review because of a validation error?",
+    "answer": "If validation errors prevent submission, contact your External Reviewer Admin for assistance. They can help resolve assignment or system-related issues.",
+    "keywords": ["validation error", "submit review", "technical issue", "external reviewer admin", "review submission"]
+  },
+  {
+    "id": "AUD014",
+    "category": "Audit",
+    "question": "What are some best practices for completing high-quality reviews?",
+    "answer": "Read the complete application before scoring, provide clear comments for borderline decisions, complete pending work regularly, verify that pitching reviews are fully submitted, and never share your login credentials.",
+    "keywords": ["best practices", "quality review", "review comments", "review tips", "security", "login credentials"]
+  },
+  {
+    "id": "AUD015",
+    "category": "Audit",
+    "question": "Who should I contact if I have login issues, incorrect assignments, or need a password reset?",
+    "answer": "Contact your External Reviewer Admin if you cannot log in, need a password reset, believe an application was assigned incorrectly, or require account reactivation.",
+    "keywords": ["password reset", "login issue", "incorrect assignment", "account reactivation", "external reviewer admin", "support"]
+  }
+]

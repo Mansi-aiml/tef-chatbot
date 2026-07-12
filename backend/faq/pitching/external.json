@@ -1,0 +1,107 @@
+[
+  {
+    "id": "ERA001",
+    "category": "Authentication",
+    "question": "How do I sign in as an External Reviewer Admin?",
+    "answer": "Select External Reviewer Admin as the Profile Type, enter your credentials, and click Sign In.",
+    "keywords": ["login","ey admin","authentication"]
+  },
+  {
+    "id": "ERA002",
+    "category": "Dashboard",
+    "question": "What summary cards are available on the dashboard?",
+    "answer": "The dashboard displays Received, Assigned, Reviewed, and Not Reviewed application counts.",
+    "keywords": ["dashboard","received","assigned"]
+  },
+  {
+    "id": "ERA003",
+    "category": "Application Management",
+    "question": "How do I assign applications to reviewers?",
+    "answer": "Go to Application Management → Assign Applications, select the applications, assign them to a reviewer, and confirm.",
+    "keywords": ["assign","reviewer","application"]
+  },
+  {
+    "id": "ERA004",
+    "category": "Application Management",
+    "question": "How do I reassign applications?",
+    "answer": "Use the Reassign Applications tab, select the assigned applications, and choose a different reviewer.",
+    "keywords": ["reassign","reviewer"]
+  },
+  {
+    "id": "ERA005",
+    "category": "Application Management",
+    "question": "How do I approve completed reviews?",
+    "answer": "Open the Review and Approved Applications tab, verify reviewer feedback, and approve the outcome.",
+    "keywords": ["approve","review"]
+  },
+  {
+    "id": "ERA006",
+    "category": "Application Management",
+    "question": "What is the Shortlisted Applications tab used for?",
+    "answer": "It is used to manage shortlisted entrepreneurs, download sample files, and upload bulk approvals.",
+    "keywords": ["shortlisted","bulk upload"]
+  },
+  {
+    "id": "ERA007",
+    "category": "User Management",
+    "question": "How do I add a new reviewer or QA user?",
+    "answer": "Open User Management → Users, click Add New User, complete the form, select Reviewer or QA, and save.",
+    "keywords": ["reviewer","qa","user"]
+  },
+  {
+    "id": "ERA008",
+    "category": "User Management",
+    "question": "What is Reviewer-QA mapping?",
+    "answer": "Reviewer-QA mapping pairs each reviewer with a QA user so QA assignments are created automatically.",
+    "keywords": ["mapping","qa","reviewer"]
+  },
+  {
+    "id": "ERA009",
+    "category": "Review Criteria",
+    "question": "How do I configure review criteria?",
+    "answer": "Open Review Criteria, select a programme, add or edit criteria, and activate or deactivate them as needed.",
+    "keywords": ["review criteria","programme"]
+  },
+  {
+    "id": "ERA010",
+    "category": "Pitching",
+    "question": "What can I do in Pitching Management?",
+    "answer": "You can assign reviewers, reassign work, filter by language, approve pitching records, and review responses.",
+    "keywords": ["pitching","assign","approve"]
+  },
+  {
+    "id": "ERA011",
+    "category": "Permissions",
+    "question": "Can I create programmes?",
+    "answer": "No. Programme creation is handled by the Super Admin.",
+    "keywords": ["programme","permission"]
+  },
+  {
+    "id": "ERA012",
+    "category": "Permissions",
+    "question": "Can I assign TEF interns?",
+    "answer": "No. Assigning interns is handled by the TEF Admin.",
+    "keywords": ["intern","permission"]
+  },
+  {
+    "id": "ERA013",
+    "category": "Best Practices",
+    "question": "Should inactive reviewers be deleted?",
+    "answer": "No. Deactivate reviewer accounts instead of deleting them.",
+    "keywords": ["deactivate","reviewer"]
+  },
+  {
+    "id": "ERA014",
+    "category": "Troubleshooting",
+    "question": "Why is Pitching Management missing?",
+    "answer": "Pitching Management is visible only when pitching is enabled for the organization.",
+    "keywords": ["pitching","missing"]
+  },
+  {
+    "id": "ERA015",
+    "category": "Support",
+    "question": "Who should I contact for help?",
+    "answer": "Contact the TEF Super Admin or the relevant programme lead for assistance.",
+    "keywords": ["support","help"]
+  }
+]

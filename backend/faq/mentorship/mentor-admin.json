@@ -1,0 +1,123 @@
+
+[
+  {
+    "id": "mentor_001",
+    "question": "What is the role of a Mentor Admin?",
+    "answer": "A Mentor Admin manages mentor registration and approval, pairs entrepreneurs with suitable mentors, manages mentorship requests, creates and monitors surveys, and responds to mentor Q&A messages. They do not manage TEF applications, programmes, or external review workflows.",
+    "keyword": ["mentor admin", "role", "responsibilities"]
+  },
+  {
+    "id": "mentor_002",
+    "question": "How do I log in as a Mentor Admin?",
+    "answer": "Open the TEFConnect Admin Portal, select 'Mentor Admin' as the profile type, enter your username and password, and click Sign In. Mentor Admins use a username instead of an email address.",
+    "keyword": ["login", "sign in", "username"]
+  },
+  {
+    "id": "mentor_003",
+    "question": "How do I log out of the Mentor Admin portal?",
+    "answer": "Open the Profile menu, select Logout, and confirm to sign out of the Mentor Admin portal.",
+    "keyword": ["logout", "sign out"]
+  },
+  {
+    "id": "mentor_004",
+    "question": "What modules are available in the Mentor Admin portal?",
+    "answer": "The main modules include Dashboard, User Management (Mentors), and Mentorship Management, which contains Pairing Management, Mentor Management, Survey Management, Request Management, and Mentor Q&A Messages.",
+    "keyword": ["navigation", "modules", "menu"]
+  },
+  {
+    "id": "mentor_005",
+    "question": "What information is displayed on the Mentor Dashboard?",
+    "answer": "The dashboard shows Total Registered Mentors, Approved Mentors, Pending Mentors, Total Messages, Responded Messages, Not Responded Messages, and Mentorship Requests.",
+    "keyword": ["dashboard", "statistics", "summary"]
+  },
+  {
+    "id": "mentor_006",
+    "question": "What can I do in User Management?",
+    "answer": "User Management allows you to browse mentor user accounts, open mentor profiles, and review account-level information.",
+    "keyword": ["user management", "mentor accounts"]
+  },
+  {
+    "id": "mentor_007",
+    "question": "What are the pairing status categories?",
+    "answer": "Pairing Management provides summary counts for Assigned, Unassigned, Pending, and Rejected entrepreneurs.",
+    "keyword": ["pairing", "status", "assigned"]
+  },
+  {
+    "id": "mentor_008",
+    "question": "How can I find entrepreneurs for mentor pairing?",
+    "answer": "Use filters such as Programme, Language, Sector, Gender, Mentor Status, Search Text, and Days Pending to locate entrepreneurs.",
+    "keyword": ["pairing", "filters", "entrepreneurs"]
+  },
+  {
+    "id": "mentor_009",
+    "question": "How do I assign or reassign a mentor?",
+    "answer": "Select an entrepreneur, choose Assign Mentor or Reassign Mentor, select a suitable mentor based on matching criteria, and confirm the assignment.",
+    "keyword": ["assign mentor", "reassign mentor"]
+  },
+  {
+    "id": "mentor_010",
+    "question": "What is Batch Pairing?",
+    "answer": "Batch Pairing automatically matches large groups of entrepreneurs with mentors. After the process completes, download the results and manually resolve any exceptions.",
+    "keyword": ["batch pairing", "bulk assignment"]
+  },
+  {
+    "id": "mentor_011",
+    "question": "Can I export pairing information?",
+    "answer": "Yes. You can export filtered pairing lists for reporting and send notifications to selected entrepreneurs or mentors regarding pairing decisions.",
+    "keyword": ["export", "reports", "notifications"]
+  },
+  {
+    "id": "mentor_012",
+    "question": "What can I do in Mentor Management?",
+    "answer": "Mentor Management lets you filter mentors, view mentor profiles, see assigned entrepreneurs, assign entrepreneurs, and send notifications to mentors individually or in groups.",
+    "keyword": ["mentor management", "profiles"]
+  },
+  {
+    "id": "mentor_013",
+    "question": "How do I create a mentorship survey?",
+    "answer": "Go to Survey Management, click Create, enter the survey details including questions, audience, and programme linkage, then save and activate the survey.",
+    "keyword": ["survey", "create survey"]
+  },
+  {
+    "id": "mentor_014",
+    "question": "How can I manage survey responses?",
+    "answer": "Open a survey to view responses, inspect individual mentee answers, edit surveys when allowed, activate or deactivate surveys, export response data, and send reminder notifications.",
+    "keyword": ["survey responses", "survey management"]
+  },
+  {
+    "id": "mentor_015",
+    "question": "What types of requests can a Mentor Admin manage?",
+    "answer": "Mentor Admins can manage Entrepreneur Requests submitted by mentees and Mentor Requests submitted by mentors.",
+    "keyword": ["requests", "entrepreneur requests", "mentor requests"]
+  },
+  {
+    "id": "mentor_016",
+    "question": "How do I process a mentorship request?",
+    "answer": "Open the request, review its details and supporting information, then approve, reject, or take the appropriate action according to programme rules.",
+    "keyword": ["approve request", "reject request"]
+  },
+  {
+    "id": "mentor_017",
+    "question": "How do I respond to Mentor Q&A messages?",
+    "answer": "Open a non-responded message thread, read the mentor's question, compose your reply, send it, and the conversation will move to the Responded tab.",
+    "keyword": ["q&a", "messages", "reply"]
+  },
+  {
+    "id": "mentor_018",
+    "question": "What actions are not available to Mentor Admins?",
+    "answer": "Mentor Admins cannot review applications, manage external reviewers, configure programmes, perform field verification, or conduct audit reviews.",
+    "keyword": ["permissions", "limitations"]
+  },
+  {
+    "id": "mentor_019",
+    "question": "What is the recommended workflow for Mentor Admins?",
+    "answer": "Approve pending mentors, run batch pairing, monitor unassigned entrepreneurs, respond to mentor questions promptly, process pending requests, launch surveys after pairing stabilises, and export programme reports.",
+    "keyword": ["workflow", "best practices"]
+  },
+  {
+    "id": "mentor_020",
+    "question": "Who should I contact if I need help as a Mentor Admin?",
+    "answer": "Contact your Super Admin or programme lead if you cannot log in, need programme or sector updates, experience batch pairing errors, or require additional Mentor Admin accounts.",
+    "keyword": ["support", "help", "super admin"]
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "id": "QA001",
+    "category": "Authentication",
+    "question": "How do I sign in as an EY QA user?",
+    "answer": "Select External Reviewer User/QA as the Profile Type, enter your email and password, and click Sign In.",
+    "keywords": ["login","qa","authentication"]
+  },
+  {
+    "id": "QA002",
+    "category": "Dashboard",
+    "question": "What dashboard cards are available for QA users?",
+    "answer": "The Application dashboard shows Pending Review and Reviewed cards.",
+    "keywords": ["dashboard","pending review"]
+  },
+  {
+    "id": "QA003",
+    "category": "Application Review",
+    "question": "What does Pending Review mean?",
+    "answer": "It means the reviewer has completed the first review and the application is waiting for QA review.",
+    "keywords": ["pending review","qa"]
+  },
+  {
+    "id": "QA004",
+    "category": "Application Review",
+    "question": "How do I complete a QA review?",
+    "answer": "Open a Pending Review application, review the details and reviewer comments, complete the QA fields, and submit.",
+    "keywords": ["submit","qa review"]
+  },
+  {
+    "id": "QA005",
+    "category": "Application Review",
+    "question": "What happens after I submit a QA review?",
+    "answer": "The application moves automatically from Pending Review to Reviewed.",
+    "keywords": ["reviewed","submission"]
+  },
+  {
+    "id": "QA006",
+    "category": "Pitching",
+    "question": "How do I complete a pitching QA review?",
+    "answer": "Open the pitching assignment, review the documents, answer the QA review criteria, and submit.",
+    "keywords": ["pitching","qa"]
+  },
+  {
+    "id": "QA007",
+    "category": "Permissions",
+    "question": "Can I review new applications before a reviewer?",
+    "answer": "No. QA review starts only after the reviewer has completed the first review.",
+    "keywords": ["review","permission"]
+  },
+  {
+    "id": "QA008",
+    "category": "Permissions",
+    "question": "Can I assign applications to reviewers?",
+    "answer": "No. Assignments are managed by the External Reviewer Admin.",
+    "keywords": ["assign","reviewer"]
+  },
+  {
+    "id": "QA009",
+    "category": "Permissions",
+    "question": "Can I configure review criteria?",
+    "answer": "No. Review criteria are configured by the External Reviewer Admin.",
+    "keywords": ["review criteria","permission"]
+  },
+  {
+    "id": "QA010",
+    "category": "Troubleshooting",
+    "question": "Why does my dashboard show Pending instead of Pending Review?",
+    "answer": "On the Application dashboard, this usually indicates the account is configured as a Reviewer instead of QA.",
+    "keywords": ["pending","dashboard"]
+  },
+  {
+    "id": "QA011",
+    "category": "Pitching",
+    "question": "Why does the Pitching dashboard use Pending instead of Pending Review?",
+    "answer": "This is expected behavior. The Pitching dashboard uses different labels while still routing QA assignments correctly.",
+    "keywords": ["pitching","pending"]
+  },
+  {
+    "id": "QA012",
+    "category": "Best Practices",
+    "question": "What should I do if reviewer comments are unclear?",
+    "answer": "Escalate the issue to the External Reviewer Admin instead of making assumptions.",
+    "keywords": ["comments","admin"]
+  },
+  {
+    "id": "QA013",
+    "category": "Best Practices",
+    "question": "Should I process older Pending Review items first?",
+    "answer": "Yes. Older assignments are usually closer to programme deadlines.",
+    "keywords": ["pending review","deadline"]
+  },
+  {
+    "id": "QA014",
+    "category": "Support",
+    "question": "Who should I contact if I am paired with the wrong reviewer?",
+    "answer": "Contact your External Reviewer Admin.",
+    "keywords": ["support","reviewer"]
+  },
+  {
+    "id": "QA015",
+    "category": "Support",
+    "question": "What should I do if reviewer work is incomplete?",
+    "answer": "Escalate the issue to the External Reviewer Admin rather than submitting an incomplete QA review.",
+    "keywords": ["incomplete","qa","support"]
+  }
+]

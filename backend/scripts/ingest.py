@@ -68,15 +68,23 @@ def ingest_faqs(root: Path) -> int:
             continue
 
         source = str(file_path.relative_to(root))
-        category = _category_for(file_path, root)
 
         documents, metadatas, ids = [], [], []
         for entry in entries:
             question = entry["question"].strip()
             answer = entry["answer"].strip()
+            keywords = entry.get("keywords") or []
             documents.append(f"Q: {question}\nA: {answer}")
-            metadatas.append({"source": source, "category": category, "question": question})
-            ids.append(f"{source}::{uuid.uuid4().hex[:8]}")
+            metadatas.append(
+                {
+                    "source": source,
+                    "category":  _category_for(file_path, root),
+                    "question": question,
+                    "id": entry["id"],
+                    "keywords": ", ".join(keywords),
+                }
+            )
+            ids.append(entry["id"])
 
         if not documents:
             print(f"skip (empty): {file_path}")

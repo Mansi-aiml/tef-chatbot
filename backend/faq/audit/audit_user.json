@@ -1,0 +1,122 @@
+[
+  {
+    "id": "audit_021",
+    "question": "Hi",
+    "answer": "Hello! Welcome to the TEFConnect Audit User Support Assistant. How can I assist you today?",
+    "keywords": ["hi", "hello", "greetings", "welcome", "audit", "audit user"]
+  },
+  {
+    "id": "audit_022",
+    "question": "What is an Audit User?",
+    "answer": "An Audit User is a field auditor who reviews entrepreneur applications assigned by an Audit Admin.",
+    "keywords": ["audit user", "field auditor", "auditor", "role", "audit admin", "application review"]
+  },
+  {
+    "id": "audit_023",
+    "question": "How do I sign in as an Audit User?",
+    "answer": "Open the TEFConnect Admin Portal, select Audit User as your profile type, enter your email and password, and click Sign In.",
+    "keywords": ["sign in", "login", "audit user", "admin portal", "email", "password"]
+  },
+  {
+    "id": "audit_024",
+    "question": "Why can't I see the Audit module?",
+    "answer": "The Audit module may not be enabled for your organization. Contact your Audit Admin or platform administrator.",
+    "keywords": ["audit module", "module missing", "cannot access", "audit admin", "permissions"]
+  },
+  {
+    "id": "audit_025",
+    "question": "What menu options are available to an Audit User?",
+    "answer": "Audit Users have access to the Dashboard and Application Management.",
+    "keywords": ["menu", "dashboard", "application management", "audit user", "navigation"]
+  },
+  {
+    "id": "audit_026",
+    "question": "What does the Dashboard display?",
+    "answer": "The Dashboard displays summary cards for In Progress Audit, Queried Application, Auditor Reviewed Application, and Admin-Responded Queries.",
+    "keywords": ["dashboard", "summary cards", "in progress audit", "queried application", "auditor reviewed"]
+  },
+  {
+    "id": "audit_027",
+    "question": "Can I filter my dashboard?",
+    "answer": "Yes. You can filter dashboard statistics by programme.",
+    "keywords": ["dashboard", "filter", "programme", "statistics"]
+  },
+  {
+    "id": "audit_028",
+    "question": "Which applications can I see?",
+    "answer": "You can only see entrepreneur applications assigned to your account.",
+    "keywords": ["assigned applications", "application access", "entrepreneur", "audit user"]
+  },
+  {
+    "id": "audit_029",
+    "question": "Which filters are available in Application Management?",
+    "answer": "You can filter by Programme, Country, Language, Audit Result, and Search.",
+    "keywords": ["application management", "filters", "programme", "country", "language", "audit result", "search"]
+  },
+  {
+    "id": "audit_030",
+    "question": "How do I start reviewing an application?",
+    "answer": "Open Application Management and click View on an assigned application.",
+    "keywords": ["review application", "application management", "view application", "assigned application"]
+  },
+  {
+    "id": "audit_031",
+    "question": "What actions can I choose for each audit criterion?",
+    "answer": "You can select Pass, Fail, or Query for each criterion.",
+    "keywords": ["pass", "fail", "query", "audit criteria", "review actions"]
+  },
+  {
+    "id": "audit_032",
+    "question": "Is a comment required for every criterion?",
+    "answer": "Yes. Every Pass, Fail, or Query action requires a mandatory comment.",
+    "keywords": ["comments", "mandatory comment", "audit criteria", "pass", "fail", "query"]
+  },
+  {
+    "id": "audit_033",
+    "question": "When should I use Raise Query?",
+    "answer": "Use Raise Query when at least one audit criterion requires clarification before a decision can be made.",
+    "keywords": ["raise query", "clarification", "audit review", "query application"]
+  },
+  {
+    "id": "audit_034",
+    "question": "When should I use Submit Audit Review?",
+    "answer": "Use Submit Audit Review when all audit criteria have been completed with Pass or Fail and no queries remain.",
+    "keywords": ["submit audit review", "audit review", "pass", "fail", "submit"]
+  },
+  {
+    "id": "audit_035",
+    "question": "What happens after I submit my review?",
+    "answer": "The application moves to Auditor Reviewed status, where the Audit Admin makes the final decision.",
+    "keywords": ["submit review", "auditor reviewed", "audit admin", "application status"]
+  },
+  {
+    "id": "audit_036",
+    "question": "Can I endorse or disqualify an application?",
+    "answer": "No. Only the Audit Admin can endorse or disqualify entrepreneur applications.",
+    "keywords": ["endorse", "disqualify", "audit admin", "permissions", "application decision"]
+  },
+  {
+    "id": "audit_037",
+    "question": "Can I assign applications to myself or another auditor?",
+    "answer": "No. Application assignment and reassignment are handled only by the Audit Admin.",
+    "keywords": ["assign application", "reassign application", "audit admin", "auditor", "assignment"]
+  },
+  {
+    "id": "audit_038",
+    "question": "What is the Audit Log?",
+    "answer": "The Audit Log is a read-only history of audit activity, application timeline, reviews, pitching, and LMS activity.",
+    "keywords": ["audit log", "history", "timeline", "reviews", "pitching", "LMS", "read only"]
+  },
+  {
+    "id": "audit_039",
+    "question": "Can I edit my review after submitting it?",
+    "answer": "No. After submission, only the Audit Admin can move the application back for further review.",
+    "keywords": ["edit review", "submitted review", "audit admin", "read only", "review changes"]
+  },
+  {
+    "id": "audit_040",
+    "question": "Who should I contact if I have no assigned applications or cannot access the portal?",
+    "answer": "Contact your Audit Admin for assignment, access, or password-related issues.",
+    "keywords": ["no assigned applications", "cannot access", "portal", "audit admin", "password", "support"]
+  }
+]
