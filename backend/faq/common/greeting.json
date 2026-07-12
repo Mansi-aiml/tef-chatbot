@@ -1,0 +1,82 @@
+[
+  {
+    "question": "Hi",
+    "answer": "Hello! Welcome to the TEFConnect Support Assistant. How can I help you today?"
+  },
+  {
+    "question": "Hello",
+    "answer": "Hi! I'm here to help you with any questions about the TEFConnect portal. What would you like to know?"
+  },
+  {
+    "question": "Hey",
+    "answer": "Hey! How can I assist you with the TEFConnect platform today?"
+  },
+  {
+    "question": "Good morning",
+    "answer": "Good morning! Welcome to the TEFConnect Support Assistant. How may I assist you today?"
+  },
+  {
+    "question": "Good afternoon",
+    "answer": "Good afternoon! I'm here to help you with any questions about TEFConnect."
+  },
+  {
+    "question": "Good evening",
+    "answer": "Good evening! How can I assist you with the TEFConnect portal today?"
+  },
+  {
+    "question": "How are you?",
+    "answer": "I'm doing well, thank you! How can I help you with TEFConnect today?"
+  },
+  {
+    "question": "Who are you?",
+    "answer": "I'm the TEFConnect Support Assistant. I can help answer questions about portal features, user roles, workflows, and common issues."
+  },
+  {
+    "question": "What can you do?",
+    "answer": "I can help you understand TEFConnect modules, explain workflows, guide you through portal features, troubleshoot common issues, and answer questions based on the available user manuals."
+  },
+  {
+    "question": "Can you help me?",
+    "answer": "Absolutely! Tell me what you're trying to do or describe the issue you're facing, and I'll do my best to help."
+  },
+  {
+    "question": "Thank you",
+    "answer": "You're welcome! If you have any other questions, feel free to ask."
+  },
+  {
+    "question": "Thanks",
+    "answer": "Happy to help! Let me know if there's anything else you need."
+  },
+  {
+    "question": "Bye",
+    "answer": "Goodbye! Have a great day, and feel free to return if you need more assistance."
+  },
+  {
+    "question": "See you later",
+    "answer": "See you later! I'll be here whenever you need help."
+  },
+  {
+    "question": "Goodbye",
+    "answer": "Goodbye! Wishing you a productive day. Feel free to reach out anytime."
+  },
+  {
+    "question": "I need help",
+    "answer": "Sure! Please tell me what you need help with, and I'll guide you through it."
+  },
+  {
+    "question": "What modules do you support?",
+    "answer": "I can assist with TEFConnect modules such as Audit, M&E, Enumerator, External Reviewer, EY QA, Super Admin, TEF Admin, and other supported portal features."
+  },
+  {
+    "question": "I don't know where to start",
+    "answer": "No problem! Tell me your role in TEFConnect or describe what you're trying to accomplish, and I'll guide you step by step."
+  },
+  {
+    "question": "Help",
+    "answer": "I'm here to help. Ask me about logging in, navigating the portal, completing tasks, understanding workflows, or resolving common issues in TEFConnect."
+  },
+  {
+    "question": "What is TEFConnect?",
+    "answer": "TEFConnect is a portal used to manage entrepreneur applications, reviews, audits, monitoring and evaluation, pitching, and other programme activities. I can help you understand its features and workflows."
+  }
+]
