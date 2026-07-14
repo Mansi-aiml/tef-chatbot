@@ -80,9 +80,14 @@ function App() {
     setLoading(true);
 
     try {
+      const history = messages
+        .filter((m) => !m.isError)
+        .map((m) => ({ role: m.isUser ? "user" : "assistant", content: m.text }));
+
       const payload = {
         user_id: "test_user",
         message: text,
+        history,
       };
       console.log("[Chat] Dispatching API request to http://127.0.0.1:8000/chat with payload:", payload);
 
