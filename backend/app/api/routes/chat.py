@@ -13,9 +13,15 @@ logger = logging.getLogger("app.api.routes.chat")
 router = APIRouter(prefix="/chat", tags=["chat"])
 
 
+class ChatMessage(BaseModel):
+    role: Literal["user", "assistant"]
+    content: str
+
+
 class ChatRequest(BaseModel):
     user_id: str
     message: str
+    history: list[ChatMessage] = []
 
 
 class ChatResponse(BaseModel):
@@ -32,7 +38,8 @@ class ChatResponse(BaseModel):
 def post_chat(request: ChatRequest, db: Session = Depends(get_db)) -> ChatResponse:
     logger.info("Received POST /chat request. User ID: %s, Message length: %d characters", request.user_id, len(request.message))
     try:
-        result = handle_message(db, request.user_id, request.message)
+        history = [{"role": m.role, "content": m.content} for m in request.history]
+        result = handle_message(db, request.user_id, request.message, history)
         logger.info(
             "Successfully processed message for User ID: %s. answered_by=%s confidence=%s escalated=%s",
             request.user_id, result.answered_by, result.confidence, result.escalated,

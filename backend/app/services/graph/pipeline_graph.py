@@ -12,7 +12,9 @@ from app.services.synthesis import synthesize
 
 
 def _refine_and_classify_node(state: ChatState) -> dict:
-    refined_query, intent, entities, is_chitchat = refine_and_classify(state["raw_message"])
+    refined_query, intent, entities, is_chitchat = refine_and_classify(
+        state["raw_message"], state.get("chat_history")
+    )
     return {
         "refined_query": refined_query,
         "intent": intent,

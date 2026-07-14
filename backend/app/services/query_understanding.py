@@ -25,11 +25,17 @@ def list_categories() -> list[str]:
 
 def _build_system_prompt(categories: list[str]) -> str:
     return (
-        "You will be given a raw user message, which may contain spelling "
-        "mistakes, typos, or shorthand. Process it in this order:\n"
+        "You will be given the recent conversation history (if any) followed by "
+        "a raw new user message, which may contain spelling mistakes, typos, or "
+        "shorthand. Process the new message in this order:\n"
         "1. First, correct it: fix spelling and typos, expand abbreviations, and "
         "make any implicit intent explicit, producing a clear, unambiguous, "
-        "self-contained query. Do not add information the user didn't imply.\n"
+        "self-contained query. If the new message is a follow-up that relies on "
+        "the conversation history (e.g. it uses pronouns like 'it'/'that', or "
+        "omits a subject already established earlier, such as 'what about the "
+        "deadline?'), rewrite it using the history so it stands alone without "
+        "needing the history to be understood. Do not add information the user "
+        "didn't imply, and do not pull in unrelated topics from earlier turns.\n"
         "2. Decide whether it is chitchat (greetings, thanks, farewells, small "
         "talk, or anything else that isn't actually asking for information) as "
         "opposed to a real question that needs an answer.\n"
@@ -45,14 +51,36 @@ def _build_system_prompt(categories: list[str]) -> str:
     )
 
 
-def refine_and_classify(message: str) -> tuple[str, str, dict[str, str], bool]:
+def _format_history(history: list[dict[str, str]]) -> str:
+    lines = []
+    for turn in history:
+        role = "User" if turn.get("role") == "user" else "Assistant"
+        content = (turn.get("content") or "").strip()
+        if content:
+            lines.append(f"{role}: {content}")
+    return "\n".join(lines)
+
+
+def refine_and_classify(
+    message: str, history: list[dict[str, str]] | None = None
+) -> tuple[str, str, dict[str, str], bool]:
     """Single LLM call that rewrites the raw message into a refined query,
     classifies it into an intent category with entities, and flags whether
     it's chitchat rather than a real question — replacing what used to be
-    two sequential LLM round-trips (refine, then extract)."""
+    two sequential LLM round-trips (refine, then extract). Recent chat
+    history is included so follow-up messages (pronouns, omitted subjects)
+    can be resolved into a self-contained query."""
     categories = list_categories()
     logger.info("QueryUnderstanding: Requesting refined query + intent/entities from LLM...")
-    raw = chat_completion(_build_system_prompt(categories), message).strip()
+
+    history_text = _format_history(history or [])
+    user_prompt = (
+        f"Conversation history:\n{history_text}\n\nNew message: {message}"
+        if history_text
+        else message
+    )
+
+    raw = chat_completion(_build_system_prompt(categories), user_prompt).strip()
     try:
         # Tolerate accidental markdown code fences around the JSON.
         cleaned = raw.strip("`").removeprefix("json").strip() if raw.startswith("```") else raw

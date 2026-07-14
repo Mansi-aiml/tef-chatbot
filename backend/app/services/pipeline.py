@@ -18,7 +18,12 @@ class ChatResult:
     sources: list[str] = field(default_factory=list)
 
 
-def handle_message(db: Session, user_id: str, message: str) -> ChatResult:
+_MAX_HISTORY_TURNS = 10
+
+
+def handle_message(
+    db: Session, user_id: str, message: str, history: list[dict[str, str]] | None = None
+) -> ChatResult:
     logger.info("Pipeline: Handling message for User %s. Message preview: '%s'", user_id, message[:60])
 
     graph = build_graph(db)
@@ -26,6 +31,7 @@ def handle_message(db: Session, user_id: str, message: str) -> ChatResult:
         {
             "user_id": user_id,
             "raw_message": message,
+            "chat_history": (history or [])[-_MAX_HISTORY_TURNS:],
             "faq_attempt": 0,
             "kb_attempt": 0,
         }
