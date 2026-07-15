@@ -69,12 +69,13 @@ def ingest_faqs(root: Path) -> int:
 
         source = str(file_path.relative_to(root))
 
-        documents, metadatas, ids = [], [], []
+        documents, metadatas, ids, questions = [], [], [], []
         for entry in entries:
             question = entry["question"].strip()
             answer = entry["answer"].strip()
             keywords = entry.get("keywords") or []
             documents.append(f"Q: {question}\nA: {answer}")
+            questions.append(question)
             metadatas.append(
                 {
                     "source": source,
@@ -90,7 +91,12 @@ def ingest_faqs(root: Path) -> int:
             print(f"skip (empty): {file_path}")
             continue
 
-        faqs.add(ids=ids, documents=documents, metadatas=metadatas)
+        # Embed the question only (not the stored Q+A document) so a short
+        # user query is compared against a same-length question vector
+        # instead of being diluted by answer text; the full Q+A is still
+        # stored and returned as the retrieved document.
+        embeddings = faqs._embedding_function(questions)
+        faqs.add(ids=ids, documents=documents, metadatas=metadatas, embeddings=embeddings)
         print(f"ingested {len(documents)} FAQ(s) from {source}")
         total_entries += len(documents)
     return total_entries
