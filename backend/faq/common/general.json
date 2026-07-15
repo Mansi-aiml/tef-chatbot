@@ -1,9 +1,15 @@
 [
   {
+    "id": "general_024",
+    "question": "What is TEF?",
+    "answer": "TEF is the Tony Elumelu Foundation, the pan-African organization behind the TEF Entrepreneurship Programme. It has trained over 2.5 million young Africans and disbursed seed capital to more than 24,000 entrepreneurs across all 54 African countries. TEFConnect is the digital platform TEF runs to deliver these programs.",
+    "keywords": ["TEF", "Tony Elumelu Foundation", "foundation", "who is TEF", "about TEF", "TEF Entrepreneurship Programme"]
+  },
+  {
     "id": "general_001",
     "question": "What is TEFConnect?",
-    "answer": "TEFConnect is the Tony Elumelu Foundation's digital platform where entrepreneurs can access learning resources, mentorship, business support, pitching opportunities, monitoring activities, and other program services.",
-    "keywords": ["TEFConnect", "Tony Elumelu Foundation", "platform", "entrepreneurs", "business support", "learning", "mentorship"]
+    "answer": "TEF Connect is the Tony Elumelu Foundation's digital platform where entrepreneurs can access learning resources, mentorship, business support, pitching opportunities, monitoring activities, and other program services.",
+    "keywords": ["TEFConnect","TEF","tef", "Tony Elumelu Foundation", "platform", "entrepreneurs", "business support", "learning", "mentorship"]
   },
   {
     "id": "general_002",
