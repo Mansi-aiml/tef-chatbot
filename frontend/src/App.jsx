@@ -117,6 +117,7 @@ function App() {
         supportEmail: data.support_email,
         supportPhone: data.support_phone,
         sources: data.sources,
+        followupSuggestions: data.followup_suggestions,
         time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       };
 
@@ -204,7 +205,7 @@ function App() {
             </div>
           </div>
         ) : (
-          messages.map((msg) => (
+          messages.map((msg, index) => (
             <div key={msg.id} className={`message-row ${msg.isUser ? "user-row" : "bot-row"}`}>
               <div className={`avatar ${msg.isUser ? "user-avatar" : "bot-avatar"}`}>
                 {msg.isUser ? "👤" : "🤖"}
@@ -232,8 +233,25 @@ function App() {
                       </div>
                     </div>
                   )}
+
+                  {/* Low-confidence fallback: clickable follow-up suggestion chips */}
+                  {!msg.isUser && msg.followupSuggestions?.length > 0 && (
+                    <div className="followup-chips">
+                      {msg.followupSuggestions.map((question, qIndex) => (
+                        <button
+                          key={qIndex}
+                          type="button"
+                          className="followup-chip"
+                          disabled={loading || index !== messages.length - 1}
+                          onClick={() => handleSendMessage(question)}
+                        >
+                          {question}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
-                
+
                 {/* Message Meta (time, layer & confidence) */}
                 <div className="message-meta">
                   <span>{msg.time}</span>

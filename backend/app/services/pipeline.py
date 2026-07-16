@@ -16,6 +16,7 @@ class ChatResult:
     answered_by: str | None = None
     escalation_reason: str | None = None
     sources: list[str] = field(default_factory=list)
+    followup_suggestions: list[str] = field(default_factory=list)
 
 
 _MAX_HISTORY_TURNS = 10
@@ -49,4 +50,5 @@ def handle_message(
         answered_by=result.get("answered_by"),
         escalation_reason=result.get("escalation_reason"),
         sources=result.get("sources", []),
+        followup_suggestions=result.get("followup_suggestions", []),
     )

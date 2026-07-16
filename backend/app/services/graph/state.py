@@ -28,3 +28,4 @@ class ChatState(TypedDict, total=False):
     escalated: bool
     escalation_reason: Literal["not_found", "low_confidence"] | None
     sources: list[str]
+    followup_suggestions: list[str]

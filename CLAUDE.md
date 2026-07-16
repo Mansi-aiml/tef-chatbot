@@ -11,9 +11,9 @@ A chatbot that answers user queries using FAQs and a knowledge base (RAG), orche
 5. **Knowledge base layer** (Layer 2, reached only if FAQ misses both attempts): semantic search against the KB Chroma collection, files under `backend/knowledgebase/`. Also retried up to 2 attempts.
 6. **Confidence gate** (KB-only): a hybrid of retrieval similarity + an LLM context-sufficiency score. This is the *only* point in the pipeline where confidence is scored.
 7. **Synthesis**: on an FAQ hit or a passing KB confidence score, the top-k retrieved chunks + refined query are sent to the LLM to produce the final answer (one shared node for both success paths).
-8. **Escalation** (Layer 3, fallback): reached if neither layer finds a match, or KB confidence is below threshold. Creates a `SupportTicket` row and returns a message with the configured support email/phone.
+8. **Escalation check** (reached if neither layer finds a match, or KB confidence is below threshold): rather than escalating immediately, counts consecutive unsuccessful turns from `chat_history` (`app/services/followup.py`). If under `max_followup_attempts`, routes to **follow-up suggestion** — a short message plus 3-5 LLM-generated, topic-grounded clarifying questions returned as a structured `followup_suggestions: list[str]` field (not embedded in the answer text), so the frontend renders them as clickable chips that submit the chosen question as the next user message. Returned like a normal (non-escalated) answer. Only once that many consecutive unsuccessful turns have occurred does it route to **escalation** (Layer 3), which creates a `SupportTicket` row and returns a message with the configured support email/phone.
 
-When working on any stage of this pipeline, preserve this routing order (FAQ → knowledge base → escalation), the 2-attempt retry on each of the FAQ/KB layers, and the fact that confidence scoring only gates the KB layer — never send a low-confidence KB answer directly to the user, and never gate FAQ answers on confidence.
+When working on any stage of this pipeline, preserve this routing order (FAQ → knowledge base → follow-up suggestion → escalation), the 2-attempt retry on each of the FAQ/KB layers, and the fact that confidence scoring only gates the KB layer — never send a low-confidence KB answer directly to the user, and never gate FAQ answers on confidence.
 
 ## Tech stack
 
@@ -36,6 +36,7 @@ When working on any stage of this pipeline, preserve this routing order (FAQ →
 - `backend/app/services/retrieval/shared.py` — shared query-with-retry / query-reformulation helpers used by both layers
 - `backend/app/services/retrieval/confidence.py` — KB-only confidence gate (retrieval similarity + LLM context-sufficiency hybrid)
 - `backend/app/services/synthesis.py` — shared answer-synthesis node (used by both FAQ and KB success paths)
+- `backend/app/services/followup.py` — follow-up-question node + the escalation-decision router (counts consecutive unsuccessful turns from `chat_history`, gated by `settings.max_followup_attempts`)
 - `backend/app/services/support.py` — support ticket creation + escalation node
 - `backend/app/db/models.py` — `SupportTicket` table
 - `backend/faq/<Category>/*.json` — FAQ content, one JSON array of `{question, answer}` per file, category folders mirror `backend/knowledgebase/`

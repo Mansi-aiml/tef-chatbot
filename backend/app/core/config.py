@@ -28,6 +28,11 @@ class Settings(BaseSettings):
     confidence_threshold: float = 0.6
     confidence_retrieval_weight: float = 0.4
 
+    # Number of consecutive low-confidence/not-found turns for which we offer
+    # follow-up questions instead of escalating. Once this many consecutive
+    # unsuccessful turns have occurred, the next unsuccessful turn escalates.
+    max_followup_attempts: int = 1
+
     support_email: str = "support@example.com"
     support_phone: str = "+1-555-0100-000"
 

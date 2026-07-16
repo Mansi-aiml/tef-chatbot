@@ -32,6 +32,7 @@ class ChatResponse(BaseModel):
     support_email: str | None = None
     support_phone: str | None = None
     sources: list[str] = []
+    followup_suggestions: list[str] = []
 
 
 @router.post("", response_model=ChatResponse)
@@ -52,6 +53,7 @@ def post_chat(request: ChatRequest, db: Session = Depends(get_db)) -> ChatRespon
             support_email=settings.support_email if result.escalated else None,
             support_phone=settings.support_phone if result.escalated else None,
             sources=result.sources,
+            followup_suggestions=result.followup_suggestions,
         )
     except Exception as e:
         logger.error("Exception occurred while handling chat message for User ID: %s: %s", request.user_id, str(e), exc_info=True)

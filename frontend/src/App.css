@@ -297,6 +297,39 @@
   white-space: normal;
 }
 
+/* Clickable follow-up suggestion chips under a low-confidence fallback message */
+.followup-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.followup-chip {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border-light);
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-align: left;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-red);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.followup-chip:hover:not(:disabled) {
+  background: var(--primary-red-light);
+  border-color: var(--primary-red);
+  transform: translateY(-1px);
+}
+
+.followup-chip:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
 .markdown-content > *:first-child {
   margin-top: 0;
 }
