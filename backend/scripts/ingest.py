@@ -62,6 +62,7 @@ def ingest_knowledge_base(root: Path) -> int:
 def ingest_faqs(root: Path) -> int:
     total_entries = 0
     for file_path in sorted(root.rglob("*.json")):
+        print(f"Reading: {file_path}")
         entries = json.loads(file_path.read_text(encoding="utf-8"))
         if not isinstance(entries, list):
             print(f"skip (not a JSON array): {file_path}")
