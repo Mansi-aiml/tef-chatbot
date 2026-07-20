@@ -23,6 +23,7 @@ _SYSTEM_PROMPT = (
     "- Bullet or numbered lists for steps, options, or multiple related items.\n"
     "- Bold text to highlight key terms, not entire sentences.\n\n"
 
+
     "If the context partially answers the question:\n"
     "- First provide the useful information available.\n"
     "- Then briefly mention any missing details in a positive way if necessary.\n"

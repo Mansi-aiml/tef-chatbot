@@ -27,8 +27,8 @@ Fill in `.env`:
 
 | Key | Purpose |
 |---|---|
-| `GROQ_API_KEY` | Groq API key, used for every LLM call in the pipeline |
-| `GROQ_MODEL` | Groq model id (default `llama-3.3-70b-versatile`) |
+| `OPENAI_API_KEY` | OPENAI API key, used for every LLM call in the pipeline |
+| `OPENAI_MODEL` | OPENAI model id (default `gpt-4o-mini`) |
 | `DATABASE_URL` | Postgres connection string, used only for `support_tickets` |
 | `CHROMA_PERSIST_DIR` | Local folder Chroma persists to (default `./chroma_data`) |
 | `FAQ_DATA_DIR` / `KB_DATA_DIR` | Source folders for ingestion (default `./faq`, `./knowledgebase`) |
@@ -42,7 +42,7 @@ Fill in `.env`:
 | `SUPPORT_EMAIL` / `SUPPORT_PHONE` | Contact info surfaced to the user on escalation |
 | `FRONTEND_ORIGIN` | Allowed CORS origin for the React app |
 
-`GROQ_API_KEY` and `DATABASE_URL` are secrets — `.env` is gitignored, never commit it.
+`OPENAI_API_KEY` and `DATABASE_URL` are secrets — `.env` is gitignored, never commit it.
 
 You also need a reachable Postgres database matching `DATABASE_URL` (only used for `support_tickets` — create the role/db yourself if they don't exist yet, e.g. `createuser <user> && createdb -O <user> tef_chatbot`). Tables are created automatically on app startup (`Base.metadata.create_all` in `app/main.py`), no migration step needed.
 

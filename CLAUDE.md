@@ -20,7 +20,7 @@ When working on any stage of this pipeline, preserve this routing order (FAQ →
 - Frontend: React (Vite) — `frontend/`
 - Backend: Python (FastAPI) — `backend/`
 - Orchestration: LangGraph (`backend/app/services/graph/`) — the pipeline is a `StateGraph` with retry loops (FAQ/KB) and conditional edges (confidence gate, escalation). LangChain is used only inside the ingestion script for document loaders/text splitting, not for the graph itself.
-- LLM: Groq (`backend/app/services/llm.py`)
+- LLM: OPENAI (`backend/app/services/llm.py`)
 - Vector DB: Chroma, persisted to `backend/chroma_data/`, two collections (`faqs`, `knowledge_base`) via `backend/app/services/vectorstore/chroma_client.py`. Embeddings are Chroma's bundled local default (no external embeddings API).
 - Database: PostgreSQL via SQLAlchemy (`backend/app/db/`) — used only for `SupportTicket` rows now (FAQs moved to files, see below).
 
@@ -49,4 +49,21 @@ When working on any stage of this pipeline, preserve this routing order (FAQ →
 
 - Backend: run from `backend/` with a venv (`python3 -m venv .venv`), deps in `requirements.txt`, config via `.env` (see `.env.example`) loaded through `app/core/config.py` (pydantic-settings).
 - Frontend: standard Vite React app in `frontend/`, run with `npm install && npm run dev`.
-- Secrets (`GROQ_API_KEY`, `DATABASE_URL`) live in `backend/.env`, which is gitignored — never commit it.
+- Secrets (`OPENAI_API_KEY`, `DATABASE_URL`) live in `backend/.env`, which is gitignored — never commit it.
+
+## Automatic Change Logging
+
+After completing any task that modifies project files:
+
+For every task that modifies one or more project files:
+
+- Ensure `docs/CLAUDE_LOG.md` exists.
+- If it does not exist, create it automatically.
+- After completing the task, append a new entry to the log.
+- Each entry must contain:
+  - Date & Time
+  - Files Modified (comma-separated)
+  - One-line Comment
+- Never overwrite or delete previous entries.
+- If no project files were modified, do not update the log.
+- Consider updating `docs/CLAUDE_LOG.md` a required part of every code change.
