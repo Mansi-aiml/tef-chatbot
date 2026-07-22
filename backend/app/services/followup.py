@@ -17,27 +17,39 @@ _FOLLOWUP_PREFIX = (
     "related questions I can help with:"
 )
 
-_MIN_SUGGESTIONS = 3
-_MAX_SUGGESTIONS = 5
+_MIN_SUGGESTIONS = 2
+_MAX_SUGGESTIONS = 3
 
 _SYSTEM_PROMPT = (
     "A user asked a question on the TEF (Tony Elumelu Foundation) platform, but "
     "the retrieved knowledge base context wasn't confident/complete enough to "
     "answer directly. Do not answer the question and do not invent facts.\n\n"
-    f"Suggest {_MIN_SUGGESTIONS}-{_MAX_SUGGESTIONS} follow-up questions that:\n"
+    "First, judge whether the context excerpts below are actually relevant to "
+    "the user's question and topic. If they are not relevant — e.g. they "
+    "discuss a different feature, module, or workflow than what the user "
+    "asked about — respond with an empty JSON array `[]` and nothing else. "
+    "Do not suggest questions about the unrelated content just because it was "
+    "retrieved.\n\n"
+    f"Otherwise, suggest {_MIN_SUGGESTIONS}-{_MAX_SUGGESTIONS} follow-up "
+    "questions that:\n"
     "- Are specific to the TEF platform's actual features and workflows (e.g. "
     "mentorship pairing, M&E enumerator/reviewer roles, audit processes, "
     "pitching, account/role management) — never generic chatbot filler like "
     "'can you clarify?' or 'what do you mean?'.\n"
-    "- Are each answerable from the context excerpts and/or topic given below; "
-    "do not invent a question about something not grounded in them.\n"
+    "- Are each directly related to the user's question and answerable from "
+    "the context excerpts given below; do not invent a question about "
+    "something not grounded in them, and never pull in an unrelated topic or "
+    "module just because it appeared in the excerpts.\n"
     "- Stay closely related to the user's original topic, helping narrow down "
     "what they're looking for.\n"
     "- Are phrased as complete, standalone questions a user could click and "
     "send as-is — no 'or', no placeholders, no leading numbering/bullets.\n\n"
-    "Respond with ONLY a JSON array of question strings, nothing else. "
-    'Example JSON output: ["How do I reset my password?", "How does a Mentor '
-    'Admin pair an entrepreneur with a mentor?"]'
+    "If you cannot come up with any question meeting all of the above, "
+    "respond with an empty JSON array `[]` instead of forcing a weak or "
+    "unrelated one.\n\n"
+    "Respond with ONLY a JSON array of question strings (or `[]`), nothing "
+    "else. Example JSON output: [\"How do I reset my password?\", \"How does "
+    'a Mentor Admin pair an entrepreneur with a mentor?"]'
 )
 
 
@@ -58,9 +70,11 @@ def _parse_suggestions(raw: str) -> list[str]:
         except json.JSONDecodeError:
             parsed = None
         if isinstance(parsed, list):
-            questions = [str(q).strip() for q in parsed if str(q).strip()]
-            if questions:
-                return questions[:_MAX_SUGGESTIONS]
+            # A well-formed (possibly empty) JSON array is authoritative: the
+            # model deliberately returns `[]` when the context is irrelevant
+            # or no valid suggestion can be grounded in it. Only fall through
+            # to line-parsing when the model didn't emit valid JSON at all.
+            return [str(q).strip() for q in parsed if str(q).strip()][:_MAX_SUGGESTIONS]
 
     # Models sometimes ignore the "JSON only" instruction and fall back to a
     # bullet/numbered list despite it; salvage that instead of returning nothing.
@@ -71,11 +85,22 @@ def _parse_suggestions(raw: str) -> list[str]:
 
 def suggest_followups(state: ChatState) -> dict:
     context = _build_context(state)
-    user_prompt = f"User's question: {state['refined_query']}\nTopic: {state.get('intent') or 'general'}"
-    if context:
-        user_prompt += f"\n\nRelated context excerpts (ground the suggested questions in these):\n{context}"
-    else:
-        user_prompt += "\n\nNo related context excerpts were retrieved; ground suggestions in the topic only."
+
+    # No relevant context was retrieved at all, so there is nothing to ground
+    # a directly-related follow-up in — skip the LLM call and let the
+    # escalation router send this straight to the ticket flow instead of
+    # returning empty/unrelated suggestions.
+    if not context:
+        logger.info(
+            "Followup: No retrieved context for '%s' (intent=%s); skipping suggestions, routing to escalation.",
+            state["refined_query"], state.get("intent"),
+        )
+        return {"escalated": False, "sources": [], "followup_suggestions": []}
+
+    user_prompt = (
+        f"User's question: {state['refined_query']}\nTopic: {state.get('intent') or 'general'}"
+        f"\n\nRelated context excerpts (ground the suggested questions in these):\n{context}"
+    )
 
     raw = chat_completion(_SYSTEM_PROMPT, user_prompt).strip()
     suggestions = _parse_suggestions(raw)
@@ -84,12 +109,22 @@ def suggest_followups(state: ChatState) -> dict:
         "Followup: Suggested %d clarifying question(s) for '%s' (intent=%s)",
         len(suggestions), state["refined_query"], state.get("intent"),
     )
+    if not suggestions:
+        return {"escalated": False, "sources": [], "followup_suggestions": []}
+
     return {
         "answer": _FOLLOWUP_PREFIX,
         "escalated": False,
         "sources": [],
         "followup_suggestions": suggestions,
     }
+
+
+def followup_result_router(state: ChatState) -> str:
+    """Routes to escalation when suggest_followups couldn't produce any
+    suggestion directly related to the user's query (irrelevant/missing
+    context, or the model returned `[]`), instead of surfacing empty chips."""
+    return "done" if state.get("followup_suggestions") else "escalate"
 
 
 def _consecutive_unsuccessful_attempts(chat_history: list[dict]) -> int:

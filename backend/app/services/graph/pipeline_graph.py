@@ -2,7 +2,11 @@ from langgraph.graph import END, StateGraph
 from sqlalchemy.orm import Session
 
 from app.services.chitchat import chitchat_reply
-from app.services.followup import escalation_decision_router, suggest_followups
+from app.services.followup import (
+    escalation_decision_router,
+    followup_result_router,
+    suggest_followups,
+)
 from app.services.graph.state import ChatState
 from app.services.query_understanding import refine_and_classify
 from app.services.retrieval.confidence import confidence_router, score_confidence
@@ -78,10 +82,14 @@ def build_graph(db: Session):
         escalation_decision_router,
         {"clarify": "suggest_followups", "escalate": "escalate"},
     )
+    graph.add_conditional_edges(
+        "suggest_followups",
+        followup_result_router,
+        {"done": END, "escalate": "escalate"},
+    )
 
     graph.add_edge("chitchat", END)
     graph.add_edge("synthesize", END)
-    graph.add_edge("suggest_followups", END)
     graph.add_edge("escalate", END)
 
     return graph.compile()
