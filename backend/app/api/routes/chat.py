@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.db.session import get_db
 from app.services.pipeline import handle_message
+from app.services.support import create_support_ticket
 
 logger = logging.getLogger("app.api.routes.chat")
 router = APIRouter(prefix="/chat", tags=["chat"])
@@ -58,3 +59,41 @@ def post_chat(request: ChatRequest, db: Session = Depends(get_db)) -> ChatRespon
     except Exception as e:
         logger.error("Exception occurred while handling chat message for User ID: %s: %s", request.user_id, str(e), exc_info=True)
         raise e
+
+
+class FeedbackTicketRequest(BaseModel):
+    user_id: str
+    query: str
+    draft_answer: str | None = None
+
+
+class FeedbackTicketResponse(BaseModel):
+    ticket_id: str
+    support_email: str
+    support_phone: str
+
+
+@router.post("/feedback/ticket", response_model=FeedbackTicketResponse)
+def post_feedback_ticket(request: FeedbackTicketRequest, db: Session = Depends(get_db)) -> FeedbackTicketResponse:
+    """Creates a support ticket from a user's negative end-of-chat feedback.
+
+    Independent of the LangGraph escalation path (Layer 3) — this fires from
+    the frontend's post-conversation feedback prompt, not from a low-confidence
+    KB answer, so it always carries confidence=0.0 and its own reason tag.
+    """
+    logger.info("Received POST /chat/feedback/ticket request. User ID: %s", request.user_id)
+    ticket = create_support_ticket(
+        db,
+        request.user_id,
+        request.query,
+        draft_answer=request.draft_answer,
+        confidence=0.0,
+        intent=None,
+        entities=None,
+        escalation_reason="user_feedback_negative",
+    )
+    return FeedbackTicketResponse(
+        ticket_id=str(ticket.id),
+        support_email=settings.support_email,
+        support_phone=settings.support_phone,
+    )

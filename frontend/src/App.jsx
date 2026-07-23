@@ -2,13 +2,53 @@ import { useState, useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import "./App.css";
 
+// Whole-message (not substring) matches that signal the user is wrapping up
+// the conversation, e.g. "thanks!" or "ok that's all bye" — used to trigger
+// the end-of-chat feedback prompt.
+const ENDING_PHRASES = [
+  "bye", "goodbye", "good bye", "see you", "see ya", "cya",
+  "thanks", "thank you", "thanks a lot", "thank you so much", "thank you very much",
+  "thats all", "that is all", "no thanks", "nope thanks", "thats it",
+  "nothing else", "no thats all", "im done", "all good", "ok thanks",
+  "okay thanks", "ok thank you", "alright thanks", "thats all i needed",
+  "thats everything",
+];
+
+function isConversationEnding(text) {
+  const normalized = text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!normalized) return false;
+  return ENDING_PHRASES.some(
+    (phrase) =>
+      normalized === phrase ||
+      normalized.endsWith(` ${phrase}`) ||
+      normalized.startsWith(`${phrase} `)
+  );
+}
+
+// How long the chat can sit idle (no new user/bot messages) before the
+// feedback prompt is shown automatically.
+const INACTIVITY_MS = 90 * 1000;
+
 function App() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isConnected, setIsConnected] = useState(true);
+  // null | "asking" | "unsatisfied" | "ticketCreated"
+  const [feedbackStage, setFeedbackStage] = useState(null);
+  const [chatEnded, setChatEnded] = useState(false);
+  const [creatingTicket, setCreatingTicket] = useState(false);
+  const [ticketInfo, setTicketInfo] = useState(null);
+  const [rating, setRating] = useState(0);
+  const [comment, setComment] = useState("");
+  const [ratingSubmitted, setRatingSubmitted] = useState(false);
   const chatEndRef = useRef(null);
   const textareaRef = useRef(null);
+  const inactivityTimerRef = useRef(null);
 
   // Suggestions for empty state — real questions verified against the FAQ/KB content
   const suggestions = [
@@ -45,6 +85,22 @@ function App() {
     checkConnection();
   }, []);
 
+  // Prompt for feedback after 1.5 minutes with no new user/bot message, as
+  // long as the chat is actually underway and no feedback flow is already
+  // in progress. Resets on every message and re-arms automatically because
+  // this effect re-runs whenever `messages` changes.
+  useEffect(() => {
+    if (inactivityTimerRef.current) clearTimeout(inactivityTimerRef.current);
+    if (chatEnded || feedbackStage || loading || messages.length === 0) {
+      return;
+    }
+    inactivityTimerRef.current = setTimeout(() => {
+      console.log("[Feedback] 1.5 minutes of inactivity — showing feedback prompt.");
+      setFeedbackStage("asking");
+    }, INACTIVITY_MS);
+    return () => clearTimeout(inactivityTimerRef.current);
+  }, [messages, loading, feedbackStage, chatEnded]);
+
   // Handle textarea autosize
   useEffect(() => {
     if (textareaRef.current) {
@@ -61,6 +117,10 @@ function App() {
     }
     if (loading) {
       console.warn("[Chat] System is currently loading another response. Aborting.");
+      return;
+    }
+    if (chatEnded || feedbackStage) {
+      console.warn("[Chat] Chat is ended or awaiting feedback response. Aborting send.");
       return;
     }
 
@@ -123,6 +183,11 @@ function App() {
 
       console.log("[Chat] Appending assistant response to chat UI:", botMsg);
       setMessages((prev) => [...prev, botMsg]);
+
+      if (isConversationEnding(text)) {
+        console.log("[Feedback] Conversation-ending phrase detected — will prompt for feedback.");
+        setTimeout(() => setFeedbackStage("asking"), 600);
+      }
     } catch (err) {
       console.error("[Chat] Error occurred during message processing:", err);
       const errorMsg = {
@@ -151,9 +216,86 @@ function App() {
     if (window.confirm("Are you sure you want to clear your chat history?")) {
       console.log("[Chat] Chat history cleared.");
       setMessages([]);
+      setFeedbackStage(null);
+      setChatEnded(false);
+      setTicketInfo(null);
+      setRating(0);
+      setComment("");
+      setRatingSubmitted(false);
     } else {
       console.log("[Chat] Clear chat cancelled by user.");
     }
+  };
+
+  const handleFeedbackSatisfied = () => {
+    console.log("[Feedback] User is satisfied. Ending chat.");
+    setFeedbackStage(null);
+    setChatEnded(true);
+  };
+
+  const handleFeedbackUnsatisfied = () => {
+    console.log("[Feedback] User is not satisfied. Offering continue/ticket options.");
+    setFeedbackStage("unsatisfied");
+  };
+
+  const handleContinueChat = () => {
+    console.log("[Feedback] User chose to continue chatting.");
+    setFeedbackStage(null);
+  };
+
+  const handleCreateTicket = async () => {
+    console.log("[Feedback] User requested a support ticket after negative feedback.");
+    setCreatingTicket(true);
+    try {
+      const lastUserMsg = [...messages].reverse().find((m) => m.isUser);
+      const lastBotMsg = [...messages].reverse().find((m) => !m.isUser && !m.isError);
+
+      const response = await fetch("http://127.0.0.1:8000/chat/feedback/ticket", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          user_id: "test_user",
+          query: lastUserMsg?.text || "User reported dissatisfaction with the chatbot session.",
+          draft_answer: lastBotMsg?.text || null,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to create support ticket");
+      }
+
+      const data = await response.json();
+      console.log("[Feedback] Support ticket created:", data);
+      setTicketInfo({ supportEmail: data.support_email, supportPhone: data.support_phone });
+    } catch (err) {
+      console.error("[Feedback] Error creating support ticket:", err);
+      setTicketInfo({ error: true });
+    } finally {
+      setFeedbackStage("ticketCreated");
+      setChatEnded(true);
+      setCreatingTicket(false);
+    }
+  };
+
+  const startNewChat = () => {
+    console.log("[Chat] Starting a new chat session.");
+    setMessages([]);
+    setFeedbackStage(null);
+    setChatEnded(false);
+    setTicketInfo(null);
+    setRating(0);
+    setComment("");
+    setRatingSubmitted(false);
+  };
+
+  const handleRating = (star) => {
+    console.log("[Feedback] Star rating selected:", star);
+    setRating(star);
+  };
+
+  const handleSubmitRating = () => {
+    console.log("[Feedback] Rating submitted:", { rating, comment: comment.trim() || null });
+    setRatingSubmitted(true);
   };
 
   return (
@@ -196,9 +338,7 @@ function App() {
                   onClick={() => handleSendMessage(s.text)}
                 >
                   <span>{s.label}</span>
-                  <p style={{ color: "var(--text-muted)", fontSize: "13px", marginTop: "4px" }}>
-                    {s.text}
-                  </p>
+                  <p className="suggestion-desc">{s.text}</p>
                   <span className="suggestion-arrow">→</span>
                 </button>
               ))}
@@ -210,8 +350,8 @@ function App() {
               <div className={`avatar ${msg.isUser ? "user-avatar" : "bot-avatar"}`}>
                 {msg.isUser ? "👤" : "🤖"}
               </div>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <div className={`message-bubble ${msg.isUser ? "user-bubble" : "bot-bubble"}`} style={msg.isError ? { borderLeft: "4px solid #e71d36" } : {}}>
+              <div className="message-content">
+                <div className={`message-bubble ${msg.isUser ? "user-bubble" : "bot-bubble"} ${msg.isError ? "error-bubble" : ""}`}>
                   {msg.isUser ? (
                     msg.text
                   ) : (
@@ -242,7 +382,7 @@ function App() {
                           key={qIndex}
                           type="button"
                           className="followup-chip"
-                          disabled={loading || index !== messages.length - 1}
+                          disabled={loading || chatEnded || !!feedbackStage || index !== messages.length - 1}
                           onClick={() => handleSendMessage(question)}
                         >
                           {question}
@@ -269,6 +409,110 @@ function App() {
           ))
         )}
 
+        {/* End-of-chat feedback prompt: fired on an ending phrase or 1.5min inactivity */}
+        {feedbackStage === "asking" && (
+          <div className="message-row bot-row">
+            <div className="avatar bot-avatar">🤖</div>
+            <div className="feedback-card">
+              <p>I hope I was able to help you. Has your query been resolved?</p>
+              <div className="feedback-actions">
+                <button className="feedback-btn feedback-btn-positive" onClick={handleFeedbackSatisfied}>
+                  👍 Yes, all good
+                </button>
+                <button className="feedback-btn feedback-btn-negative" onClick={handleFeedbackUnsatisfied}>
+                  👎 Not quite
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {feedbackStage === "unsatisfied" && (
+          <div className="message-row bot-row">
+            <div className="avatar bot-avatar">🤖</div>
+            <div className="feedback-card">
+              <p>Sorry about that. Would you like to keep chatting, or should I connect you with our support team?</p>
+              <div className="feedback-actions">
+                <button className="feedback-btn" onClick={handleContinueChat} disabled={creatingTicket}>
+                  Continue Chat
+                </button>
+                <button className="feedback-btn feedback-btn-negative" onClick={handleCreateTicket} disabled={creatingTicket}>
+                  {creatingTicket ? "Creating ticket..." : "Create Support Ticket"}
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {feedbackStage === "ticketCreated" && (
+          <div className="message-row bot-row">
+            <div className="avatar bot-avatar">🤖</div>
+            <div className="feedback-card">
+              {ticketInfo?.error ? (
+                <p>Sorry, something went wrong creating your support ticket. Please try again shortly or reach out to our support team directly.</p>
+              ) : (
+                <p>
+                  A support ticket has been created and our team will follow up with you shortly.
+                  {(ticketInfo?.supportEmail || ticketInfo?.supportPhone) && (
+                    <> You can also reach them directly at {ticketInfo.supportEmail}{ticketInfo.supportEmail && ticketInfo.supportPhone ? " or " : ""}{ticketInfo.supportPhone}.</>
+                  )}
+                </p>
+              )}
+            </div>
+          </div>
+        )}
+        {chatEnded && (
+          <div className="message-row bot-row">
+            <div className="avatar bot-avatar">🤖</div>
+            <div className="feedback-card">
+              <p>Thank you for chatting with us.</p>
+
+              {ratingSubmitted ? (
+                <p className="feedback-subtext">We appreciate your feedback! 🙏</p>
+              ) : (
+                <>
+                  <p className="feedback-subtext">
+                    We'd appreciate your feedback. Please rate your experience.
+                  </p>
+                  <div className="star-rating">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <button
+                        key={star}
+                        type="button"
+                        className={`star-btn ${star <= rating ? "star-btn-active" : ""}`}
+                        onClick={() => handleRating(star)}
+                        aria-label={`Rate ${star} star${star > 1 ? "s" : ""}`}
+                      >
+                        ⭐
+                      </button>
+                    ))}
+                  </div>
+                  <textarea
+                    className="comment-input"
+                    placeholder="Any comments? (optional)"
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
+                    rows="2"
+                  />
+                  <div className="feedback-actions">
+                    <button
+                      className="feedback-btn feedback-btn-positive"
+                      onClick={handleSubmitRating}
+                      disabled={!rating}
+                    >
+                      Submit Feedback
+                    </button>
+                  </div>
+                </>
+              )}
+
+              <button className="new-chat-btn" onClick={startNewChat}>
+                Start New Chat
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Loading Indicator */}
         {loading && (
           <div className="message-row bot-row">
@@ -292,16 +536,16 @@ function App() {
             ref={textareaRef}
             className="chat-input"
             rows="1"
-            placeholder="Type your message here..."
+            placeholder={chatEnded ? "This chat has ended. Start a new chat to continue." : "Type your message here..."}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyPress}
-            disabled={loading}
+            disabled={loading || chatEnded || !!feedbackStage}
           />
           <button
             className="send-btn"
             onClick={() => handleSendMessage()}
-            disabled={loading || !message.trim()}
+            disabled={loading || !message.trim() || chatEnded || !!feedbackStage}
           >
             <span className="send-icon">▲</span>
           </button>

@@ -59,7 +59,6 @@ def _build_context(state: ChatState) -> str:
 
 
 _JSON_ARRAY_RE = re.compile(r"\[.*\]", re.DOTALL)
-_LEADING_MARKER_RE = re.compile(r"^[\-\*\d.\)]+\s*")
 
 
 def _parse_suggestions(raw: str) -> list[str]:
@@ -70,17 +69,15 @@ def _parse_suggestions(raw: str) -> list[str]:
         except json.JSONDecodeError:
             parsed = None
         if isinstance(parsed, list):
-            # A well-formed (possibly empty) JSON array is authoritative: the
-            # model deliberately returns `[]` when the context is irrelevant
-            # or no valid suggestion can be grounded in it. Only fall through
-            # to line-parsing when the model didn't emit valid JSON at all.
             return [str(q).strip() for q in parsed if str(q).strip()][:_MAX_SUGGESTIONS]
 
-    # Models sometimes ignore the "JSON only" instruction and fall back to a
-    # bullet/numbered list despite it; salvage that instead of returning nothing.
-    logger.warning("Followup: No JSON array found in LLM response '%s'. Falling back to line parsing.", raw)
-    lines = [_LEADING_MARKER_RE.sub("", line).strip() for line in raw.splitlines()]
-    return [line for line in lines if line][:_MAX_SUGGESTIONS]
+    # No valid JSON array in the response — treat this the same as the model
+    # deliberately returning `[]`. We never salvage a raw-text/line-based
+    # guess here: any unparseable or malformed response must fall through to
+    # escalation (see followup_result_router) rather than surface a
+    # fabricated, possibly irrelevant "suggestion" to the user.
+    logger.warning("Followup: No valid JSON array in LLM response '%s'. Treating as no suggestions.", raw)
+    return []
 
 
 def suggest_followups(state: ChatState) -> dict:
