@@ -11,6 +11,7 @@ from app.services.graph.state import ChatState
 from app.services.query_understanding import refine_and_classify
 from app.services.retrieval.confidence import confidence_router, score_confidence
 from app.services.retrieval.faq_layer import faq_router, faq_search
+from app.services.retrieval.faq_relevance import check_faq_relevance, faq_relevance_router
 from app.services.retrieval.kb_layer import kb_router, kb_search
 from app.services.support import make_escalate_node
 from app.services.synthesis import synthesize
@@ -48,6 +49,7 @@ def build_graph(db: Session):
     graph.add_node("refine_and_classify", _refine_and_classify_node)
     graph.add_node("chitchat", chitchat_reply)
     graph.add_node("faq_search", faq_search)
+    graph.add_node("check_faq_relevance", check_faq_relevance)
     graph.add_node("kb_search", kb_search)
     graph.add_node("score_confidence", score_confidence)
     graph.add_node("synthesize", synthesize)
@@ -65,7 +67,12 @@ def build_graph(db: Session):
     graph.add_conditional_edges(
         "faq_search",
         faq_router,
-        {"found": "synthesize", "retry": "faq_search", "give_up": "kb_search"},
+        {"found": "check_faq_relevance", "retry": "faq_search", "give_up": "kb_search"},
+    )
+    graph.add_conditional_edges(
+        "check_faq_relevance",
+        faq_relevance_router,
+        {"relevant": "synthesize", "not_relevant": "kb_search"},
     )
     graph.add_conditional_edges(
         "kb_search",

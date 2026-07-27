@@ -15,6 +15,7 @@ class ChatState(TypedDict, total=False):
     faq_attempt: int
     faq_query: str
     faq_hits: list[RetrievedChunk]
+    faq_relevant: bool | None
 
     kb_attempt: int
     kb_query: str
