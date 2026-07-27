@@ -11,3 +11,7 @@ Comment: Added end-of-chat feedback flow — client-side detection of conversati
 ## 2026-07-23 16:45
 Files Modified: frontend/src/App.jsx, frontend/src/App.css
 Comment: Fixed the end-of-chat star rating (was calling an undefined handleRating, crashing on click), added an optional comment textarea alongside it, and cleaned up leftover dead code/inline styles in the message and suggestion-card markup.
+
+## 2026-07-27 00:00
+Files Modified: frontend/src/App.css
+Comment: Darkened the feedback star rating buttons (grayscale+brightness filter instead of low opacity) and added a circular border so they're clearly visible against the white feedback card background.
