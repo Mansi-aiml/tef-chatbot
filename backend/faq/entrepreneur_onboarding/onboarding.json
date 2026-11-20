@@ -1,0 +1,131 @@
+{
+  "title": "Entrepreneur Onboarding - FAQs",
+  "platform": "TEFConnect",
+  "faqs": [
+    {
+      "id": 1,
+      "question": "How can the entrepreneur register on the platform?",
+      "answer": "By going on the website of the TEFConnect. Thereafter, the entrepreneur can register through Join Now by selecting New User, or through the registration option available from Sign In."
+    },
+    {
+      "id": 2,
+      "question": "The entrepreneur is already registered. How can the entrepreneur access the account?",
+      "answer": "Select Sign in or Join Now → Existing User and log in using the existing account."
+    },
+    {
+      "id": 3,
+      "question": "What happens after the entrepreneur registers?",
+      "answer": "A verification email is sent to the entrepreneur's registered email address. The entrepreneur must complete email verification before logging in."
+    },
+    {
+      "id": 4,
+      "question": "Can the entrepreneur log in without verifying the entrepreneur's email?",
+      "answer": "No. Email verification is required before the entrepreneur can successfully log in."
+    },
+    {
+      "id": 5,
+      "question": "What if the entrepreneur did not receive or complete the verification?",
+      "answer": "When the entrepreneur attempts to log in without completing verification, an option to resend the email verification is provided."
+    },
+    {
+      "id": 6,
+      "question": "What does the entrepreneur need to do after logging in?",
+      "answer": "The entrepreneur needs to complete the profile by filling in the required fields and updating the information."
+    },
+    {
+      "id": 7,
+      "question": "Can the entrepreneur edit the profile later?",
+      "answer": "Yes, the platform provides an option to edit the entrepreneur's profile."
+    },
+    {
+      "id": 8,
+      "question": "Can the entrepreneur access training after login?",
+      "answer": "Yes, General Training can be accessed from the profile-completion stage."
+    },
+    {
+      "id": 9,
+      "question": "How does the entrepreneur start an application?",
+      "answer": "Go to the Dashboard, select the relevant programme, and click Start Application."
+    },
+    {
+      "id": 10,
+      "question": "What happens before the entrepreneur starts the application?",
+      "answer": "The entrepreneur needs to review the Terms and Conditions and either accept or decline them."
+    },
+    {
+      "id": 11,
+      "question": "What are the main application steps?",
+      "answer": "The application consists of Business Information, Business Industry, Business Acumen, and Declaration."
+    },
+    {
+      "id": 12,
+      "question": "What information is required under Business Information?",
+      "answer": "The entrepreneur needs to complete the required information under Business Fundamentals and Business Information."
+    },
+    {
+      "id": 13,
+      "question": "What does the entrepreneur need to provide under Business Industry?",
+      "answer": "The entrepreneur needs to complete the Business and Industry Overview and Business Industry sections according to the instructions."
+    },
+    {
+      "id": 14,
+      "question": "What should the entrepreneur mention about the business under Industry Description?",
+      "answer": "The entrepreneur should provide information that explains what the entrepreneur's business stands for and how it is unique."
+    },
+    {
+      "id": 15,
+      "question": "What are Key Industry Trends?",
+      "answer": "The entrepreneur needs to provide relevant information about the key trends associated with the entrepreneur's business industry, as instructed in the application."
+    },
+    {
+      "id": 16,
+      "question": "Can the entrepreneur leave the application incomplete and continue later?",
+      "answer": "Yes. If the entrepreneur cannot complete the application in one session, the entrepreneur can resume it from where the entrepreneur left off."
+    },
+    {
+      "id": 17,
+      "question": "Can the entrepreneur edit the Business Acumen test after submitting it?",
+      "answer": "No. The Business Acumen test cannot be edited once submitted."
+    },
+    {
+      "id": 18,
+      "question": "What comes after Business Acumen?",
+      "answer": "The entrepreneur proceeds to the Declaration section, where the entrepreneur can also provide certain additional information."
+    },
+    {
+      "id": 19,
+      "question": "Can the entrepreneur review the application before final submission?",
+      "answer": "Yes. The entrepreneur can view the inputs and edit them where editing is permitted before final submission."
+    },
+    {
+      "id": 20,
+      "question": "Can the entrepreneur edit the application after final submission?",
+      "answer": "No. Once the application is finally submitted, the entrepreneur cannot edit or resubmit it."
+    },
+    {
+      "id": 21,
+      "question": "What happens after the entrepreneur submits the application?",
+      "answer": "The entrepreneur will see a successful-submission confirmation page with a Back to Dashboard button."
+    },
+    {
+      "id": 22,
+      "question": "What happens after the entrepreneur's application is shortlisted?",
+      "answer": "The entrepreneur will receive access to the LMS module and will be assigned a mentor."
+    },
+    {
+      "id": 23,
+      "question": "Can the entrepreneur change the application after it has been submitted?",
+      "answer": "No. The provided process states that the application cannot be edited or resubmitted after final submission."
+    },
+    {
+      "id": 24,
+      "question": "What should the entrepreneur do before final submission?",
+      "answer": "Review the entrepreneur's application carefully and make any permitted corrections before submitting it finally."
+    },
+    {
+      "id": 25,
+      "question": "When will the entrepreneur get access to LMS and mentorship?",
+      "answer": "According to the provided process, access to LMS and mentor assignment occurs after the entrepreneur's application is shortlisted by the administrator."
+    }
+  ]
+}

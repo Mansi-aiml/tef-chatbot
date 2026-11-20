@@ -1,0 +1,216 @@
+{
+  "title": "Mentorship - FAQs",
+  "platform": "TEFConnect",
+  "faqs": [
+    {
+      "id": 1,
+      "question": "What is the Mentorship module?",
+      "answer": "The Mentorship module connects you with an assigned mentor who can guide you throughout your entrepreneurial journey."
+    },
+    {
+      "id": 2,
+      "question": "When will I get access to the Mentorship module?",
+      "answer": "You get the access of the mentorship module when you have completed the LMS. Mentor assignment can take place at any stage of your programme after onboarding. You can engage with your mentor once he is assigned to you."
+    },
+    {
+      "id": 3,
+      "question": "Why can't I see the Mentorship module?",
+      "answer": "The Mentorship module may not yet be available to you based on your current programme status or eligibility. If you believe you should have access, use the available support option."
+    },
+    {
+      "id": 4,
+      "question": "Why is the Mentorship module greyed out?",
+      "answer": "The module may be disabled because the required access or eligibility conditions have not yet been met. If you believe you should have access, use the available support option."
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of the mentorship programme?",
+      "answer": "The programme provides personalized guidance and support from experienced mentors to help you grow."
+    },
+    {
+      "id": 6,
+      "question": "How do I know who my mentor is?",
+      "answer": "Open the Mentorship module to view your assigned mentor's details."
+    },
+    {
+      "id": 7,
+      "question": "How can I view my mentor's profile?",
+      "answer": "Click on your mentor's name or Know More to view their profile and details."
+    },
+    {
+      "id": 8,
+      "question": "What details of my mentor can I see?",
+      "answer": "You can view your mentor's available contact details and profile information."
+    },
+    {
+      "id": 9,
+      "question": "Why has no mentor been assigned to me yet?",
+      "answer": "Make sure you have completed the required onboarding process. If your onboarding is complete, your mentor assignment may still be under process."
+    },
+    {
+      "id": 10,
+      "question": "How is my mentor assigned?",
+      "answer": "Your mentor is assigned through the programme's mentorship assignment process."
+    },
+    {
+      "id": 11,
+      "question": "Can I choose my own mentor?",
+      "answer": "Mentor assignment is managed through the programme's mentorship process. The current process does not specify that entrepreneurs can select their own mentor. However, you can ask for mentor change if you are not satisfied with your mentor's response."
+    },
+    {
+      "id": 12,
+      "question": "How do I ask a question to my mentor?",
+      "answer": "Go to the Mentorship module and click Ask Query, enter your question, and submit it."
+    },
+    {
+      "id": 13,
+      "question": "What type of questions can I ask my mentor?",
+      "answer": "You can ask questions related to your business, challenges, or areas where you need guidance from your mentor."
+    },
+    {
+      "id": 14,
+      "question": "How can I view my previous questions?",
+      "answer": "Open the Mentorship module to see the list of your submitted queries and their status."
+    },
+    {
+      "id": 15,
+      "question": "How do I know if my mentor has replied?",
+      "answer": "The status of your query will be updated when your mentor responds, and the response will be visible in the Mentorship module."
+    },
+    {
+      "id": 16,
+      "question": "Is there any notification when my mentor replies?",
+      "answer": "You can check the status of your query and view your mentor's response in the Mentorship module."
+    },
+    {
+      "id": 17,
+      "question": "Can I edit my question after submitting it?",
+      "answer": "Yes, but only until your mentor submits a response."
+    },
+    {
+      "id": 18,
+      "question": "Can I delete my question?",
+      "answer": "Yes, you can delete your query before your mentor responds."
+    },
+    {
+      "id": 19,
+      "question": "Why can't I edit or delete my question anymore?",
+      "answer": "Once your mentor responds, the query becomes read-only and cannot be modified."
+    },
+    {
+      "id": 20,
+      "question": "Can I ask multiple questions?",
+      "answer": "Yes. You can submit multiple queries to your mentor."
+    },
+    {
+      "id": 21,
+      "question": "How long does it take for my mentor to respond?",
+      "answer": "Response times may vary depending on your mentor's availability. You can monitor the status of your query in the Mentorship module."
+    },
+    {
+      "id": 22,
+      "question": "What should I do if my mentor has not replied?",
+      "answer": "Check the status of your query. If the delay continues and you are dissatisfied with the mentorship experience, you may request a mentor change."
+    },
+    {
+      "id": 23,
+      "question": "Where can I view my mentor's response?",
+      "answer": "Open the Mentorship module and view the response against your submitted query."
+    },
+    {
+      "id": 24,
+      "question": "How do I request a new mentor?",
+      "answer": "Open Mentor Change Request/Re-pairing Request, select the applicable reason, and submit your request."
+    },
+    {
+      "id": 25,
+      "question": "When should I request a mentor change?",
+      "answer": "You may request a new mentor if your mentor is unresponsive, provides unsatisfactory guidance, or there is another valid reason."
+    },
+    {
+      "id": 26,
+      "question": "What reasons can I select for requesting a new mentor?",
+      "answer": "Common reasons include an unresponsive mentor, delayed response, unsatisfactory answers, or another reason that you can describe."
+    },
+    {
+      "id": 27,
+      "question": "Can I submit more than one mentor change request?",
+      "answer": "No. Only one active mentor change request can be submitted at a time."
+    },
+    {
+      "id": 28,
+      "question": "How can I check the status of my mentor change request?",
+      "answer": "The status is available in the Mentorship module and will be updated after your request is reviewed."
+    },
+    {
+      "id": 29,
+      "question": "Can my mentor change request be rejected?",
+      "answer": "Mentor change requests are subject to rejection and approval."
+    },
+    {
+      "id": 30,
+      "question": "What happens after I submit a mentor change request?",
+      "answer": "Your request remains under review until a decision is made."
+    },
+    {
+      "id": 31,
+      "question": "Will my current mentor continue supporting me until a new mentor is assigned?",
+      "answer": "Yes. Your current mentor remains assigned until your mentor change request is approved and a new mentor is assigned."
+    },
+    {
+      "id": 32,
+      "question": "What happens after my mentor change request is approved?",
+      "answer": "A new mentor will be assigned to you."
+    },
+    {
+      "id": 33,
+      "question": "Can I submit another mentor change request while one is pending?",
+      "answer": "No. Only one active mentor change request can be submitted at a time."
+    },
+    {
+      "id": 34,
+      "question": "What is the mentorship feedback survey?",
+      "answer": "It is a survey through which you provide feedback about your mentorship experience and your assigned mentor."
+    },
+    {
+      "id": 35,
+      "question": "Is the mentorship survey mandatory?",
+      "answer": "When the survey is assigned to you, you should complete it within the specified timeline. However, it is not mandatory."
+    },
+    {
+      "id": 36,
+      "question": "Can I edit my survey after submitting it?",
+      "answer": "No. Once submitted, the survey responses cannot be changed."
+    },
+    {
+      "id": 37,
+      "question": "Why should I complete the mentorship survey?",
+      "answer": "Your feedback helps evaluate the mentorship experience and supports mentor performance assessment."
+    },
+    {
+      "id": 38,
+      "question": "What are my responsibilities as a mentee?",
+      "answer": "Communicate with your mentor, ask relevant questions, participate in the mentorship process, and complete the required feedback survey within the specified timeline."
+    },
+    {
+      "id": 39,
+      "question": "What can I expect from my mentor?",
+      "answer": "Your mentor can answer your queries and provide practical guidance based on their experience."
+    },
+    {
+      "id": 40,
+      "question": "How can I make the most of my mentoring sessions?",
+      "answer": "Prepare your questions, explain your business challenges clearly, and consider the guidance provided by your mentor."
+    },
+    {
+      "id": 41,
+      "question": "Can I contact my mentor outside the Mentorship module?",
+      "answer": "The platform provides mentor contact details and a query facility. Use the available mentorship features for communication and support."
+    },
+    {
+      "id": 42,
+      "question": "How can I report an issue with the Mentorship module?",
+      "answer": "Use the support option available on the platform or contact TEF support for technical issues."
+    }
+  ]
+}

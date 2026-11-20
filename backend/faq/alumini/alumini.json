@@ -1,0 +1,1071 @@
+{
+  "title": "Alumni Module - FAQs",
+  "platform": "TEFConnect",
+  "sections": [
+    {
+      "section": "A. General Questions",
+      "faqs": [
+        {
+          "id": 1,
+          "question": "What is the Alumni Community?",
+          "answer": "The Alumni Community is TEFConnect’s networking and engagement space for funded TEF entrepreneurs. It allows Alumni to share updates, connect with members, join groups, exchange messages, access learning resources, attend events and explore business opportunities."
+        },
+        {
+          "id": 2,
+          "question": "Who can access the Alumni Community?",
+          "answer": "Funded TEF entrepreneurs who are recognised as Alumni within TEFConnect, Community manager, investor and mentor can access the Alumni Community."
+        },
+        {
+          "id": 3,
+          "question": "Do I need to register separately for the Alumni Community?",
+          "answer": "No. Alumni are added to the community when they are recognised as funded TEF entrepreneurs. Separate registration within the Alumni Community is not required."
+        },
+        {
+          "id": 4,
+          "question": "Where can I access the Alumni Community?",
+          "answer": "You can access it through TEFConnect Web by opening the Alumni Community section."
+        },
+        {
+          "id": 5,
+          "question": "What are the main features available in the Alumni Community?",
+          "answer": "The main features include Home Feed, My Network, Profile, Groups, Messages, Knowledge Centre, Events, Value Added Opportunities, Leaderboard, Notifications and Settings."
+        },
+        {
+          "id": 6,
+          "question": "Is there a separate Jobs section in the Alumni Community?",
+          "answer": "No. There is no separate Jobs board. Business offers, funding opportunities and growth programmes are available under Value Added Opportunities."
+        },
+        {
+          "id": 7,
+          "question": "Can I use the Alumni Community to connect with other entrepreneurs?",
+          "answer": "Yes. You can discover members, view their profiles, send connection requests, follow members and communicate through Messages."
+        }
+      ]
+    },
+    {
+      "section": "B. Access and Login",
+      "faqs": [
+        {
+          "id": 8,
+          "question": "How do I access the Alumni Community?",
+          "answer": [
+            "Open TEFConnect Web.",
+            "Sign in using the Entrepreneur option generally available on the login screen.",
+            "Complete your main profile if prompted.",
+            "Open Alumni Community using the tab of Alumni Module."
+          ]
+        },
+        {
+          "id": 9,
+          "question": "Which login option should I use as an Alumni member?",
+          "answer": "Use the Entrepreneur login option generally available on the TEFConnect login screen."
+        },
+        {
+          "id": 10,
+          "question": "Do I need to complete my main TEFConnect profile before accessing the Alumni Community?",
+          "answer": "If the platform prompts you to complete your main profile, you should do so. An incomplete main profile may restrict access to the rest of the application."
+        },
+        {
+          "id": 11,
+          "question": "Why am I unable to access the Alumni Community?",
+          "answer": "Access is associated with recognition as a funded TEF entrepreneur. An incomplete main profile may also restrict access."
+        },
+        {
+          "id": 12,
+          "question": "Is there a separate Alumni registration form?",
+          "answer": "No. Separate registration within the Alumni Community is not required."
+        }
+      ]
+    },
+    {
+      "section": "C. Alumni Profile Management",
+      "faqs": [
+        {
+          "id": 13,
+          "question": "What is my Alumni profile?",
+          "answer": "Your Alumni profile represents your professional and business presence within the community. It may display your profile information, posts, connections, groups, badges, community ranking, events, resources and bookmarks."
+        },
+        {
+          "id": 14,
+          "question": "How can I update my Alumni profile?",
+          "answer": [
+            "Open Alumni Community.",
+            "Navigate to Profile.",
+            "Select Edit Profile.",
+            "Update the available details, such as Bio, Business Information, Funding Year and Country.",
+            "Set your profile visibility.",
+            "Upload a profile or cover picture if the options are available.",
+            "Save your changes."
+          ]
+        },
+        {
+          "id": 15,
+          "question": "What information can I update in my profile?",
+          "answer": "You can update the available profile fields, including Bio, Business Information, Funding Year, Country and other fields displayed in the application."
+        },
+        {
+          "id": 16,
+          "question": "Can I upload a profile picture?",
+          "answer": "Yes. You can upload a profile picture if the upload option is available."
+        },
+        {
+          "id": 17,
+          "question": "Can I upload a cover picture?",
+          "answer": "Yes. You can upload a cover picture if the upload option is available."
+        },
+        {
+          "id": 18,
+          "question": "Can I make my profile private?",
+          "answer": "Yes. You can set your profile visibility to Public or Private."
+        },
+        {
+          "id": 19,
+          "question": "What happens when my profile is Public?",
+          "answer": "Your profile is available for discovery according to the community's visibility behaviour."
+        },
+        {
+          "id": 20,
+          "question": "What happens when my profile is Private?",
+          "answer": "Your profile has restricted visibility."
+        },
+        {
+          "id": 21,
+          "question": "Does my profile visibility affect my posts?",
+          "answer": "Yes. Post visibility follows the author's profile visibility setting."
+        },
+        {
+          "id": 22,
+          "question": "Can I schedule my profile to become Public on a future date?",
+          "answer": "No. The manual does not describe a separate option to schedule when your profile becomes Public."
+        },
+        {
+          "id": 23,
+          "question": "What information can I view from my profile?",
+          "answer": "You can view profile information, posts, connections, groups, badges, community ranking, events, resources and bookmarks."
+        },
+        {
+          "id": 24,
+          "question": "Can I view my community ranking from my profile?",
+          "answer": "Yes. Community ranking is included among the profile information and activity that may be displayed."
+        }
+      ]
+    },
+    {
+      "section": "D. Home Feed",
+      "faqs": [
+        {
+          "id": 25,
+          "question": "What is the Home Feed?",
+          "answer": "The Home Feed displays posts from members you relate to and from authors whose profiles are Public."
+        },
+        {
+          "id": 26,
+          "question": "How can I create a post?",
+          "answer": [
+            "Open Home Feed.",
+            "Enter your update in the post composition area.",
+            "Select the required format: Text, Photo, Video or Poll.",
+            "Add the relevant content.",
+            "Select Post."
+          ]
+        },
+        {
+          "id": 27,
+          "question": "What types of posts can I publish?",
+          "answer": "You can publish text posts, photo posts, video posts and polls."
+        },
+        {
+          "id": 28,
+          "question": "Can I like another member's post?",
+          "answer": "Yes. You can like posts displayed in the Home Feed."
+        },
+        {
+          "id": 29,
+          "question": "Can I comment on a post?",
+          "answer": "Yes. You can comment on posts."
+        },
+        {
+          "id": 30,
+          "question": "Can I reply to another member's comment?",
+          "answer": "Yes, where the reply option is available."
+        },
+        {
+          "id": 31,
+          "question": "Can I delete my own post?",
+          "answer": "Yes. You can delete your own posts."
+        },
+        {
+          "id": 32,
+          "question": "Can I delete my own comments?",
+          "answer": "Yes. You can delete your own comments."
+        },
+        {
+          "id": 33,
+          "question": "Why can I not see a particular member's post?",
+          "answer": "The Home Feed displays posts from members you are connected with and from authors whose profiles are Public. Post visibility follows the author's profile visibility setting."
+        },
+        {
+          "id": 34,
+          "question": "What information is displayed in the Home Feed side panels?",
+          "answer": "Depending on availability, the side panels may display Suggested Connections, Trending Groups, Upcoming Events and a Leaderboard Preview."
+        }
+      ]
+    },
+    {
+      "section": "E. My Network and Connections",
+      "faqs": [
+        {
+          "id": 35,
+          "question": "What is My Network?",
+          "answer": "My Network allows you to discover other community members, view profiles, manage connection requests, follow members and initiate conversations."
+        },
+        {
+          "id": 36,
+          "question": "How can I search for other members?",
+          "answer": "Open My Network and search using a member's Name, Business, Industry or Sector, or Country."
+        },
+        {
+          "id": 37,
+          "question": "Can I filter members in My Network?",
+          "answer": "Yes. Available filters include Country, Industry and Funding Year."
+        },
+        {
+          "id": 38,
+          "question": "What sections are available in My Network?",
+          "answer": "The available sections include Suggested Connections, Pending Requests, Followers, Following, Mutual Connections, Investor Discovery and Mentor Discovery."
+        },
+        {
+          "id": 39,
+          "question": "How can I send a connection request?",
+          "answer": [
+            "Open My Network.",
+            "Search for a member or select a suggested connection.",
+            "Open the member's profile or person card.",
+            "Select Connect.",
+            "Wait for the recipient to accept the request."
+          ]
+        },
+        {
+          "id": 40,
+          "question": "What are the different connection statuses?",
+          "answer": "The connection statuses are None, Pending and Connected."
+        },
+        {
+          "id": 41,
+          "question": "What happens after I send a connection request?",
+          "answer": "The connection status changes to Pending until the recipient accepts the request."
+        },
+        {
+          "id": 42,
+          "question": "Can I accept or ignore an incoming connection request?",
+          "answer": "Yes. You can accept or ignore incoming connection requests."
+        },
+        {
+          "id": 43,
+          "question": "Can I remove an existing connection?",
+          "answer": "Yes. You can use the Remove option for an existing connection."
+        },
+        {
+          "id": 44,
+          "question": "What is the Follow option?",
+          "answer": "Follow is a networking action available on a member card where the option is displayed. You can view members in the Followers and Following sections."
+        },
+        {
+          "id": 45,
+          "question": "Are Connect and Follow two separate networking systems?",
+          "answer": "No. The manual describes Connect and Follow as networking actions within the same connection model."
+        },
+        {
+          "id": 46,
+          "question": "Can I view another member's profile?",
+          "answer": "Yes. You can open a member's profile from My Network or the relevant member card."
+        },
+        {
+          "id": 47,
+          "question": "Can I message a member from My Network?",
+          "answer": "Yes. You can use the Message option available on a member's Network or Profile card."
+        },
+        {
+          "id": 48,
+          "question": "Can I search for investors and mentors?",
+          "answer": "Yes. My Network includes Investor Discovery and Mentor Discovery sections."
+        }
+      ]
+    },
+    {
+      "section": "F. Messages and Communication",
+      "faqs": [
+        {
+          "id": 49,
+          "question": "What is the Messages feature?",
+          "answer": "Messages allows Alumni to communicate through direct conversations between two members and group conversations within community groups."
+        },
+        {
+          "id": 50,
+          "question": "What types of conversations are available?",
+          "answer": "Direct conversations (one-to-one) and Group Chat within a community group."
+        },
+        {
+          "id": 51,
+          "question": "How can I start a direct conversation?",
+          "answer": [
+            "Open Messages or locate the member through My Network or Profile.",
+            "Select the Message option on the member's card.",
+            "Enter your message.",
+            "Attach a file or image if required.",
+            "Select Send."
+          ]
+        },
+        {
+          "id": 52,
+          "question": "Do I need to be connected to a member before sending a direct message?",
+          "answer": "No. The manual states that there is no friend or connection requirement enforced in chat to start a direct message."
+        },
+        {
+          "id": 53,
+          "question": "How can I send a message in a group?",
+          "answer": [
+            "Open a community group you belong to.",
+            "Select the Group Chat tab.",
+            "Enter your message in the group message field.",
+            "Select Send."
+          ]
+        },
+        {
+          "id": 54,
+          "question": "Can I send text messages?",
+          "answer": "Yes. Text messages are supported."
+        },
+        {
+          "id": 55,
+          "question": "Can I reply to messages?",
+          "answer": "Yes. Replies are supported."
+        },
+        {
+          "id": 56,
+          "question": "Can I react to a message using emojis?",
+          "answer": "Yes. Emoji reactions are supported where available. The manual states that one reaction per person per message is supported."
+        },
+        {
+          "id": 57,
+          "question": "Can I attach files to a message?",
+          "answer": "Yes. The Messages feature supports image, video, audio and document attachments. Attachment options may differ between the main Messages inbox and Group Chat."
+        },
+        {
+          "id": 58,
+          "question": "What are the approximate attachment size limits?",
+          "answer": "The manual lists the following approximate limits: Images – 10 MB; Videos – 50 MB; Audio – 20 MB; Documents – 15 MB; and up to 5 attachments per message. These are the limits stated in the manual and are not independently verified against the current live application."
+        },
+        {
+          "id": 59,
+          "question": "Can I mark a conversation as read?",
+          "answer": "Yes. You can mark conversations as read."
+        },
+        {
+          "id": 60,
+          "question": "Can I view unread conversation counts?",
+          "answer": "Yes. Unread conversation counts are available in the inbox."
+        },
+        {
+          "id": 61,
+          "question": "Do messages update while I am using the application?",
+          "answer": "Yes. Live updates are supported while you are signed in and using the application."
+        },
+        {
+          "id": 62,
+          "question": "Can I edit a message after sending it?",
+          "answer": "No. Editing a sent message is not included in the documented Messages functionality."
+        },
+        {
+          "id": 63,
+          "question": "Can I delete a sent message for everyone?",
+          "answer": "No. Delete for everyone is not included in the documented Messages functionality."
+        },
+        {
+          "id": 64,
+          "question": "Can I mute a conversation?",
+          "answer": "The manual states that the Alumni Messages experience does not include a mute conversation option."
+        },
+        {
+          "id": 65,
+          "question": "Can I leave a chat?",
+          "answer": "The manual states that a leave-chat option is not included in the Alumni Messages experience."
+        },
+        {
+          "id": 66,
+          "question": "Will I receive a separate phone push notification for every new message?",
+          "answer": "The manual states that separate phone push notifications for every new chat message are not included. Chat updates are mainly available in the application while you are connected."
+        },
+        {
+          "id": 67,
+          "question": "Can I send a message to myself?",
+          "answer": "No. Alumni cannot send messages to their own account."
+        },
+        {
+          "id": 68,
+          "question": "Is Messages the same as Mentorship Q&A?",
+          "answer": "No. Messages is the Alumni Community's direct and group chat feature. Mentorship Q&A is a separate Mentorship-related feature and is not the Alumni private messaging inbox."
+        }
+      ]
+    },
+    {
+      "section": "G. Groups and Community Participation",
+      "faqs": [
+        {
+          "id": 69,
+          "question": "What are Groups in the Alumni Community?",
+          "answer": "Groups provide a space for Alumni to interact with members who share common interests, cohorts, programmes or industries."
+        },
+        {
+          "id": 70,
+          "question": "What sections are available under Groups?",
+          "answer": "Discover, My Groups, Trending, Recommended, Public and Private."
+        },
+        {
+          "id": 71,
+          "question": "How can I discover a group?",
+          "answer": [
+            "Open Groups.",
+            "Browse the available sections.",
+            "Select a group.",
+            "Review its details and membership type.",
+            "Join or request access depending on the group type."
+          ]
+        },
+        {
+          "id": 72,
+          "question": "How can I join a Public Group?",
+          "answer": "Open Groups, find the required public group and select Join."
+        },
+        {
+          "id": 73,
+          "question": "How can I join a Private Group?",
+          "answer": "Open the private group, submit a request to join and wait for the Group Owner or Admin to approve the request."
+        },
+        {
+          "id": 74,
+          "question": "Will I get immediate access after requesting to join a Private Group?",
+          "answer": "No. Submitting a request does not provide immediate access. You must wait for approval from the Group Owner or Admin."
+        },
+        {
+          "id": 75,
+          "question": "Can a group have membership restrictions?",
+          "answer": "Yes. Groups may restrict membership based on Country, Programme, Year or Funding Year, and Industry."
+        },
+        {
+          "id": 76,
+          "question": "Why can I not join a particular group?",
+          "answer": "The group may be private and require approval, or you may not meet its applicable membership restrictions, such as Country, Programme, Year or Industry."
+        },
+        {
+          "id": 77,
+          "question": "What can I do after joining a group?",
+          "answer": "You can participate in Discussions, use Group Chat, view Members, access Media, participate in Polls and view the About section."
+        },
+        {
+          "id": 78,
+          "question": "Can I create my own group?",
+          "answer": "Yes. The manual describes a Create Group option. You can enter a group name, select Public or Private visibility and configure the available membership restrictions."
+        },
+        {
+          "id": 79,
+          "question": "Can I create a Private Group?",
+          "answer": "Yes. The group creation process allows you to select Public or Private visibility."
+        },
+        {
+          "id": 80,
+          "question": "Can I leave a group?",
+          "answer": "Yes. You can leave a group using the available option."
+        },
+        {
+          "id": 81,
+          "question": "Can I report a group?",
+          "answer": "Yes. You can report a group using the available reporting option."
+        },
+        {
+          "id": 82,
+          "question": "Can I view the members of a group?",
+          "answer": "Yes. The Members section allows you to view group membership."
+        },
+        {
+          "id": 83,
+          "question": "Can I participate in group polls?",
+          "answer": "Yes. You can participate in Polls where available."
+        }
+      ]
+    },
+    {
+      "section": "H. Knowledge Centre",
+      "faqs": [
+        {
+          "id": 84,
+          "question": "What is the Knowledge Centre?",
+          "answer": "The Knowledge Centre provides access to learning and reference materials shared with the Alumni Community."
+        },
+        {
+          "id": 85,
+          "question": "What types of resources are available in the Knowledge Centre?",
+          "answer": "The available categories include Guides, Playbooks, Videos and Templates."
+        },
+        {
+          "id": 86,
+          "question": "How can I access a resource?",
+          "answer": [
+            "Open the Knowledge Centre.",
+            "Browse the available content.",
+            "Select a category.",
+            "Select Open to view the resource details.",
+            "Use the available file-opening or download option."
+          ]
+        },
+        {
+          "id": 87,
+          "question": "Can I download resources from the Knowledge Centre?",
+          "answer": "Yes. You can open and download resources using the available options."
+        },
+        {
+          "id": 88,
+          "question": "Can I save a resource for later?",
+          "answer": "The manual mentions saving resources where the option is available."
+        },
+        {
+          "id": 89,
+          "question": "Can I see how many times a resource has been viewed or downloaded?",
+          "answer": "Yes. Resource details may display the number of views and downloads."
+        },
+        {
+          "id": 90,
+          "question": "Can I upload my own resources to the Knowledge Centre?",
+          "answer": "No, you cannot upload your resource for knowledge centre."
+        }
+      ]
+    },
+    {
+      "section": "I. Events",
+      "faqs": [
+        {
+          "id": 91,
+          "question": "What is the Events section?",
+          "answer": "The Events section allows Alumni to discover community events, review event details, manage RSVPs and access past event information or replays where available."
+        },
+        {
+          "id": 92,
+          "question": "What event categories or filters are available?",
+          "answer": "Upcoming, My RSVPs, Virtual, In Person and Past."
+        },
+        {
+          "id": 93,
+          "question": "How can I view event details?",
+          "answer": "Open Events, select the relevant event and view its details."
+        },
+        {
+          "id": 94,
+          "question": "How can I RSVP to an event?",
+          "answer": [
+            "Open Events.",
+            "Navigate to Upcoming or the relevant event filter.",
+            "Select an event.",
+            "Open its details.",
+            "Select RSVP or Going, as displayed."
+          ]
+        },
+        {
+          "id": 95,
+          "question": "Where can I view the events, I have registered for?",
+          "answer": "You can use the My RSVPs section."
+        },
+        {
+          "id": 96,
+          "question": "Can I join a Private Event directly?",
+          "answer": "Private events require an access request. You must submit a request and wait for the event organiser to approve it."
+        },
+        {
+          "id": 97,
+          "question": "Is my registration confirmed immediately after requesting access to a Private Event?",
+          "answer": "No. Registration is not confirmed until the event organiser approves the request."
+        },
+        {
+          "id": 98,
+          "question": "Can I view past events?",
+          "answer": "Yes. You can use the Past section to review previous events."
+        },
+        {
+          "id": 99,
+          "question": "Can I watch recordings or replays of past events?",
+          "answer": "You can view replays where they are available."
+        },
+        {
+          "id": 100,
+          "question": "Can Alumni host events?",
+          "answer": "Yes. Alumni can host alumni-style events when the event-hosting option is available."
+        },
+        {
+          "id": 101,
+          "question": "What details may be required when creating an event?",
+          "answer": "The event creation screen may include Event Name, Event Type, Description and Location. The available fields depend on the interface."
+        },
+        {
+          "id": 102,
+          "question": "Can I edit an event after creating it?",
+          "answer": "No, you cannot create event."
+        }
+      ]
+    },
+    {
+      "section": "J. Value Added Opportunities",
+      "faqs": [
+        {
+          "id": 103,
+          "question": "What is Value Added Opportunities?",
+          "answer": "Value Added Opportunities provides access to business and growth-related opportunities available within the TEF community."
+        },
+        {
+          "id": 104,
+          "question": "What types of opportunities can I explore?",
+          "answer": "The available categories include Funding, Partnerships, Markets and Programmes."
+        },
+        {
+          "id": 105,
+          "question": "How can I browse opportunities?",
+          "answer": [
+            "Open Value-Added Opportunities.",
+            "Select the required category or filter: All, Funding, Partnerships, Markets or Programmes.",
+            "Select View on an opportunity.",
+            "Review its details."
+          ]
+        },
+        {
+          "id": 106,
+          "question": "How can I apply for an opportunity?",
+          "answer": [
+            "Open the required opportunity.",
+            "Review its details and eligibility.",
+            "Select Apply if applications are available.",
+            "Complete the available application steps."
+          ]
+        },
+        {
+          "id": 107,
+          "question": "Can I apply to every opportunity listed?",
+          "answer": "No. Only published opportunities accept applications, and your role must match the opportunity's intended audience."
+        },
+        {
+          "id": 108,
+          "question": "Can an opportunity be restricted to Alumni?",
+          "answer": "Yes. Some opportunities may be intended for specific audiences, such as Alumni or Everyone."
+        },
+        {
+          "id": 109,
+          "question": "Can I apply after the opportunity deadline?",
+          "answer": "No. Applications must be submitted while the opportunity is active and before its deadline."
+        },
+        {
+          "id": 110,
+          "question": "Why can I not apply to an opportunity?",
+          "answer": "The opportunity may not be published, may not be active, may have passed its deadline, or may not be intended for your role or audience."
+        },
+        {
+          "id": 111,
+          "question": "Can I save an opportunity for later?",
+          "answer": "Yes. You can select Save where the option is available."
+        },
+        {
+          "id": 112,
+          "question": "Is there a separate Jobs board in the Alumni Community?",
+          "answer": "No. There is no separate Jobs board. Business offers, funding opportunities and growth programmes are available under Value Added Opportunities."
+        }
+      ]
+    },
+    {
+      "section": "K. TEF Coach",
+      "faqs": [
+        {
+          "id": 113,
+          "question": "What is the TEF Coach feature?",
+          "answer": "The TEF Coach feature allows eligible Alumni to apply to become a TEF Coach through their Alumni profile."
+        },
+        {
+          "id": 114,
+          "question": "Who can apply to become a TEF Coach?",
+          "answer": "Only Alumni can apply through this feature."
+        },
+        {
+          "id": 115,
+          "question": "How can I apply to become a TEF Coach?",
+          "answer": [
+            "Open your Alumni Profile.",
+            "Locate the Become TEF Coach or similarly labelled option.",
+            "Select the option.",
+            "Submit the application."
+          ]
+        },
+        {
+          "id": 116,
+          "question": "What happens after I submit my TEF Coach application?",
+          "answer": "Your application status becomes Pending until it is reviewed."
+        },
+        {
+          "id": 117,
+          "question": "What are the possible TEF Coach application statuses?",
+          "answer": "Approved and Rejected after the application has been reviewed."
+        },
+        {
+          "id": 118,
+          "question": "What happens if my TEF Coach application is approved?",
+          "answer": "You receive Certified TEF Coach recognition and Mentorship access for coaches. Additional TEF Coach recognition levels may be updated based on mentee count."
+        },
+        {
+          "id": 119,
+          "question": "What happens if my TEF Coach application is rejected?",
+          "answer": "You remain an Alumni. You may apply again later when a new application attempt is allowed."
+        },
+        {
+          "id": 120,
+          "question": "Will I lose my Alumni membership if my TEF Coach application is rejected?",
+          "answer": "No. Your Alumni membership remains active regardless of the TEF Coach application outcome."
+        },
+        {
+          "id": 121,
+          "question": "Does becoming a TEF Coach change my Alumni membership?",
+          "answer": "No. Coach status is managed separately from Alumni membership."
+        },
+        {
+          "id": 122,
+          "question": "Can I apply again after rejection?",
+          "answer": "The manual states that you may apply again when a new application attempt is allowed."
+        },
+        {
+          "id": 123,
+          "question": "What are the eligibility criteria for becoming a TEF Coach?",
+          "answer": "You must be an alumnus."
+        },
+        {
+          "id": 124,
+          "question": "How long does the TEF Coach application take to get approved or rejected?",
+          "answer": "Until mentor admin approves or rejects it."
+        }
+      ]
+    },
+    {
+      "section": "L. Badges and Recognition",
+      "faqs": [
+        {
+          "id": 125,
+          "question": "What are badges in the Alumni Community?",
+          "answer": "Badges recognise Alumni contributions, achievements and milestones within the community. Awarded badges may appear on member profiles and related community views, such as the directory or leaderboard, where configured."
+        },
+        {
+          "id": 126,
+          "question": "Which badges are available in the Alumni Community?",
+          "answer": "The manual identifies Historical Legacy, Job Creator (Economic Impact), Community Leader, Frequent Contributors, Certified TEF Coach, TEF Coach Levels, Cohort Year and Best Chat Room recognition."
+        },
+        {
+          "id": 127,
+          "question": "What is the Historical Legacy badge?",
+          "answer": "It is a legacy recognition badge for funded entrepreneurs. It appears when awarded to a member."
+        },
+        {
+          "id": 128,
+          "question": "What is the Job Creator badge?",
+          "answer": "Job Creator (Economic Impact) recognises members for creating employment opportunities. It appears when awarded to a member."
+        },
+        {
+          "id": 129,
+          "question": "What is the Community Leader badge?",
+          "answer": "It recognises the highest engagement during a two-week period. The manual also states that recipients must wait 30 days before receiving another such award."
+        },
+        {
+          "id": 130,
+          "question": "What is the Frequent Contributors badge?",
+          "answer": "It recognises the top three members who engage each day during a seven-day period."
+        },
+        {
+          "id": 131,
+          "question": "What is the Certified TEF Coach badge?",
+          "answer": "It recognises an Alumni member whose TEF Coach application has been approved."
+        },
+        {
+          "id": 132,
+          "question": "What are TEF Coach Levels?",
+          "answer": "These are additional recognition levels based on the number of mentees. The manual lists 1–5 mentees, 6–10 mentees and more than 10 mentees as the levels."
+        },
+        {
+          "id": 133,
+          "question": "What is the Cohort Year badge?",
+          "answer": "It recognises a member's funding or enrolment year. The manual states that Cohort Year badges are awarded to Alumni matching the selected year."
+        },
+        {
+          "id": 134,
+          "question": "What is the Best Chat Room recognition?",
+          "answer": "It is recognition based on group chat activity when the required chat metrics are available."
+        },
+        {
+          "id": 135,
+          "question": "Are badges awarded automatically?",
+          "answer": "Some badges are awarded automatically based on system rules, while others may be awarded through Community Admin action."
+        },
+        {
+          "id": 136,
+          "question": "Are all badges awarded in the same way?",
+          "answer": "No. The awarding method depends on the badge type."
+        },
+        {
+          "id": 137,
+          "question": "Can I request a particular badge?",
+          "answer": "No, you cannot request a badge."
+        },
+        {
+          "id": 138,
+          "question": "Can I remove a badge from my profile?",
+          "answer": "No, you cannot remove a badge from your profile."
+        }
+      ]
+    },
+    {
+      "section": "M. Leaderboard",
+      "faqs": [
+        {
+          "id": 139,
+          "question": "What is the Leaderboard?",
+          "answer": "The Leaderboard displays community members based on their engagement and participation within the Alumni Community."
+        },
+        {
+          "id": 140,
+          "question": "What ranking periods are available?",
+          "answer": "The manual identifies Weekly and Monthly leaderboard periods."
+        },
+        {
+          "id": 141,
+          "question": "How can I improve my leaderboard position?",
+          "answer": "Engage with posts and comments during the applicable Weekly or Monthly period. The ranking considers posts, comments and likes received."
+        },
+        {
+          "id": 142,
+          "question": "What activities are considered for leaderboard ranking?",
+          "answer": "Posts, comments and likes received are included in the ranking criteria described in the manual."
+        },
+        {
+          "id": 143,
+          "question": "Does the Leaderboard display every Alumni member?",
+          "answer": "No. Only the configured top percentage of active members is displayed."
+        },
+        {
+          "id": 144,
+          "question": "Can I view my position on the Leaderboard?",
+          "answer": "Yes. Alumni can view available rankings and their position for the selected period."
+        },
+        {
+          "id": 145,
+          "question": "Does my ranking change between Weekly and Monthly periods?",
+          "answer": "Rankings may vary depending on the selected period and applicable ranking configuration."
+        }
+      ]
+    },
+    {
+      "section": "N. Notifications",
+      "faqs": [
+        {
+          "id": 146,
+          "question": "What is the Notifications section?",
+          "answer": "The Notifications section displays alerts related to actions involving your profile and community activity."
+        },
+        {
+          "id": 147,
+          "question": "How can I view my notifications?",
+          "answer": "Open Notifications from the Alumni Community menu and review the available notifications."
+        },
+        {
+          "id": 148,
+          "question": "Can I mark notifications as read?",
+          "answer": "Yes. You can mark notifications as read using the available option."
+        },
+        {
+          "id": 149,
+          "question": "Can I see who has mentioned me?",
+          "answer": "Yes. You can view members who have mentioned you."
+        },
+        {
+          "id": 150,
+          "question": "Can I see how many new notifications I have?",
+          "answer": "Yes. The Notifications section displays the count of new notifications."
+        },
+        {
+          "id": 151,
+          "question": "What types of activities trigger notifications?",
+          "answer": "The profile-related notifications, mentions and other community alerts."
+        }
+      ]
+    },
+    {
+      "section": "O. Settings and Blocked Users",
+      "faqs": [
+        {
+          "id": 152,
+          "question": "What can I manage under Settings?",
+          "answer": "Settings allows Alumni to manage available profile preferences and blocked users."
+        },
+        {
+          "id": 153,
+          "question": "How can I access Settings?",
+          "answer": "Open the Alumni Community menu and select Settings."
+        },
+        {
+          "id": 154,
+          "question": "Can I manage my profile preferences?",
+          "answer": "Yes. Open Settings, review the available profile preference options and save your changes."
+        },
+        {
+          "id": 155,
+          "question": "Can I view blocked users?",
+          "answer": "Yes. The Settings section includes an area for managing blocked users."
+        },
+        {
+          "id": 156,
+          "question": "How can I manage blocked users?",
+          "answer": [
+            "Open Settings.",
+            "Navigate to the blocked user's area.",
+            "Review the available blocked-user information.",
+            "Make changes using the options displayed.",
+            "Save your changes."
+          ]
+        },
+        {
+          "id": 157,
+          "question": "Can I unblock a user?",
+          "answer": "Yes, you can unblock a user if you want."
+        },
+        {
+          "id": 158,
+          "question": "What happens when I block another member?",
+          "answer": "You will not see his posts and profile. Also, he will not be able to message you."
+        },
+        {
+          "id": 159,
+          "question": "Does blocking a member automatically remove an existing connection?",
+          "answer": "Yes, blocking a member removes a connection."
+        }
+      ]
+    },
+    {
+      "section": "P. Reporting Inappropriate Content and Users",
+      "faqs": [
+        {
+          "id": 160,
+          "question": "Can I report inappropriate content in the Alumni Community?",
+          "answer": "Yes. Alumni can report inappropriate users, posts, comments and groups."
+        },
+        {
+          "id": 161,
+          "question": "How can I report a post?",
+          "answer": "Open the relevant post, select Report and follow the available reporting controls."
+        },
+        {
+          "id": 162,
+          "question": "How can I report a member?",
+          "answer": "Open the member's profile or user card, select the available reporting option and follow the reporting controls."
+        },
+        {
+          "id": 163,
+          "question": "How can I report a comment?",
+          "answer": "Locate the relevant comment, select the available reporting option and follow the reporting controls."
+        },
+        {
+          "id": 164,
+          "question": "How can I report a group?",
+          "answer": "Open the relevant group, select the available reporting option and follow the reporting controls."
+        },
+        {
+          "id": 165,
+          "question": "What happens after I report a user or content?",
+          "answer": "The selected user or content is submitted for review through the community's reporting process. Reporting does not itself confirm that the content or account will be removed."
+        },
+        {
+          "id": 166,
+          "question": "Can I withdraw a report after submitting it?",
+          "answer": "No, you cannot withdraw a report after submitting it."
+        }
+      ]
+    },
+    {
+      "section": "Q. Common Questions and Troubleshooting",
+      "faqs": [
+        {
+          "id": 167,
+          "question": "I cannot access the Alumni Community. What should I check?",
+          "answer": "Confirm that you are signed in to TEFConnect Web using the Entrepreneur option and that you have completed your main profile if prompted. Alumni access is associated with recognition as a funded TEF entrepreneur."
+        },
+        {
+          "id": 168,
+          "question": "I cannot see another member's profile. What should I check?",
+          "answer": "Check the profile visibility setting. A member whose profile is Private has restricted visibility."
+        },
+        {
+          "id": 169,
+          "question": "I cannot see a member's posts in my Home Feed. Why?",
+          "answer": "Your Home Feed displays posts from members you are connected with and from authors whose profiles are Public."
+        },
+        {
+          "id": 170,
+          "question": "My connection request is still Pending. What does this mean?",
+          "answer": "It means the recipient has not yet accepted the connection request."
+        },
+        {
+          "id": 171,
+          "question": "I cannot join a group. What should I check?",
+          "answer": "Check whether the group is Private and requires approval. Also check whether you meet its Country, Programme, Year or Industry restrictions."
+        },
+        {
+          "id": 172,
+          "question": "I requested to join a Private Group but cannot access it. Why?",
+          "answer": "A request to join a Private Group does not provide immediate access. You must wait for the Group Owner or Admin to approve it."
+        },
+        {
+          "id": 173,
+          "question": "I cannot send a direct message. What should I check?",
+          "answer": "Ensure that you are signed in and are using the available Message option from the member's Network or Profile card. The manual does not specify all possible causes of messaging failures."
+        },
+        {
+          "id": 174,
+          "question": "I cannot attach a file to Group Chat. Why?",
+          "answer": "Attachment options may differ between Group Chat and the main Messages inbox."
+        },
+        {
+          "id": 175,
+          "question": "I cannot apply for an opportunity. What should I check?",
+          "answer": "Confirm that the opportunity is published and active, that the deadline has not passed and that your role matches the intended audience."
+        },
+        {
+          "id": 176,
+          "question": "I cannot access a Private Event. What should I do?",
+          "answer": "Submit an access request and wait for the event organiser to approve it."
+        },
+        {
+          "id": 177,
+          "question": "My TEF Coach application is Pending. What does this mean?",
+          "answer": "Your application is awaiting review. Its status will be updated to Approved or Rejected after the review."
+        },
+        {
+          "id": 178,
+          "question": "I cannot find a particular badge on my profile. Why?",
+          "answer": "Badge visibility depends on the applicable badge type and its awarding conditions."
+        },
+        {
+          "id": 179,
+          "question": "I cannot see my name on the Leaderboard. Why?",
+          "answer": "The Leaderboard displays only the configured top percentage of active members."
+        },
+        {
+          "id": 180,
+          "question": "I have unread notifications. How can I review them?",
+          "answer": "Open Notifications, review the available alerts and use the available option to mark them as read."
+        },
+        {
+          "id": 181,
+          "question": "What should I do if a feature is not working?",
+          "answer": "Contact technical support."
+        }
+      ]
+    }
+  ]
+}
