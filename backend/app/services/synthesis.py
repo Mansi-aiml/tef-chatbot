@@ -1,6 +1,7 @@
 import logging
 
 from app.services.graph.state import ChatState
+from app.services.language import language_instruction
 from app.services.llm import chat_completion
 
 logger = logging.getLogger("app.services.synthesis")
@@ -51,7 +52,7 @@ def synthesize(state: ChatState) -> dict:
     user_prompt = f"Context:\n{context}\n\nQuestion: {state['refined_query']}"
 
     logger.info("Synthesis: Generating final answer from %d chunk(s), answered_by=%s", len(chunks), state.get("answered_by"))
-    answer = chat_completion(_SYSTEM_PROMPT, user_prompt)
+    answer = chat_completion(_SYSTEM_PROMPT + language_instruction(state.get("language")), user_prompt)
 
     sources = sorted({c["metadata"].get("source", "") for c in chunks if c["metadata"].get("source")})
     return {"answer": answer, "escalated": False, "sources": sources}

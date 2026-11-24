@@ -4,6 +4,7 @@ from dataclasses import dataclass, field
 from sqlalchemy.orm import Session
 
 from app.services.graph.pipeline_graph import build_graph
+from app.services.language import normalize_language
 
 logger = logging.getLogger("app.services.pipeline")
 
@@ -23,7 +24,11 @@ _MAX_HISTORY_TURNS = 10
 
 
 def handle_message(
-    db: Session, user_id: str, message: str, history: list[dict[str, str]] | None = None
+    db: Session,
+    user_id: str,
+    message: str,
+    history: list[dict[str, str]] | None = None,
+    language: str | None = None,
 ) -> ChatResult:
     logger.info("Pipeline: Handling message for User %s. Message preview: '%s'", user_id, message[:60])
 
@@ -33,6 +38,7 @@ def handle_message(
             "user_id": user_id,
             "raw_message": message,
             "chat_history": (history or [])[-_MAX_HISTORY_TURNS:],
+            "language": normalize_language(language),
             "faq_attempt": 0,
             "kb_attempt": 0,
         }

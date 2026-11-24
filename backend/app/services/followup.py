@@ -4,18 +4,16 @@ import re
 
 from app.core.config import settings
 from app.services.graph.state import ChatState
+from app.services.language import FOLLOWUP_PREFIXES, followup_prefix, language_instruction
 from app.services.llm import chat_completion
 
 logger = logging.getLogger("app.services.followup")
 
-# Prefixed onto every follow-up message so later turns can recognize it in
-# chat_history without any extra state — this is the only signal we have for
-# "how many unsuccessful attempts in a row", since the graph is stateless
-# across requests and history is round-tripped by the frontend.
-_FOLLOWUP_PREFIX = (
-    "I couldn't find a fully confident answer to that yet. Here are some "
-    "related questions I can help with:"
-)
+# Every follow-up message starts with a (translated) prefix from
+# language.FOLLOWUP_PREFIXES so later turns can recognize it in chat_history
+# without any extra state — this is the only signal we have for "how many
+# unsuccessful attempts in a row", since the graph is stateless across
+# requests and history is round-tripped by the frontend.
 
 _MIN_SUGGESTIONS = 2
 _MAX_SUGGESTIONS = 3
@@ -99,7 +97,9 @@ def suggest_followups(state: ChatState) -> dict:
         f"\n\nRelated context excerpts (ground the suggested questions in these):\n{context}"
     )
 
-    raw = chat_completion(_SYSTEM_PROMPT, user_prompt).strip()
+    # The language instruction applies to the question strings only; the
+    # JSON-array output format stays the same.
+    raw = chat_completion(_SYSTEM_PROMPT + language_instruction(state.get("language")), user_prompt).strip()
     suggestions = _parse_suggestions(raw)
 
     logger.info(
@@ -110,7 +110,7 @@ def suggest_followups(state: ChatState) -> dict:
         return {"escalated": False, "sources": [], "followup_suggestions": []}
 
     return {
-        "answer": _FOLLOWUP_PREFIX,
+        "answer": followup_prefix(state.get("language")),
         "escalated": False,
         "sources": [],
         "followup_suggestions": suggestions,
@@ -129,7 +129,8 @@ def _consecutive_unsuccessful_attempts(chat_history: list[dict]) -> int:
     for msg in reversed(chat_history or []):
         if msg.get("role") != "assistant":
             continue
-        if _FOLLOWUP_PREFIX in (msg.get("content") or ""):
+        content = msg.get("content") or ""
+        if any(prefix in content for prefix in FOLLOWUP_PREFIXES.values()):
             count += 1
         else:
             break

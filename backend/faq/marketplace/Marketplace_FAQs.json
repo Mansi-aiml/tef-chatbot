@@ -1,0 +1,801 @@
+{
+  "title": "Frequently Asked Questions (FAQ)",
+  "subtitle": "For General Entrepreneurs and TEF Programme Members",
+  "sections": [
+    {
+      "section": "A. General Questions",
+      "faqs": [
+        {
+          "id": 1,
+          "question": "What is the Marketplace Module?",
+          "answer": "The Marketplace Module is TEFConnect’s members-only networking space where entrepreneurs can connect with other members, share updates, join communities, attend events, access learning resources and find opportunities."
+        },
+        {
+          "id": 2,
+          "question": "Who can use the Marketplace?",
+          "answer": "The two entrepreneur access categories covered here are General Entrepreneurs and TEF Programme Members. Both access the Marketplace after the applicable access requirements are met. There is a community admin with whom the users can connect and he is the manager of the marketplace."
+        },
+        {
+          "id": 3,
+          "question": "Are General Entrepreneurs and TEF Programme Members using separate Marketplace platforms?",
+          "answer": "No."
+        },
+        {
+          "id": 4,
+          "question": "What can I do in the Marketplace?",
+          "answer": "You can manage your profile, share and interact with Home Feed posts, connect with and follow members, join communities, register for events, access Knowledge Centre resources, save and apply for opportunities, message connections, and manage notifications and account settings."
+        },
+        {
+          "id": 5,
+          "question": "Where can I access the Marketplace?",
+          "answer": "The Marketplace is accessed through TEFConnect Web."
+        },
+        {
+          "id": 6,
+          "question": "Do both entrepreneur categories have the same main menu?",
+          "answer": "The members see the same main menu once access is allowed. It does not provide a separate feature-by-feature permission comparison between the two categories."
+        }
+      ]
+    },
+    {
+      "section": "B. Registration, Login and Marketplace Access",
+      "faqs": [
+        {
+          "id": 7,
+          "question": "How do I register as a General Entrepreneur?",
+          "answer": "Open the TEFConnect Registration page, select Marketplace as the Profile Type, select your country and region, enter the required name and account details, accept the consent requirement and select Register."
+        },
+        {
+          "id": 8,
+          "question": "Do I need to verify my email after registering as a General Entrepreneur?",
+          "answer": "Yes. Email verification is required after Marketplace account registration. Open the “Verify Your Email” message and select the verification link."
+        },
+        {
+          "id": 9,
+          "question": "I have not received the verification email. What should I do?",
+          "answer": "Check your Junk or Spam folder. On the Login page, select Marketplace, enter your details and select Resend Verification Email."
+        },
+        {
+          "id": 10,
+          "question": "What happens if my verification link is invalid or expired?",
+          "answer": "The page displays “Verification failed.” You can return to registration or sign in and request a new verification email."
+        },
+        {
+          "id": 11,
+          "question": "How do I log in as a General Entrepreneur?",
+          "answer": "Open the TEFConnect Login page, select Marketplace under User Type, enter your registered email address and password, and select Login."
+        },
+        {
+          "id": 12,
+          "question": "Why am I seeing an account status page instead of the Marketplace?",
+          "answer": "If Marketplace access is not allowed, the system displays the applicable account status page instead of the full Marketplace menu. Check the status and follow the instructions shown there."
+        },
+        {
+          "id": 13,
+          "question": "Do TEF Programme Members need to register for a separate Marketplace account?",
+          "answer": "No. Existing TEF Programme Members use their existing TEFConnect account to access the Marketplace."
+        },
+        {
+          "id": 14,
+          "question": "How does a TEF Programme Member access the Marketplace?",
+          "answer": "Log in to the existing TEFConnect account, complete the TEF profile, select Access Marketplace from the sidebar and wait for access setup if prompted."
+        },
+        {
+          "id": 15,
+          "question": "Why can’t I see Access Marketplace in my TEFConnect sidebar?",
+          "answer": "The Access Marketplace option appears only after your TEF profile is complete."
+        },
+        {
+          "id": 16,
+          "question": "How do I return to my TEF dashboard?",
+          "answer": "Select Dashboard from the profile menu."
+        },
+        {
+          "id": 17,
+          "question": "Can a general entrepreneur register for a TEF programme from Marketplace?",
+          "answer": "The profile menu provides a Register for TEF Programme option."
+        },
+        {
+          "id": 18,
+          "question": "Can I use one email address to create another Marketplace account if it is already registered?",
+          "answer": "The registration validation states that if the email address is already registered, you must use another email address or sign in."
+        },
+        {
+          "id": 19,
+          "question": "What happens if my General Entrepreneur account is flagged for review?",
+          "answer": "The account status page indicates that the registration has been sent for Community Admin review. Follow the status page and check it again using Refresh status."
+        }
+      ]
+    },
+    {
+      "section": "C. Marketplace Profile and Business Information",
+      "faqs": [
+        {
+          "id": 20,
+          "question": "What information is displayed on my Marketplace profile?",
+          "answer": "Your profile can display your profile photo, cover photo, name, Connections and Followers counts, About information, Interests, Offering and Businesses."
+        },
+        {
+          "id": 21,
+          "question": "How do I edit my Marketplace profile?",
+          "answer": "Open Profile, select Edit profile, update the required information and select Save profile. For a first-time submission, the option shown is Submit profile."
+        },
+        {
+          "id": 22,
+          "question": "Which profile fields are mandatory?",
+          "answer": "First name, Phone number, Country, Region / State, Sector, Sub-sector, Business name, Business stage and Short bio as required. At least one Interest is also required."
+        },
+        {
+          "id": 23,
+          "question": "Are last name, city and offering mandatory?",
+          "answer": "No. Last name, City and Offering as optional."
+        },
+        {
+          "id": 24,
+          "question": "Are profile and cover photos mandatory?",
+          "answer": "No. The profile photo and cover photo as optional."
+        },
+        {
+          "id": 25,
+          "question": "Why can’t I save my profile?",
+          "answer": "Check the message displayed above the form. It identifies the required details that are missing."
+        },
+        {
+          "id": 26,
+          "question": "What happens after I save my profile?",
+          "answer": "The system displays “Profile saved.” If changes were requested, the profile is resubmitted for Community Admin review."
+        },
+        {
+          "id": 27,
+          "question": "What profile visibility options are available?",
+          "answer": "The two options are Public and Connections only."
+        },
+        {
+          "id": 28,
+          "question": "What happens when my profile is set to Public?",
+          "answer": "Other Marketplace members can view your profile details and posts."
+        },
+        {
+          "id": 29,
+          "question": "What happens when my profile is set to Connections only?",
+          "answer": "Members who are not your connections see a limited-profile message. Your posts remain hidden from non-connections until they connect with you."
+        },
+        {
+          "id": 30,
+          "question": "Can I add business information to my profile?",
+          "answer": "Yes."
+        },
+        {
+          "id": 31,
+          "question": "How do I add a business?",
+          "answer": "In the profile form, select Add business, enter the business name and description, select the sector, business stage, founding year and status, optionally enter a website, upload at least one picture and select Save business."
+        },
+        {
+          "id": 32,
+          "question": "Is a business picture required?",
+          "answer": "Yes. At least one business picture must be uploaded when adding a business."
+        },
+        {
+          "id": 33,
+          "question": "Can I edit or delete a business after adding it?",
+          "answer": "Yes. Use the edit or delete icons on the business card."
+        },
+        {
+          "id": 34,
+          "question": "What is the maximum size for a profile or business photo?",
+          "answer": "Profile and business photos can be up to 10 MB each."
+        },
+        {
+          "id": 35,
+          "question": "Can TEF Programme Members add business information?",
+          "answer": "Yes."
+        }
+      ]
+    },
+    {
+      "section": "D. Home Feed, Posts and Polls",
+      "faqs": [
+        {
+          "id": 36,
+          "question": "What is the Home Feed?",
+          "answer": "The Home Feed displays posts shared by Marketplace members. Some posts may carry badges such as Success Story, Mentor Insight, Community Poll or Opportunity. Posts pinned by an administrator remain at the top."
+        },
+        {
+          "id": 37,
+          "question": "How do I create a post?",
+          "answer": "Select the post box at the top of the Home Feed, enter your message, optionally mention a member using @ and add photos or a video if required. Set Allow comments on or off and select Post."
+        },
+        {
+          "id": 38,
+          "question": "Can I create a post without text?",
+          "answer": "Yes, if the post includes at least one photo or video. A post must contain text, a photo or a video."
+        },
+        {
+          "id": 39,
+          "question": "How many photos or videos can I add to one post?",
+          "answer": "A post can contain up to 20 photos or videos."
+        },
+        {
+          "id": 40,
+          "question": "What are the media size limits for a post?",
+          "answer": "Each photo can be up to 10 MB and each video can be up to 50 MB."
+        },
+        {
+          "id": 41,
+          "question": "Why was my photo or video upload rejected?",
+          "answer": "An incorrect or oversized file is rejected with a system message. Use Retry after a failed upload or Remove media to remove a file."
+        },
+        {
+          "id": 42,
+          "question": "Can I mention another member in a post?",
+          "answer": "Yes. Type @ followed by the member’s name when creating the post."
+        },
+        {
+          "id": 43,
+          "question": "Can I turn off comments on my post?",
+          "answer": "Yes. You can switch Allow comments on or off while creating the post."
+        },
+        {
+          "id": 44,
+          "question": "How do I create a poll?",
+          "answer": "Select Poll in the post box, enter the poll question, add at least two options, optionally set an end date and enable Allow multiple selections if required, then select Post."
+        },
+        {
+          "id": 45,
+          "question": "How many options can a poll contain?",
+          "answer": "A poll must contain between 2 and 6 options."
+        },
+        {
+          "id": 46,
+          "question": "Can I allow members to select more than one poll option?",
+          "answer": "Yes. Allow multiple selections is an optional poll setting."
+        },
+        {
+          "id": 47,
+          "question": "Can I set a poll end date in the past?",
+          "answer": "No. The end date cannot be in the past."
+        },
+        {
+          "id": 48,
+          "question": "How do I vote in a poll?",
+          "answer": "Open the poll, select an option and select Vote. To change an existing vote, select Update vote."
+        },
+        {
+          "id": 49,
+          "question": "Why can’t I vote in a poll?",
+          "answer": "If no option is selected, the system displays “Select at least one option.” After the poll end date, the poll is closed and no further votes are accepted."
+        },
+        {
+          "id": 50,
+          "question": "Can I like, save, share or comment on a post?",
+          "answer": "Yes, you can Like/Unlike, Save, Share/copy link, Comment and Reply actions."
+        },
+        {
+          "id": 51,
+          "question": "Where can I find saved posts?",
+          "answer": "Saved posts appear in the Bookmarks tab on your profile. The Bookmarks tab is visible only to you."
+        },
+        {
+          "id": 52,
+          "question": "What is the maximum comment length?",
+          "answer": "A comment can contain up to 2,000 characters."
+        },
+        {
+          "id": 53,
+          "question": "Why can’t I comment on a post?",
+          "answer": "The post author may have turned comments off. In that case, the system displays “Comments are turned off for this post.”"
+        },
+        {
+          "id": 54,
+          "question": "Can I delete my own post or comment?",
+          "answer": "Yes. Use More options, select Delete post or Delete comment as applicable, and confirm. Deleting a post cannot be undone."
+        }
+      ]
+    },
+    {
+      "section": "E. My Network: Discover, Follow and Connect",
+      "faqs": [
+        {
+          "id": 55,
+          "question": "What is available under My Network?",
+          "answer": "My Network contains Discover, My Connections, Requests, Following and Blocked."
+        },
+        {
+          "id": 56,
+          "question": "How do I find another Marketplace member?",
+          "answer": "Open My Network, select Discover and enter at least two letters of the person’s first or last name in Search by name. You can optionally filter by Country, Region, Sector, Business stage, Interests or Offering."
+        },
+        {
+          "id": 57,
+          "question": "Can I follow another member without connecting?",
+          "answer": "Yes. Select Follow on the member’s card or profile. Following does not require approval and does not create a connection."
+        },
+        {
+          "id": 58,
+          "question": "How do I unfollow a member?",
+          "answer": "Select Unfollow on the member’s card or profile."
+        },
+        {
+          "id": 59,
+          "question": "What is the difference between following and connecting?",
+          "answer": "Following does not require approval and does not create a connection. A connection is established when a connection request is accepted."
+        },
+        {
+          "id": 60,
+          "question": "How do I send a connection request?",
+          "answer": "Open the member’s card or profile, select Connect, optionally enter an introductory note, and select Send with note or Connect without note."
+        },
+        {
+          "id": 61,
+          "question": "Is an introductory note mandatory for a connection request?",
+          "answer": "No. You can send a connection request without a note."
+        },
+        {
+          "id": 62,
+          "question": "What is the maximum length of a connection note?",
+          "answer": "An introductory note can contain up to 500 characters."
+        },
+        {
+          "id": 63,
+          "question": "How many connection notes can I send per day?",
+          "answer": "The default limit is 5 notes per day. TEF can change this configured limit. The connection window displays the remaining number of notes."
+        },
+        {
+          "id": 64,
+          "question": "What can I do if I reach the daily connection-note limit?",
+          "answer": "You can still select Connect without note. Notes become available again the next day."
+        },
+        {
+          "id": 65,
+          "question": "How do I respond to a connection request?",
+          "answer": "Open My Network, select Requests, choose Received and select Accept, Decline or Ignore."
+        },
+        {
+          "id": 66,
+          "question": "How do I withdraw a connection request I sent?",
+          "answer": "Open Requests, choose Sent and select Withdraw."
+        },
+        {
+          "id": 67,
+          "question": "How do I know if my connection request was sent?",
+          "answer": "The system displays “Connection request sent” and the member’s card shows “Requested.”"
+        },
+        {
+          "id": 68,
+          "question": "Can I message someone who is not my connection?",
+          "answer": "You can send a message request. Direct chat is available for connections only."
+        },
+        {
+          "id": 69,
+          "question": "How do I send a message request?",
+          "answer": "Select Message on the member’s card or profile, enter a mandatory message of up to 1,000 characters and select Send request."
+        },
+        {
+          "id": 70,
+          "question": "What happens if the recipient accepts my message request?",
+          "answer": "You become connected if the recipient accepts the message request."
+        },
+        {
+          "id": 71,
+          "question": "Where can I find sent and received message requests?",
+          "answer": "They are available under Requests in the Messages list."
+        },
+        {
+          "id": 72,
+          "question": "Is there a daily limit on message requests?",
+          "answer": "Yes. A daily limit applies."
+        },
+        {
+          "id": 73,
+          "question": "How do I remove an existing connection?",
+          "answer": "Open My Network, select My Connections and select Remove for the required member."
+        },
+        {
+          "id": 74,
+          "question": "What happens when I block a member?",
+          "answer": "The person is removed from your connections, requests and follows."
+        },
+        {
+          "id": 75,
+          "question": "How do I unblock a member?",
+          "answer": "Open the Blocked section and select Unblock."
+        }
+      ]
+    },
+    {
+      "section": "F. Communities",
+      "faqs": [
+        {
+          "id": 76,
+          "question": "What are Marketplace Communities?",
+          "answer": "Communities are industry-based groups that members can browse and join. Community cards display the community name, description, sector, country and region."
+        },
+        {
+          "id": 77,
+          "question": "How do I browse communities?",
+          "answer": "Open Communities, choose All Communities or My Communities, use the search box and Sector filter if needed, navigate with Previous and Next, and select View Community or Open Community."
+        },
+        {
+          "id": 78,
+          "question": "What does the Restricted label mean?",
+          "answer": "A Restricted label means only eligible members can join that community."
+        },
+        {
+          "id": 79,
+          "question": "How do I join a community?",
+          "answer": "Open the community, read About this community and the Community guidelines, select Join Community, tick the confirmation that you agree to follow the guidelines and confirm."
+        },
+        {
+          "id": 80,
+          "question": "Why can’t I join a community?",
+          "answer": "The community may be restricted to eligible members, or you may not have confirmed agreement with the community guidelines."
+        },
+        {
+          "id": 81,
+          "question": "Can I read discussions without joining a community?",
+          "answer": "Yes. Members can read discussions without joining."
+        },
+        {
+          "id": 82,
+          "question": "Can I post in a community without joining?",
+          "answer": "No. Posting, reacting and commenting require you to join the community and accept its guidelines."
+        },
+        {
+          "id": 83,
+          "question": "What is the maximum length of a community discussion post?",
+          "answer": "A community discussion post can contain up to 2,000 characters."
+        },
+        {
+          "id": 84,
+          "question": "Can I add an image to a community discussion post?",
+          "answer": "Yes. Adding an image is optional when creating a discussion post."
+        },
+        {
+          "id": 85,
+          "question": "Why can’t I participate after the community guidelines have changed?",
+          "answer": "You must accept the updated guidelines. Discussions remain read-only until you accept the new version."
+        },
+        {
+          "id": 86,
+          "question": "What happens if I am muted in a community?",
+          "answer": "The system displays the date and time until which you are muted. You cannot participate until the mute period ends."
+        },
+        {
+          "id": 87,
+          "question": "How do I view community members?",
+          "answer": "Open the community and select the Members tab. You can search and filter members by sector, country and region."
+        },
+        {
+          "id": 88,
+          "question": "How do I leave a community?",
+          "answer": "Open the required community and select Leave."
+        }
+      ]
+    },
+    {
+      "section": "G. Events",
+      "faqs": [
+        {
+          "id": 89,
+          "question": "How do I browse Marketplace events?",
+          "answer": "Open Events and choose All, Active, Upcoming or Expired. Under All, you can also use Search, Format and Event Type filters. Select Details to view an event."
+        },
+        {
+          "id": 90,
+          "question": "What information can I see on an event page?",
+          "answer": "The event page can show the description, speakers, agenda, attachments, time and place, registration details, audience and organiser."
+        },
+        {
+          "id": 91,
+          "question": "How do I register for a public event?",
+          "answer": "Open the event and select Participate."
+        },
+        {
+          "id": 92,
+          "question": "What happens after I register for a public event?",
+          "answer": "The system displays “You are registered for this event” and the button shows Registered."
+        },
+        {
+          "id": 93,
+          "question": "What happens if a public event is full and has a waiting list?",
+          "answer": "You are added to the waiting list and the button shows Waitlisted."
+        },
+        {
+          "id": 94,
+          "question": "How do I request participation in a private event?",
+          "answer": "Open the private event and select Request to participate. The button then shows Request pending."
+        },
+        {
+          "id": 95,
+          "question": "Who reviews a private event participation request?",
+          "answer": "A Marketplace Community Admin reviews private event registration requests."
+        },
+        {
+          "id": 96,
+          "question": "What statuses can I see for a private event request?",
+          "answer": "The documented outcomes are Request pending, Registered, Waitlisted and Request rejected."
+        },
+        {
+          "id": 97,
+          "question": "Can I cancel my event registration?",
+          "answer": "Yes. you can cancel your own event registration. The status then shows Cancelled."
+        },
+        {
+          "id": 98,
+          "question": "Can I register for an event when registration is closed?",
+          "answer": "No. Registration is available only while the registration period is open. The system displays “Registration is not open right now” when it is closed."
+        },
+        {
+          "id": 99,
+          "question": "Can I register twice for the same event?",
+          "answer": "No. Duplicate registration for the same event is not allowed."
+        },
+        {
+          "id": 100,
+          "question": "Why is the Participate button disabled?",
+          "answer": "The registration may not be open, or you may already be registered or have a pending request."
+        }
+      ]
+    },
+    {
+      "section": "H. Knowledge Centre",
+      "faqs": [
+        {
+          "id": 101,
+          "question": "What is the Knowledge Centre?",
+          "answer": "The Knowledge Centre provides access to published learning resources such as guides, playbooks and templates."
+        },
+        {
+          "id": 102,
+          "question": "How do I find a resource?",
+          "answer": "Open Knowledge Centre, use Search or choose a Category, navigate with Previous and Next, and select Open on the required resource."
+        },
+        {
+          "id": 103,
+          "question": "How many resources are displayed per page?",
+          "answer": "The resource listing displays 10 resources per page."
+        },
+        {
+          "id": 104,
+          "question": "Can I download a Knowledge Centre resource?",
+          "answer": "Yes. Open the resource and select Open file to view it or Download to save it."
+        },
+        {
+          "id": 105,
+          "question": "Can I see draft resources?",
+          "answer": "No. Members can see published resources only."
+        },
+        {
+          "id": 106,
+          "question": "Why does a resource show No file attached?",
+          "answer": "The message appears when no file is attached to the resource."
+        },
+        {
+          "id": 107,
+          "question": "Can I report a Knowledge Centre resource?",
+          "answer": "Yes. Select Report this resource and follow the content-reporting process."
+        }
+      ]
+    },
+    {
+      "section": "I. Opportunities",
+      "faqs": [
+        {
+          "id": 108,
+          "question": "What are Marketplace Opportunities?",
+          "answer": "The Opportunities section lists business- related opportunities such as partnerships, funding and offers."
+        },
+        {
+          "id": 109,
+          "question": "How do I browse opportunities?",
+          "answer": "Open Opportunities and choose All opportunities, Saved or My applications. Use Search and the Opportunity Type filter, then select View details."
+        },
+        {
+          "id": 110,
+          "question": "How do I save an opportunity?",
+          "answer": "Open the opportunity and select Save opportunity. To remove it from your saved list, select Remove from saved."
+        },
+        {
+          "id": 111,
+          "question": "How do I apply for an opportunity?",
+          "answer": "Open the opportunity, review Key details and Eligibility, and select Apply."
+        },
+        {
+          "id": 112,
+          "question": "When can I apply for an opportunity?",
+          "answer": "You can apply only when the opportunity is published and the current date is within the configured application period, before the deadline."
+        },
+        {
+          "id": 113,
+          "question": "Can I apply more than once for the same opportunity?",
+          "answer": "No. Duplicate applications for the same opportunity are not allowed."
+        },
+        {
+          "id": 114,
+          "question": "How do I know my application was submitted?",
+          "answer": "The system displays “Application submitted successfully,” the button changes to Applied and the application appears under My applications."
+        },
+        {
+          "id": 115,
+          "question": "Can I cancel an opportunity application?",
+          "answer": "You can cancel while the application is still newly submitted. Open the opportunity, select Cancel application and confirm with Yes."
+        },
+        {
+          "id": 116,
+          "question": "Why can’t I see the Cancel application option?",
+          "answer": "The option is no longer displayed after the application moves further into review."
+        },
+        {
+          "id": 117,
+          "question": "What if an opportunity has an External apply link?",
+          "answer": "Select Open application link and continue on the external website."
+        }
+      ]
+    },
+    {
+      "section": "J. Messages, Notifications and Settings",
+      "faqs": [
+        {
+          "id": 118,
+          "question": "Who can I message directly?",
+          "answer": "Direct chat is available for your connections only."
+        },
+        {
+          "id": 119,
+          "question": "How do I start a new chat with a connection?",
+          "answer": "Open the connection in My Network and select Message, or open Messages and select the required conversation."
+        },
+        {
+          "id": 120,
+          "question": "Can I search my existing conversations?",
+          "answer": "Yes. Use Search conversations in the Messages section."
+        },
+        {
+          "id": 121,
+          "question": "Can I attach files to messages?",
+          "answer": "Yes."
+        },
+        {
+          "id": 122,
+          "question": "How do I report a message?",
+          "answer": "Select Report this message."
+        },
+        {
+          "id": 123,
+          "question": "How do I view notifications?",
+          "answer": "Open Notifications and use All, Unread or Mentions filters. Select a notification to open the related item."
+        },
+        {
+          "id": 124,
+          "question": "How do I clear the unread notification count?",
+          "answer": "Select Mark all read."
+        },
+        {
+          "id": 125,
+          "question": "How do I change notification preferences?",
+          "answer": "Open Settings, select the Notifications tab and switch the required preferences on or off. Each change saves automatically."
+        },
+        {
+          "id": 126,
+          "question": "Which notification preferences can I manage?",
+          "answer": "The listed preferences are Network catch- up updates, Posting and commenting, Mentions, Weekly opportunity digest and Opportunity match alerts."
+        },
+        {
+          "id": 127,
+          "question": "Can I turn off security, verification and moderation emails?",
+          "answer": "No. The security, verification and moderation emails always remain on."
+        },
+        {
+          "id": 128,
+          "question": "Can I unsubscribe from the weekly opportunity digest?",
+          "answer": "Yes. Each weekly digest email has an unsubscribe link. You can switch the digest back on in Settings."
+        }
+      ]
+    },
+    {
+      "section": "K. Account Deactivation, Deletion and Appeals",
+      "faqs": [
+        {
+          "id": 129,
+          "question": "How do I deactivate my Marketplace account?",
+          "answer": "Open Settings, select the Account tab, choose Deactivate account, optionally enter a reason and confirm."
+        },
+        {
+          "id": 130,
+          "question": "What happens when I deactivate my account?",
+          "answer": "Your profile is hidden and you are signed out. Log in again to reactivate the account."
+        },
+        {
+          "id": 131,
+          "question": "How do I delete my Marketplace account?",
+          "answer": "Open Settings, select the Account tab, choose Delete account, optionally enter a reason and confirm with Delete permanently."
+        },
+        {
+          "id": 132,
+          "question": "Can I undo account deletion?",
+          "answer": "No. Account deletion permanently closes the account and cannot be undone. The posts and comments are removed."
+        },
+        {
+          "id": 133,
+          "question": "What does “Your Marketplace account is under review” mean?",
+          "answer": "Your registration was flagged for Community Admin review. Wait for the decision and select Refresh status to check again."
+        },
+        {
+          "id": 134,
+          "question": "What should I do if my account status says Changes requested?",
+          "answer": "Read the Admin remarks, select Update profile, make the requested changes and save. Your account returns to review."
+        },
+        {
+          "id": 135,
+          "question": "What should I do if my registration was not approved?",
+          "answer": "Read the Admin remarks. If you believe the decision was a mistake, select Appeal decision on the status page."
+        },
+        {
+          "id": 136,
+          "question": "Can I appeal a rejected registration or moderation action?",
+          "answer": "Yes. The appeals for a rejected registration, mute, suspension, removal or warning are allowed."
+        },
+        {
+          "id": 137,
+          "question": "How do I submit an appeal while signed in?",
+          "answer": "Open the moderation appeals page, select New appeal, choose the Appeal type, enter your reason under “Why should this decision be reviewed?” and select Submit appeal."
+        },
+        {
+          "id": 138,
+          "question": "What appeal types are available?",
+          "answer": "Suspension, Removal, Mute, Warning and Other."
+        },
+        {
+          "id": 139,
+          "question": "Is there a minimum length for an appeal reason?",
+          "answer": "Yes. The reason must contain at least 10 characters."
+        },
+        {
+          "id": 140,
+          "question": "How can I appeal if I cannot sign in because of suspension or removal?",
+          "answer": "Use the appeal link included in the suspension or removal email, choose the Appeal type, enter your reason and select Submit appeal."
+        },
+        {
+          "id": 141,
+          "question": "What appeal statuses can I see?",
+          "answer": "The documented statuses are Pending, Approved and Rejected. A Reviewer note may also be provided."
+        },
+        {
+          "id": 142,
+          "question": "What happens if my appeal is rejected?",
+          "answer": "If the appeal relates to suspension or removal and is rejected, the restriction remains in place."
+        }
+      ]
+    },
+    {
+      "section": "L. Reporting Marketplace Content",
+      "faqs": [
+        {
+          "id": 143,
+          "question": "What Marketplace content can I report?",
+          "answer": "You can report posts, comments, profiles, messages, businesses and Knowledge Centre resources."
+        },
+        {
+          "id": 144,
+          "question": "How do I report content?",
+          "answer": "Open the item, select its Report option (often under More options), choose a reason, optionally enter details and submit the report."
+        },
+        {
+          "id": 145,
+          "question": "What reasons can I select when reporting content?",
+          "answer": "Spam, Inappropriate language, Harassment, Misinformation, Hate speech or Other."
+        },
+        {
+          "id": 146,
+          "question": "What is the maximum length for additional report details?",
+          "answer": "Additional details can contain up to 1,000 characters."
+        },
+        {
+          "id": 147,
+          "question": "What happens after I submit a report?",
+          "answer": "The item displays Reported. A Community Admin reviews it."
+        }
+      ]
+    }
+  ]
+}

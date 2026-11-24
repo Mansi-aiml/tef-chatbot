@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.db.models import SupportTicket
 from app.services.graph.state import ChatState
+from app.services.language import escalation_message
 
 logger = logging.getLogger("app.services.support")
 
@@ -51,11 +52,7 @@ def make_escalate_node(db: Session):
             entities=state.get("entities"),
             escalation_reason=reason,
         )
-        message = (
-            "Thanks for reaching out — I've escalated this to our support team, "
-            "who will follow up with you shortly. "
-            f"You can also reach them directly at {settings.support_email} or {settings.support_phone}."
-        )
+        message = escalation_message(state.get("language"), settings.support_email, settings.support_phone)
         return {"answer": message, "escalated": True, "escalation_reason": reason}
 
     return escalate

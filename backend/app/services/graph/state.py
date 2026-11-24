@@ -7,6 +7,7 @@ class ChatState(TypedDict, total=False):
     user_id: str
     raw_message: str
     chat_history: list[dict[str, str]]
+    language: str
     refined_query: str
     intent: str
     entities: dict[str, str]
