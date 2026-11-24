@@ -27,6 +27,9 @@ except Exception:
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[settings.frontend_origin],
+    # Vite moves to the next free port (5174, 5175, ...) when 5173 is taken,
+    # so accept any local dev origin as well.
+    allow_origin_regex=r"http://(localhost|127\.0\.0\.1)(:\d+)?",
     allow_methods=["*"],
     allow_headers=["*"],
 )

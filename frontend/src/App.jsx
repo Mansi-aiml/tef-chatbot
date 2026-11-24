@@ -69,7 +69,7 @@ function App() {
     console.log("[Connection] Checking backend connection status on load...");
     const checkConnection = async () => {
       try {
-        const res = await fetch("http://127.0.0.1:8000/health");
+        const res = await fetch("/health");
         if (res.ok) {
           console.log("[Connection] Backend is online and responding.");
           setIsConnected(true);
@@ -149,9 +149,9 @@ function App() {
         message: text,
         history,
       };
-      console.log("[Chat] Dispatching API request to http://127.0.0.1:8000/chat with payload:", payload);
+      console.log("[Chat] Dispatching API request to /chat with payload:", payload);
 
-      const response = await fetch("http://127.0.0.1:8000/chat", {
+      const response = await fetch("/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -250,7 +250,7 @@ function App() {
       const lastUserMsg = [...messages].reverse().find((m) => m.isUser);
       const lastBotMsg = [...messages].reverse().find((m) => !m.isUser && !m.isError);
 
-      const response = await fetch("http://127.0.0.1:8000/chat/feedback/ticket", {
+      const response = await fetch("/chat/feedback/ticket", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
