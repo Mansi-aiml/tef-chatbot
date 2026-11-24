@@ -29,6 +29,26 @@ function isConversationEnding(text) {
   );
 }
 
+// Languages the bot can answer in. `code` is sent to the backend as
+// `language`; English is the default.
+const LANGUAGES = [
+  { code: "en", label: "English" },
+  { code: "ar", label: "العربية" },
+  { code: "fr", label: "Français" },
+  { code: "pt", label: "Português" },
+];
+const DEFAULT_LANGUAGE = "en";
+const LANGUAGE_STORAGE_KEY = "tef-chat-language";
+
+function loadSavedLanguage() {
+  try {
+    const saved = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    return LANGUAGES.some((l) => l.code === saved) ? saved : DEFAULT_LANGUAGE;
+  } catch {
+    return DEFAULT_LANGUAGE;
+  }
+}
+
 // How long the chat can sit idle (no new user/bot messages) before the
 // feedback prompt is shown automatically.
 const INACTIVITY_MS = 90 * 1000;
@@ -46,6 +66,7 @@ function App() {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
   const [ratingSubmitted, setRatingSubmitted] = useState(false);
+  const [language, setLanguage] = useState(loadSavedLanguage);
   const chatEndRef = useRef(null);
   const textareaRef = useRef(null);
   const inactivityTimerRef = useRef(null);
@@ -101,6 +122,15 @@ function App() {
     return () => clearTimeout(inactivityTimerRef.current);
   }, [messages, loading, feedbackStage, chatEnded]);
 
+  // Remember the chosen answer language for this browser.
+  useEffect(() => {
+    try {
+      localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+    } catch {
+      // Storage unavailable (private mode etc.) — the choice just won't persist.
+    }
+  }, [language]);
+
   // Handle textarea autosize
   useEffect(() => {
     if (textareaRef.current) {
@@ -148,6 +178,7 @@ function App() {
         user_id: "test_user",
         message: text,
         history,
+        language,
       };
       console.log("[Chat] Dispatching API request to /chat with payload:", payload);
 
@@ -312,11 +343,31 @@ function App() {
             </div>
           </div>
         </div>
-        {messages.length > 0 && (
-          <button className="clear-btn" onClick={clearChat} title="Clear history">
-            <span>🗑️</span> Clear Chat
-          </button>
-        )}
+        <div className="header-actions">
+          {messages.length > 0 && (
+            <button className="clear-btn" onClick={clearChat} title="Clear history">
+              <span>🗑️</span> Clear Chat
+            </button>
+          )}
+          <label className="language-select-wrapper" title="Answer language">
+            <span className="language-icon" aria-hidden="true">🌐</span>
+            <select
+              className="language-select"
+              value={language}
+              onChange={(e) => {
+                console.log("[Language] Answer language changed to:", e.target.value);
+                setLanguage(e.target.value);
+              }}
+              aria-label="Answer language"
+            >
+              {LANGUAGES.map((l) => (
+                <option key={l.code} value={l.code}>
+                  {l.label}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
       </header>
 
       {/* Main Chat Area */}
@@ -353,9 +404,9 @@ function App() {
               <div className="message-content">
                 <div className={`message-bubble ${msg.isUser ? "user-bubble" : "bot-bubble"} ${msg.isError ? "error-bubble" : ""}`}>
                   {msg.isUser ? (
-                    msg.text
+                    <span dir="auto">{msg.text}</span>
                   ) : (
-                    <div className="markdown-content">
+                    <div className="markdown-content" dir="auto">
                       <ReactMarkdown>{msg.text}</ReactMarkdown>
                     </div>
                   )}
@@ -384,6 +435,7 @@ function App() {
                           className="followup-chip"
                           disabled={loading || chatEnded || !!feedbackStage || index !== messages.length - 1}
                           onClick={() => handleSendMessage(question)}
+                          dir="auto"
                         >
                           {question}
                         </button>
@@ -534,6 +586,7 @@ function App() {
         <div className="input-container">
           <textarea
             ref={textareaRef}
+            dir="auto"
             className="chat-input"
             rows="1"
             placeholder={chatEnded ? "This chat has ended. Start a new chat to continue." : "Type your message here..."}
