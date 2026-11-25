@@ -71,14 +71,6 @@ function App() {
   const textareaRef = useRef(null);
   const inactivityTimerRef = useRef(null);
 
-  // Suggestions for empty state — real questions verified against the FAQ/KB content
-  const suggestions = [
-    { text: "How do I reset my password?", label: "Reset Password" },
-    { text: "How does a Mentor Admin pair an entrepreneur with a mentor?", label: "Mentor Pairing" },
-    { text: "How does an M&E Admin onboard a new enumerator?", label: "Enumerator Onboarding" },
-    { text: "What is the difference between an External Reviewer and a QA reviewer?", label: "Reviewer vs QA" }
-  ];
-
   // Auto-scroll to the bottom of the chat
   useEffect(() => {
     console.log("[Chat] Auto-scrolling to bottom. Message count:", messages.length);
@@ -377,23 +369,9 @@ function App() {
             <div className="welcome-logo">🤖</div>
             <h2>Welcome to TEF Support</h2>
             <p className="welcome-desc">
-              Ask any question about mentor creation, support ticket processing, or configuration settings.
-              Our RAG-powered agent is here to help!
+              How can we help you today? Ask a question about the TEF platform and our support
+              assistant will guide you.
             </p>
-            <div className="suggestions-title">Suggested questions:</div>
-            <div className="suggestions-grid">
-              {suggestions.map((s, index) => (
-                <button
-                  key={index}
-                  className="suggestion-card"
-                  onClick={() => handleSendMessage(s.text)}
-                >
-                  <span>{s.label}</span>
-                  <p className="suggestion-desc">{s.text}</p>
-                  <span className="suggestion-arrow">→</span>
-                </button>
-              ))}
-            </div>
           </div>
         ) : (
           messages.map((msg, index) => (
