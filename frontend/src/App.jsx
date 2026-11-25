@@ -453,6 +453,9 @@ function App() {
                 <button className="feedback-btn feedback-btn-positive" onClick={handleFeedbackSatisfied}>
                   👍 Yes, all good
                 </button>
+                <button className="feedback-btn" onClick={handleContinueChat}>
+                  💬 Continue chat
+                </button>
                 <button className="feedback-btn feedback-btn-negative" onClick={handleFeedbackUnsatisfied}>
                   👎 Not quite
                 </button>
