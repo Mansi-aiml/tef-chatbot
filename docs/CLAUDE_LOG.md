@@ -15,3 +15,7 @@ Comment: Fixed the end-of-chat star rating (was calling an undefined handleRatin
 ## 2026-07-27 00:00
 Files Modified: frontend/src/App.css
 Comment: Darkened the feedback star rating buttons (grayscale+brightness filter instead of low opacity) and added a circular border so they're clearly visible against the white feedback card background.
+
+## 2026-11-25 00:00
+Files Modified: backend/app/services/support.py, backend/app/services/language.py, backend/app/services/graph/pipeline_graph.py, backend/app/services/graph/state.py, backend/app/services/pipeline.py, backend/app/api/routes/chat.py, frontend/src/App.jsx, CLAUDE.md
+Comment: Replaced automatic ticket escalation with a warm out-of-scope reply (no ticket) that triggers the feedback prompt; tickets are now only created if the user opts in.

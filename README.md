@@ -37,7 +37,7 @@ pip install -r requirements.txt
 cp .env.example .env   # fill in GROQ_API_KEY, DATABASE_URL, support contact info
 python -m scripts.ingest --collection knowledge_base --path ./knowledgebase
 python -m scripts.ingest --collection faq --path ./faq
-uvicorn app.main:app --reload
+ 
 ```
 
 ### Frontend

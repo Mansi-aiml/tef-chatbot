@@ -196,6 +196,7 @@ function App() {
         isUser: false,
         confidence: data.confidence,
         escalated: data.escalated,
+        outOfScope: data.out_of_scope,
         answeredBy: data.answered_by,
         supportEmail: data.support_email,
         supportPhone: data.support_phone,
@@ -207,7 +208,10 @@ function App() {
       console.log("[Chat] Appending assistant response to chat UI:", botMsg);
       setMessages((prev) => [...prev, botMsg]);
 
-      if (isConversationEnding(text)) {
+      if (data.out_of_scope) {
+        console.log("[Feedback] Out-of-scope reply — offering feedback prompt.");
+        setTimeout(() => setFeedbackStage("asking"), 600);
+      } else if (isConversationEnding(text)) {
         console.log("[Feedback] Conversation-ending phrase detected — will prompt for feedback.");
         setTimeout(() => setFeedbackStage("asking"), 600);
       }
