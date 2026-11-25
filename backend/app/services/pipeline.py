@@ -15,7 +15,7 @@ class ChatResult:
     confidence: float | None
     escalated: bool
     answered_by: str | None = None
-    escalation_reason: str | None = None
+    out_of_scope: bool = False
     sources: list[str] = field(default_factory=list)
     followup_suggestions: list[str] = field(default_factory=list)
 
@@ -32,7 +32,7 @@ def handle_message(
 ) -> ChatResult:
     logger.info("Pipeline: Handling message for User %s. Message preview: '%s'", user_id, message[:60])
 
-    graph = build_graph(db)
+    graph = build_graph()
     result = graph.invoke(
         {
             "user_id": user_id,
@@ -54,7 +54,7 @@ def handle_message(
         confidence=result.get("confidence"),
         escalated=bool(result.get("escalated")),
         answered_by=result.get("answered_by"),
-        escalation_reason=result.get("escalation_reason"),
+        out_of_scope=bool(result.get("out_of_scope")),
         sources=result.get("sources", []),
         followup_suggestions=result.get("followup_suggestions", []),
     )

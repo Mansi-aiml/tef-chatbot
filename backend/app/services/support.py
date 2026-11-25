@@ -3,10 +3,9 @@ import logging
 
 from sqlalchemy.orm import Session
 
-from app.core.config import settings
 from app.db.models import SupportTicket
 from app.services.graph.state import ChatState
-from app.services.language import escalation_message
+from app.services.language import out_of_scope_message
 
 logger = logging.getLogger("app.services.support")
 
@@ -37,22 +36,20 @@ def create_support_ticket(
     return ticket
 
 
-def make_escalate_node(db: Session):
-    def escalate(state: ChatState) -> dict:
-        # Reached either because neither layer found a match (kb_hits empty)
-        # or because the KB layer found hits but confidence scored too low.
-        reason = "low_confidence" if state.get("kb_hits") else "not_found"
-        create_support_ticket(
-            db,
-            state["user_id"],
-            state["refined_query"],
-            draft_answer=None,
-            confidence=state.get("confidence") or 0.0,
-            intent=state.get("intent"),
-            entities=state.get("entities"),
-            escalation_reason=reason,
-        )
-        message = escalation_message(state.get("language"), settings.support_email, settings.support_phone)
-        return {"answer": message, "escalated": True, "escalation_reason": reason}
+def out_of_scope(state: ChatState) -> dict:
+    """Final fallback when neither layer can answer and follow-ups are exhausted.
 
-    return escalate
+    Deliberately does NOT create a support ticket — replying with a warm
+    out-of-scope message is friendlier than escalating on the user's behalf.
+    The frontend then shows its feedback prompt, where the user can opt in to
+    a ticket (POST /chat/feedback/ticket) if they still need help.
+    """
+    reason = "low_confidence" if state.get("kb_hits") else "not_found"
+    logger.info("Support: Out of scope (reason=%s) for '%s'", reason, state.get("refined_query"))
+    return {
+        "answer": out_of_scope_message(state.get("language")),
+        "escalated": False,
+        "out_of_scope": True,
+        "followup_suggestions": [],
+        "sources": [],
+    }

@@ -31,6 +31,7 @@ class ChatResponse(BaseModel):
     answer: str
     confidence: float | None = None
     escalated: bool
+    out_of_scope: bool = False
     answered_by: Literal["faq", "kb"] | None = None
     support_email: str | None = None
     support_phone: str | None = None
@@ -52,6 +53,7 @@ def post_chat(request: ChatRequest, db: Session = Depends(get_db)) -> ChatRespon
             answer=result.answer,
             confidence=result.confidence,
             escalated=result.escalated,
+            out_of_scope=result.out_of_scope,
             answered_by=result.answered_by,
             support_email=settings.support_email if result.escalated else None,
             support_phone=settings.support_phone if result.escalated else None,

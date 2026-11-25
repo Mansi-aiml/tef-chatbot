@@ -1,5 +1,4 @@
 from langgraph.graph import END, StateGraph
-from sqlalchemy.orm import Session
 
 from app.services.chitchat import chitchat_reply
 from app.services.followup import (
@@ -13,7 +12,7 @@ from app.services.retrieval.confidence import confidence_router, score_confidenc
 from app.services.retrieval.faq_layer import faq_router, faq_search
 from app.services.retrieval.faq_relevance import check_faq_relevance, faq_relevance_router
 from app.services.retrieval.kb_layer import kb_router, kb_search
-from app.services.support import make_escalate_node
+from app.services.support import out_of_scope
 from app.services.synthesis import synthesize
 
 
@@ -40,10 +39,9 @@ def _chitchat_router(state: ChatState) -> str:
     return "chitchat" if state.get("is_chitchat") else "question"
 
 
-def build_graph(db: Session):
-    """Compiled per-request so the escalate node can close over this request's
-    DB session — the graph itself completes within a single request/response
-    cycle, so there's no need for LangGraph checkpointing/persistence here."""
+def build_graph():
+    """The graph completes within a single request/response cycle, so there's
+    no need for LangGraph checkpointing/persistence here."""
     graph = StateGraph(ChatState)
 
     graph.add_node("refine_and_classify", _refine_and_classify_node)
@@ -55,7 +53,7 @@ def build_graph(db: Session):
     graph.add_node("synthesize", synthesize)
     graph.add_node("check_escalation", _check_escalation_node)
     graph.add_node("suggest_followups", suggest_followups)
-    graph.add_node("escalate", make_escalate_node(db))
+    graph.add_node("out_of_scope", out_of_scope)
 
     graph.set_entry_point("refine_and_classify")
     graph.add_conditional_edges(
@@ -87,16 +85,16 @@ def build_graph(db: Session):
     graph.add_conditional_edges(
         "check_escalation",
         escalation_decision_router,
-        {"clarify": "suggest_followups", "escalate": "escalate"},
+        {"clarify": "suggest_followups", "escalate": "out_of_scope"},
     )
     graph.add_conditional_edges(
         "suggest_followups",
         followup_result_router,
-        {"done": END, "escalate": "escalate"},
+        {"done": END, "escalate": "out_of_scope"},
     )
 
     graph.add_edge("chitchat", END)
     graph.add_edge("synthesize", END)
-    graph.add_edge("escalate", END)
+    graph.add_edge("out_of_scope", END)
 
     return graph.compile()

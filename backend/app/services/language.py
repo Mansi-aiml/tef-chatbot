@@ -57,25 +57,31 @@ FOLLOWUP_PREFIXES: dict[str, str] = {
     ),
 }
 
-_ESCALATION_MESSAGES: dict[str, str] = {
+_OUT_OF_SCOPE_MESSAGES: dict[str, str] = {
     "en": (
-        "Thanks for reaching out — I've escalated this to our support team, who "
-        "will follow up with you shortly. You can also reach them directly at "
-        "{email} or {phone}."
+        "Thanks for your question! This one seems to be outside what I can help "
+        "with right now — I focus on TEF platform topics, and I don't have "
+        "reliable information on this. I'd really appreciate your feedback "
+        "below, and I'm happy to help with anything else about TEF."
     ),
     "ar": (
-        "شكرًا لتواصلك معنا — لقد أحلت طلبك إلى فريق الدعم لدينا، وسيتواصلون معك "
-        "قريبًا. يمكنك أيضًا التواصل معهم مباشرة عبر {email} أو {phone}."
+        "شكرًا على سؤالك! يبدو أن هذا السؤال خارج نطاق ما يمكنني المساعدة فيه "
+        "حاليًا — فأنا أركز على مواضيع منصة TEF ولا تتوفر لدي معلومات موثوقة "
+        "حول هذا الموضوع. يسعدني الاطلاع على رأيك أدناه، وأنا جاهز للمساعدة "
+        "في أي أمر آخر يخص TEF."
     ),
     "fr": (
-        "Merci de nous avoir contactés — j'ai transmis votre demande à notre équipe "
-        "d'assistance, qui reviendra vers vous rapidement. Vous pouvez également la "
-        "joindre directement à {email} ou au {phone}."
+        "Merci pour votre question ! Elle semble sortir du cadre de ce que je peux "
+        "traiter pour le moment — je me concentre sur les sujets de la plateforme "
+        "TEF et je ne dispose pas d'informations fiables à ce sujet. Je serais "
+        "ravi de recevoir vos commentaires ci-dessous, et je reste disponible "
+        "pour toute autre question sur TEF."
     ),
     "pt": (
-        "Obrigado pelo contato — encaminhei isto para a nossa equipe de suporte, que "
-        "entrará em contato com você em breve. Você também pode falar diretamente "
-        "com ela pelo {email} ou {phone}."
+        "Obrigado pela sua pergunta! Parece estar fora do que posso ajudar neste "
+        "momento — eu me concentro em temas da plataforma TEF e não tenho "
+        "informações confiáveis sobre isso. Adoraria receber o seu feedback "
+        "abaixo, e terei prazer em ajudar com qualquer outra dúvida sobre a TEF."
     ),
 }
 
@@ -84,5 +90,5 @@ def followup_prefix(code: str | None) -> str:
     return FOLLOWUP_PREFIXES[normalize_language(code)]
 
 
-def escalation_message(code: str | None, email: str, phone: str) -> str:
-    return _ESCALATION_MESSAGES[normalize_language(code)].format(email=email, phone=phone)
+def out_of_scope_message(code: str | None) -> str:
+    return _OUT_OF_SCOPE_MESSAGES[normalize_language(code)]
