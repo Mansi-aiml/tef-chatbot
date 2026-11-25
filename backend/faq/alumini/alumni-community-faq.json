@@ -1,0 +1,662 @@
+{
+  "module": "alumni-community",
+  "moduleLabel": "Alumni Community",
+  "product": "TEFConnect",
+  "version": "2.0",
+  "language": "en",
+  "pairedDocument": "Alumni_Community_Module_Knowledge.docx",
+  "instructions": "Alumni Community FAQ only. Use for short Q&A; use the paired Word document for detailed how-tos and edge cases. Follow the common rule book for shared assistant behaviour across all modules.",
+  "faqs": [
+    {
+      "id": "ac-001",
+      "category": "overview",
+      "question": "What is Alumni Community?",
+      "answer": "Alumni Community is TEFConnect’s community hub for TEF alumni and community members. Members can share updates, connect, join or create groups, attend or host events when eligible, message, use Knowledge Centre, apply for opportunities, and view the Leaderboard.",
+      "keywords": [
+        "what is",
+        "alumni community",
+        "overview"
+      ]
+    },
+    {
+      "id": "ac-002",
+      "category": "overview",
+      "question": "What sections are in Alumni Community?",
+      "answer": "Home Feed, My Network, Profile, Groups, Messages, Knowledge Centre, Events, Value Added Opportunities, Leaderboard, Notifications, and Settings.",
+      "keywords": [
+        "sections",
+        "menu"
+      ]
+    },
+    {
+      "id": "ac-003",
+      "category": "overview",
+      "question": "Is Alumni Community the same as Marketplace?",
+      "answer": "No. Marketplace is a separate networking hub. Alumni Community is the alumni and community portal with groups, events hosting for eligible alumni, leaderboard, and role-specific profiles.",
+      "keywords": [
+        "difference",
+        "marketplace"
+      ]
+    },
+    {
+      "id": "ac-004",
+      "category": "overview",
+      "question": "Is Alumni Community the same as Mentorship?",
+      "answer": "No. Mentorship is the assigned mentor–mentee engagement area. Alumni Community can open Mentorship for TEF Coach flows, and mentors can return with Back to Alumni Portal.",
+      "keywords": [
+        "difference",
+        "mentorship",
+        "tef coach"
+      ]
+    },
+    {
+      "id": "ac-005",
+      "category": "access",
+      "question": "Who can access Alumni Community?",
+      "answer": "TEF entrepreneurs/alumni with finance status passed can open it from TEFConnect. Investors, community admins, and community mentors use community accounts. Mentorship mentors may return via Back to Alumni Portal.",
+      "keywords": [
+        "access",
+        "finance passed",
+        "who can"
+      ]
+    },
+    {
+      "id": "ac-006",
+      "category": "access",
+      "question": "Why don’t I see Alumni Community in my menu?",
+      "answer": "For TEF entrepreneurs, Alumni Community appears when at least one programme has finance status passed.",
+      "keywords": [
+        "menu",
+        "missing",
+        "finance"
+      ]
+    },
+    {
+      "id": "ac-007",
+      "category": "access",
+      "question": "Why must I complete my Alumni Community profile first?",
+      "answer": "Incomplete community profiles are redirected to Edit profile. Module sections stay unavailable until the community profile is complete.",
+      "keywords": [
+        "incomplete profile",
+        "edit profile"
+      ]
+    },
+    {
+      "id": "ac-008",
+      "category": "access",
+      "question": "What happens if my Alumni Community account is suspended?",
+      "answer": "Community suspension blocks Alumni Community use while the TEFConnect portal session can remain. Follow the suspension message shown.",
+      "keywords": [
+        "suspended",
+        "suspension"
+      ]
+    },
+    {
+      "id": "ac-009",
+      "category": "roles",
+      "question": "What roles exist in Alumni Community?",
+      "answer": "Role labels include Alumni, Mentor, Investor, and Community Admin. Profile forms and some actions differ by role.",
+      "keywords": [
+        "roles",
+        "investor",
+        "mentor"
+      ]
+    },
+    {
+      "id": "ac-010",
+      "category": "feed",
+      "question": "How do I share an update in Alumni Community?",
+      "answer": "Go to Home Feed, write your update, optionally add Photo, Video, or Poll, use @ to mention people, then Post.",
+      "keywords": [
+        "post",
+        "home feed"
+      ]
+    },
+    {
+      "id": "ac-011",
+      "category": "feed",
+      "question": "What are post media limits?",
+      "answer": "Up to 20 photos or videos per post. Each image under 10 MB. Each video under 50 MB.",
+      "keywords": [
+        "media",
+        "10 mb",
+        "50 mb",
+        "20"
+      ]
+    },
+    {
+      "id": "ac-012",
+      "category": "feed",
+      "question": "How do polls work?",
+      "answer": "Choose Poll, add 2 to 6 options, then members can Vote or Update vote until the poll is closed.",
+      "keywords": [
+        "poll",
+        "vote"
+      ]
+    },
+    {
+      "id": "ac-013",
+      "category": "feed",
+      "question": "How long can a comment be?",
+      "answer": "Up to 2000 characters.",
+      "keywords": [
+        "comment",
+        "2000"
+      ]
+    },
+    {
+      "id": "ac-014",
+      "category": "feed",
+      "question": "How do I bookmark a post?",
+      "answer": "Use Save on the post. Saved/Remove bookmark toggles the bookmark. Own profile Bookmarks shows saved posts.",
+      "keywords": [
+        "bookmark",
+        "save"
+      ]
+    },
+    {
+      "id": "ac-015",
+      "category": "feed",
+      "question": "Can I delete my post?",
+      "answer": "Yes. Use Delete post when the post is yours.",
+      "keywords": [
+        "delete post"
+      ]
+    },
+    {
+      "id": "ac-016",
+      "category": "network",
+      "question": "How do I connect with someone?",
+      "answer": "Open My Network, search (at least 2 letters) or use Suggested, then Connect. Manage Pending and Sent Requests. Accept or Reject incoming requests.",
+      "keywords": [
+        "connect",
+        "pending",
+        "network"
+      ]
+    },
+    {
+      "id": "ac-017",
+      "category": "network",
+      "question": "What sections are in My Network?",
+      "answer": "All Results, My Connections, Suggested, Pending, Sent Requests, Followers, and Following.",
+      "keywords": [
+        "my network",
+        "segments"
+      ]
+    },
+    {
+      "id": "ac-018",
+      "category": "network",
+      "question": "What filters can I use in My Network?",
+      "answer": "Role, country, sector, programme, and funding year.",
+      "keywords": [
+        "filters",
+        "programme",
+        "funding year"
+      ]
+    },
+    {
+      "id": "ac-019",
+      "category": "network",
+      "question": "How do I message a connection?",
+      "answer": "After connecting, use Message from the network card or profile, or open Messages.",
+      "keywords": [
+        "message",
+        "connection"
+      ]
+    },
+    {
+      "id": "ac-020",
+      "category": "groups",
+      "question": "Can I create a group?",
+      "answer": "Yes. In Groups choose Create Group. Set name, Public or Private visibility, description, required community rules, optional audience filters, logo/cover, and invites. You can edit groups you created.",
+      "keywords": [
+        "create group"
+      ]
+    },
+    {
+      "id": "ac-021",
+      "category": "groups",
+      "question": "How do I join a group?",
+      "answer": "Open Groups, open a group, then Join for public groups or Request to join for private groups. Status may show Request pending.",
+      "keywords": [
+        "join group",
+        "private"
+      ]
+    },
+    {
+      "id": "ac-022",
+      "category": "groups",
+      "question": "What tabs are inside a group?",
+      "answer": "Discussion Feed, Group Chat, Members, and About (rules).",
+      "keywords": [
+        "group tabs",
+        "discussion",
+        "chat"
+      ]
+    },
+    {
+      "id": "ac-023",
+      "category": "groups",
+      "question": "What can group owners or managers do?",
+      "answer": "Edit groups they created, approve/reject private join requests, remove members, transfer ownership, and report members. Members can Leave.",
+      "keywords": [
+        "owner",
+        "approve",
+        "transfer ownership"
+      ]
+    },
+    {
+      "id": "ac-024",
+      "category": "groups",
+      "question": "Why can’t I post in a group?",
+      "answer": "You may need to join first, or wait until a private join request is approved. Non-members are guided to join before posting or using chat.",
+      "keywords": [
+        "cannot post",
+        "join to post"
+      ]
+    },
+    {
+      "id": "ac-025",
+      "category": "groups",
+      "question": "Can I edit any group?",
+      "answer": "No. You can only edit groups you created.",
+      "keywords": [
+        "edit group",
+        "only creator"
+      ]
+    },
+    {
+      "id": "ac-026",
+      "category": "events",
+      "question": "Can I host an event?",
+      "answer": "Host event is available for portal alumni-eligible members (entrepreneur or alumni). Investors, community admins, and community mentors do not get Host event.",
+      "keywords": [
+        "host event",
+        "who can host"
+      ]
+    },
+    {
+      "id": "ac-027",
+      "category": "events",
+      "question": "How do I join an event?",
+      "answer": "Open Events, open an event, then Join Event for public events or Request to Join for private events. Status may be Joined, Waitlisted, or Request pending.",
+      "keywords": [
+        "join event",
+        "waitlist"
+      ]
+    },
+    {
+      "id": "ac-028",
+      "category": "events",
+      "question": "Why can’t I register for an event?",
+      "answer": "Registration may be closed outside the registration window.",
+      "keywords": [
+        "registration closed"
+      ]
+    },
+    {
+      "id": "ac-029",
+      "category": "events",
+      "question": "What are event attachment limits?",
+      "answer": "Attachments up to 50 MB. Allowed types include JPG, PNG, MP4, PDF, DOC, and DOCX. Short description is limited to 500 words.",
+      "keywords": [
+        "attachment",
+        "50 mb"
+      ]
+    },
+    {
+      "id": "ac-030",
+      "category": "events",
+      "question": "Can I cancel event registration?",
+      "answer": "Yes when Cancel registration or Cancel request is offered.",
+      "keywords": [
+        "cancel registration"
+      ]
+    },
+    {
+      "id": "ac-031",
+      "category": "events",
+      "question": "What can hosts configure for an event?",
+      "answer": "Name/description/agenda, type, format (virtual/physical/hybrid), schedule, registration window, capacity, waiting list, audience, visibility, speakers, attachments, and Draft/Publish/Schedule.",
+      "keywords": [
+        "create event fields",
+        "publish",
+        "draft"
+      ]
+    },
+    {
+      "id": "ac-032",
+      "category": "knowledge",
+      "question": "What can I do in Knowledge Centre?",
+      "answer": "Browse categories and resources, search, open or download materials, and see view/download activity. Members cannot upload knowledge resources.",
+      "keywords": [
+        "knowledge centre",
+        "download"
+      ]
+    },
+    {
+      "id": "ac-033",
+      "category": "opportunities",
+      "question": "How do I apply for a Value Added Opportunity?",
+      "answer": "Open Value Added Opportunities, open a listing, then Apply when published and not past the deadline. Save first if needed. Cancel application when Submitted.",
+      "keywords": [
+        "apply",
+        "cancel application"
+      ]
+    },
+    {
+      "id": "ac-034",
+      "category": "opportunities",
+      "question": "Can I create an opportunity?",
+      "answer": "No. Members browse, save, and apply only.",
+      "keywords": [
+        "create opportunity"
+      ]
+    },
+    {
+      "id": "ac-035",
+      "category": "messages",
+      "question": "How do Messages work?",
+      "answer": "Open Messages for private conversations with connections, including direct and group chats when available. Search conversations; send attachments, @ mentions, and reactions.",
+      "keywords": [
+        "messages",
+        "chat"
+      ]
+    },
+    {
+      "id": "ac-036",
+      "category": "messages",
+      "question": "What are chat attachment limits?",
+      "answer": "Up to 5 attachments per message; images/docs 10 MB; video 50 MB; audio 20 MB.",
+      "keywords": [
+        "attachments",
+        "limits"
+      ]
+    },
+    {
+      "id": "ac-037",
+      "category": "messages",
+      "question": "Can I start a voice or video call?",
+      "answer": "Call starting is not available as a working member action in Alumni Community Messages.",
+      "keywords": [
+        "call",
+        "video call"
+      ]
+    },
+    {
+      "id": "ac-038",
+      "category": "notifications",
+      "question": "How do Notifications work?",
+      "answer": "Open Notifications, filter All/Unread/Mentions, Mark all read, and Accept/Ignore connection-style items when offered.",
+      "keywords": [
+        "notifications"
+      ]
+    },
+    {
+      "id": "ac-039",
+      "category": "settings",
+      "question": "What settings can I change?",
+      "answer": "Private profile (Save changes) and Manage blocked users (unblock). Other preference labels that are not working controls should not be treated as active features.",
+      "keywords": [
+        "settings",
+        "private profile",
+        "blocked"
+      ]
+    },
+    {
+      "id": "ac-040",
+      "category": "settings",
+      "question": "Can I download my data from Settings?",
+      "answer": "Download my data is not available as a working Settings control in Alumni Community.",
+      "keywords": [
+        "download my data"
+      ]
+    },
+    {
+      "id": "ac-041",
+      "category": "profile",
+      "question": "How do I edit my Alumni Community profile?",
+      "answer": "Profile → Edit Profile. Forms differ by role (Alumni, Mentor, Investor, Community Admin). Use Preview when available.",
+      "keywords": [
+        "edit profile",
+        "preview"
+      ]
+    },
+    {
+      "id": "ac-042",
+      "category": "profile",
+      "question": "What is Become a TEF Coach?",
+      "answer": "On an alumni own profile, Become a TEF Coach / Re-apply / Open Mentorship / Complete Mentorship profile starts or continues the Mentorship coach path. Statuses include None, Pending, Approved, Rejected.",
+      "keywords": [
+        "tef coach",
+        "mentorship"
+      ]
+    },
+    {
+      "id": "ac-043",
+      "category": "profile",
+      "question": "Can I send an investment request?",
+      "answer": "Investment request is not available as a working action in Alumni Community profiles at this time.",
+      "keywords": [
+        "investment request"
+      ]
+    },
+    {
+      "id": "ac-044",
+      "category": "profile",
+      "question": "Does Mute work on member profiles?",
+      "answer": "Mute is not a working profile action even if a mute label appears when connected.",
+      "keywords": [
+        "mute"
+      ]
+    },
+    {
+      "id": "ac-045",
+      "category": "leaderboard",
+      "question": "What is the Leaderboard?",
+      "answer": "Weekly or monthly rankings for community engagement, podium/list views, your rank, and badges such as Community Leader or Frequent Contributor.",
+      "keywords": [
+        "leaderboard",
+        "ranking",
+        "badges"
+      ]
+    },
+    {
+      "id": "ac-046",
+      "category": "safety",
+      "question": "What can I report?",
+      "answer": "Users, posts, comments, and groups. Reasons include Spam, Inappropriate language, Harassment, Misinformation, Hate speech, and Other. Report details can be up to 1000 characters. You can also Block/Unblock.",
+      "keywords": [
+        "report",
+        "block"
+      ]
+    },
+    {
+      "id": "ac-047",
+      "category": "safety",
+      "question": "Is there an appeals process in Alumni Community?",
+      "answer": "Alumni Community does not provide a member appeals flow in this product area. For suspension help beyond Block/Report, use official TEFConnect support.",
+      "keywords": [
+        "appeal",
+        "appeals"
+      ]
+    },
+    {
+      "id": "ac-048",
+      "category": "mentorship-switch",
+      "question": "How do I return to Alumni Community from Mentorship?",
+      "answer": "Use Back to Alumni Portal when shown. It restores or re-opens Alumni Community for Alumni-sourced mentors.",
+      "keywords": [
+        "back to alumni portal"
+      ]
+    },
+    {
+      "id": "ac-049",
+      "category": "limits",
+      "question": "What can members not do in Alumni Community?",
+      "answer": "Cannot create Knowledge Centre resources or Value Added Opportunity listings. Investment request, working Mute, call start, and many Settings email preference controls are unavailable. Host event is only for portal alumni-eligible members.",
+      "keywords": [
+        "cannot",
+        "limits"
+      ]
+    },
+    {
+      "id": "ac-050",
+      "category": "feed",
+      "question": "What suggestions appear beside the feed?",
+      "answer": "Recent notifications, suggested connections, recommended groups, upcoming events, and a leaderboard preview may appear.",
+      "keywords": [
+        "suggestions",
+        "rail"
+      ]
+    },
+    {
+      "id": "ac-051",
+      "category": "groups",
+      "question": "What browse segments exist for groups?",
+      "answer": "Discover, My Groups, Trending, Recommended, Public, and Private.",
+      "keywords": [
+        "discover",
+        "trending",
+        "my groups"
+      ]
+    },
+    {
+      "id": "ac-052",
+      "category": "events",
+      "question": "What event browse segments exist?",
+      "answer": "All Events, Active Events, Upcoming Events, Expired Events, and My Events when shown for alumni account type.",
+      "keywords": [
+        "all events",
+        "my events"
+      ]
+    },
+    {
+      "id": "ac-053",
+      "category": "profile",
+      "question": "What activity tabs are on my own profile?",
+      "answer": "Posts, Events, Groups, Resources, and Bookmarks.",
+      "keywords": [
+        "activity tabs",
+        "bookmarks"
+      ]
+    },
+    {
+      "id": "ac-054",
+      "category": "profile",
+      "question": "What if a profile is private?",
+      "answer": "Limited view until you are connected. You may see Connect to see more details.",
+      "keywords": [
+        "private profile",
+        "connections"
+      ]
+    },
+    {
+      "id": "ac-055",
+      "category": "access",
+      "question": "How do investors or community admins enter Alumni Community?",
+      "answer": "Through their community accounts and secure SSO hand-offs when provisioned, then complete their role-specific profile if required.",
+      "keywords": [
+        "investor",
+        "community admin",
+        "sso"
+      ]
+    },
+    {
+      "id": "ac-056",
+      "category": "messages",
+      "question": "Can I open chat from a group?",
+      "answer": "Yes. Group Chat can open conversations when available, in addition to Messages and profile Message.",
+      "keywords": [
+        "group chat"
+      ]
+    },
+    {
+      "id": "ac-057",
+      "category": "opportunities",
+      "question": "What opportunity views exist?",
+      "answer": "All and Saved, plus type filters where offered. External apply links and dynamic application fields may appear on detail.",
+      "keywords": [
+        "saved",
+        "external apply"
+      ]
+    },
+    {
+      "id": "ac-058",
+      "category": "knowledge",
+      "question": "Can I upload a knowledge resource?",
+      "answer": "No. Learners/members browse and download only.",
+      "keywords": [
+        "upload knowledge"
+      ]
+    },
+    {
+      "id": "ac-059",
+      "category": "settings",
+      "question": "How do I unblock someone?",
+      "answer": "Settings → Manage blocked users → Unblock.",
+      "keywords": [
+        "unblock"
+      ]
+    },
+    {
+      "id": "ac-060",
+      "category": "tef-coach",
+      "question": "My TEF Coach application is pending. What next?",
+      "answer": "Complete Mentorship profile when offered, then wait for approval. After approval you see Certified TEF Coach and can Open Mentorship.",
+      "keywords": [
+        "pending approval",
+        "complete mentorship profile"
+      ]
+    },
+    {
+      "id": "ac-061",
+      "category": "events",
+      "question": "Who cannot host events?",
+      "answer": "Investors, community admins, and community mentors do not receive the Host event action.",
+      "keywords": [
+        "cannot host"
+      ]
+    },
+    {
+      "id": "ac-062",
+      "category": "feed",
+      "question": "Why are comments turned off on a post?",
+      "answer": "The author disabled comments for that post.",
+      "keywords": [
+        "comments turned off"
+      ]
+    },
+    {
+      "id": "ac-063",
+      "category": "safety",
+      "question": "What report reasons can I choose?",
+      "answer": "Spam, Inappropriate language, Harassment, Misinformation, Hate speech, or Other.",
+      "keywords": [
+        "report reasons"
+      ]
+    },
+    {
+      "id": "ac-064",
+      "category": "overview",
+      "question": "What is the feed greeting about?",
+      "answer": "Welcome back to the community — Share wins, learn from mentors, and grow with fellow TEF entrepreneurs.",
+      "keywords": [
+        "welcome back",
+        "greeting"
+      ]
+    },
+    {
+      "id": "ac-065",
+      "category": "limits",
+      "question": "Are Media/Polls/Pinned group tabs available?",
+      "answer": "Live group tabs are Discussion Feed, Group Chat, Members, and About. Standalone Media/Polls/Pinned tabs are not the live group tab set.",
+      "keywords": [
+        "group media",
+        "pinned"
+      ]
+    }
+  ],
+  "faqCount": 65
+}

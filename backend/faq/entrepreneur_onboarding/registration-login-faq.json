@@ -1,0 +1,458 @@
+{
+  "module": "registration-login",
+  "moduleLabel": "Registration & Login",
+  "product": "TEFConnect",
+  "version": "2.0",
+  "language": "en",
+  "pairedDocument": "Registration_Login_Module_Knowledge.docx",
+  "instructions": "Registration & Login FAQ only. Use for short Q&A; use the paired Word document for detailed how-tos and edge cases. Follow the common rule book for shared assistant behaviour across all modules.",
+  "faqs": [
+    {
+      "id": "rl-001",
+      "category": "overview",
+      "question": "How do I create a TEFConnect account?",
+      "answer": "Join Now or Create an account → choose Profile Type → fill required fields → accept Consent Clause for Data Collection and Privacy Policy → Register → Verify Your Email.",
+      "keywords": [
+        "register",
+        "create account",
+        "join now"
+      ]
+    },
+    {
+      "id": "rl-002",
+      "category": "overview",
+      "question": "How do I log in?",
+      "answer": "Sign In/Login → select User Type → Email Address → Password → Login. Use the same account type you registered with.",
+      "keywords": [
+        "login",
+        "sign in"
+      ]
+    },
+    {
+      "id": "rl-003",
+      "category": "types",
+      "question": "What account types can I register as?",
+      "answer": "Entrepreneur, Mentor, Investor, Marketplace. Alumni, Partner, and Community Admin are not Register options.",
+      "keywords": [
+        "profile type"
+      ]
+    },
+    {
+      "id": "rl-004",
+      "category": "types",
+      "question": "What account types can I log in as?",
+      "answer": "Entrepreneur, Mentor, Investor, Previously funded entrepreneur, Marketplace. Previously funded signs into Alumni Community path.",
+      "keywords": [
+        "user type",
+        "previously funded"
+      ]
+    },
+    {
+      "id": "rl-005",
+      "category": "password",
+      "question": "What are the password rules?",
+      "answer": "Entrepreneur/Marketplace: ≥8 chars, uppercase, number, symbol. Mentor/Investor/Previously funded login: non-empty password on the form. Legacy set-password uses full complexity.",
+      "keywords": [
+        "password rules"
+      ]
+    },
+    {
+      "id": "rl-006",
+      "category": "password",
+      "question": "How do I reset a forgotten password?",
+      "answer": "Forgot Password? on Login for Entrepreneur, Mentor, Investor → email → Send. Not shown for Marketplace or Previously funded. Legacy alumni may use First time? Request access email.",
+      "keywords": [
+        "forgot password"
+      ]
+    },
+    {
+      "id": "rl-007",
+      "category": "email",
+      "question": "I did not get a verification email.",
+      "answer": "Check spam/junk. Use Resend Verification Email on login when shown. Support on login includes enquiries@tonyelumelufoundation.org.",
+      "keywords": [
+        "verification email",
+        "resend",
+        "support"
+      ]
+    },
+    {
+      "id": "rl-008",
+      "category": "email",
+      "question": "What happens after I register?",
+      "answer": "Verify Your Email → Got it → verify via inbox link → log in.",
+      "keywords": [
+        "after register"
+      ]
+    },
+    {
+      "id": "rl-009",
+      "category": "redirect",
+      "question": "Where do I go after login?",
+      "answer": "Entrepreneur complete → Home; incomplete → My Profile. Mentor approved → Dashboard; incomplete/not approved → Mentorship profile. Investor/previously funded → Alumni Community (or profile edit). Marketplace → Marketplace home/edit/status by gate.",
+      "keywords": [
+        "after login",
+        "redirect"
+      ]
+    },
+    {
+      "id": "rl-010",
+      "category": "marketplace",
+      "question": "My Marketplace account is deactivated.",
+      "answer": "Login as Marketplace → Reactivate account when shown → continue by access status.",
+      "keywords": [
+        "reactivate"
+      ]
+    },
+    {
+      "id": "rl-011",
+      "category": "mentor",
+      "question": "Why can’t I use Dashboard as a mentor yet?",
+      "answer": "Not approved yet → Mentorship profile. You may also need Change password on first login.",
+      "keywords": [
+        "mentor not approved",
+        "change password"
+      ]
+    },
+    {
+      "id": "rl-012",
+      "category": "alumni",
+      "question": "Previously funded entrepreneur access.",
+      "answer": "Login → Previously funded entrepreneur → First time? Request access email if needed → Set your password from email → Go to login → sign in.",
+      "keywords": [
+        "previously funded",
+        "set password"
+      ]
+    },
+    {
+      "id": "rl-013",
+      "category": "validation",
+      "question": "Name and email rules on Register?",
+      "answer": "Email 5–100 chars. First/Last name required 2–50 letters/spaces. Middle optional same if filled. Gender Male/Female where required.",
+      "keywords": [
+        "validation",
+        "name",
+        "email"
+      ]
+    },
+    {
+      "id": "rl-014",
+      "category": "logout",
+      "question": "How do I log out?",
+      "answer": "Logout → confirm Are you sure you want to log out? Typically returns to Home. Marketplace logout also ends Marketplace session.",
+      "keywords": [
+        "logout"
+      ]
+    },
+    {
+      "id": "rl-015",
+      "category": "sso",
+      "question": "What are SSO sign-in pages?",
+      "answer": "Token hand-offs: Signing you in… / Opening Mentorship… / Marketplace sign-in. No email/password on those pages.",
+      "keywords": [
+        "sso"
+      ]
+    },
+    {
+      "id": "rl-016",
+      "category": "errors",
+      "question": "This email is already registered.",
+      "answer": "Use Login with correct User Type, or Forgot Password if available. Do not register again for the same type.",
+      "keywords": [
+        "email already registered"
+      ]
+    },
+    {
+      "id": "rl-017",
+      "category": "limits",
+      "question": "Can I register as Alumni or Community Admin?",
+      "answer": "No from Register Profile Type list. Previously funded is a Login path. Community Admin arrives via SSO when provisioned.",
+      "keywords": [
+        "cannot register alumni"
+      ]
+    },
+    {
+      "id": "rl-018",
+      "category": "support",
+      "question": "How do I get help with login?",
+      "answer": "Resend Verification Email, Forgot Password, or Reactivate when shown. Login shows enquiries@tonyelumelufoundation.org.",
+      "keywords": [
+        "support",
+        "enquiries"
+      ]
+    },
+    {
+      "id": "rl-019",
+      "category": "overview",
+      "question": "What is the Home login modal?",
+      "answer": "Login / Registration with New User? and Already a User? then Continue to Register or Login.",
+      "keywords": [
+        "join now modal"
+      ]
+    },
+    {
+      "id": "rl-020",
+      "category": "types",
+      "question": "Wrong User Type selected.",
+      "answer": "Login fails for that type. Choose the type you registered with; there is no automatic cross-type detection.",
+      "keywords": [
+        "wrong type"
+      ]
+    },
+    {
+      "id": "rl-021",
+      "category": "password",
+      "question": "Mentor forced Change password rules.",
+      "answer": "Uppercase required; confirm must match. Stay on Login until completed.",
+      "keywords": [
+        "mentor change password"
+      ]
+    },
+    {
+      "id": "rl-022",
+      "category": "marketplace",
+      "question": "Register with Marketplace preselected.",
+      "answer": "Marketplace CTA/profileType can lock Profile Type or User Type to Marketplace.",
+      "keywords": [
+        "marketplace register"
+      ]
+    },
+    {
+      "id": "rl-023",
+      "category": "validation",
+      "question": "Investor register fields.",
+      "answer": "Investor mainly registers with names, email, password (language/country/gender/region hidden).",
+      "keywords": [
+        "investor register"
+      ]
+    },
+    {
+      "id": "rl-024",
+      "category": "validation",
+      "question": "Mentor register extra fields.",
+      "answer": "Mentor also requires Sector (and typical language/country/region/gender fields).",
+      "keywords": [
+        "mentor register"
+      ]
+    },
+    {
+      "id": "rl-025",
+      "category": "email",
+      "question": "Email Verification Required on login.",
+      "answer": "Use Resend Verification Email for entrepreneur/marketplace/investor verification paths as shown.",
+      "keywords": [
+        "email verification required"
+      ]
+    },
+    {
+      "id": "rl-026",
+      "category": "alumni",
+      "question": "Set your password page.",
+      "answer": "Create a password to access the TEFConnect Alumni community → Set password → Go to login. Requires email token.",
+      "keywords": [
+        "set password page"
+      ]
+    },
+    {
+      "id": "rl-027",
+      "category": "limits",
+      "question": "Is phone required on Register?",
+      "answer": "No. Phone is not collected on Register/Login forms.",
+      "keywords": [
+        "phone"
+      ]
+    },
+    {
+      "id": "rl-028",
+      "category": "limits",
+      "question": "Google/Microsoft sign-in on Home?",
+      "answer": "Hero Google/Microsoft buttons are not live in the current product.",
+      "keywords": [
+        "google",
+        "microsoft"
+      ]
+    },
+    {
+      "id": "rl-029",
+      "category": "redirect",
+      "question": "Already logged in opened Login/Register.",
+      "answer": "You are redirected based on profile completion status.",
+      "keywords": [
+        "already logged in"
+      ]
+    },
+    {
+      "id": "rl-030",
+      "category": "marketplace",
+      "question": "Marketplace after login destinations.",
+      "answer": "Allowed → Marketplace; REQUIRES_PROFILE → profile edit; pending/changes/rejected → status page.",
+      "keywords": [
+        "marketplace gate"
+      ]
+    },
+    {
+      "id": "rl-031",
+      "category": "mentor",
+      "question": "Mentor incomplete profile after login.",
+      "answer": "Goes to Mentorship profile until complete/approved.",
+      "keywords": [
+        "mentor profile redirect"
+      ]
+    },
+    {
+      "id": "rl-032",
+      "category": "entrepreneur",
+      "question": "Entrepreneur incomplete after login.",
+      "answer": "Goes to My Profile.",
+      "keywords": [
+        "my profile redirect"
+      ]
+    },
+    {
+      "id": "rl-033",
+      "category": "password",
+      "question": "Forgot Password not showing for Marketplace.",
+      "answer": "Correct — Forgot Password link is not shown for Marketplace or Previously funded on the login form.",
+      "keywords": [
+        "forgot password marketplace"
+      ]
+    },
+    {
+      "id": "rl-034",
+      "category": "sso",
+      "question": "SSO missing token error.",
+      "answer": "You see an error with Go to login / Back to alumni profile / Back to login depending on the hand-off.",
+      "keywords": [
+        "sso error"
+      ]
+    },
+    {
+      "id": "rl-035",
+      "category": "types",
+      "question": "Partner register option?",
+      "answer": "Partner is not a selectable Register Profile Type on the form.",
+      "keywords": [
+        "partner"
+      ]
+    },
+    {
+      "id": "rl-036",
+      "category": "validation",
+      "question": "Consent checkbox.",
+      "answer": "Required: By clicking create account, you agree to our Consent Clause for Data Collection and Privacy Policy.",
+      "keywords": [
+        "consent",
+        "privacy"
+      ]
+    },
+    {
+      "id": "rl-037",
+      "category": "overview",
+      "question": "Create an account subtitle.",
+      "answer": "Start your journey to limitless opportunities today.",
+      "keywords": [
+        "create an account"
+      ]
+    },
+    {
+      "id": "rl-038",
+      "category": "overview",
+      "question": "Login welcome text.",
+      "answer": "Welcome — Please login to your account.",
+      "keywords": [
+        "welcome"
+      ]
+    },
+    {
+      "id": "rl-039",
+      "category": "password",
+      "question": "Password symbols allowed.",
+      "answer": "At least one symbol from the allowed symbol set is required for Entrepreneur/Marketplace complexity rules.",
+      "keywords": [
+        "symbol"
+      ]
+    },
+    {
+      "id": "rl-040",
+      "category": "alumni",
+      "question": "First time? Request access email.",
+      "answer": "Shown for Previously funded entrepreneur login to request the access/set-password email.",
+      "keywords": [
+        "request access email"
+      ]
+    },
+    {
+      "id": "rl-041",
+      "category": "marketplace",
+      "question": "Mentors opening Marketplace.",
+      "answer": "Mentors are redirected away from Marketplace browsing except SSO hand-off paths.",
+      "keywords": [
+        "mentor marketplace"
+      ]
+    },
+    {
+      "id": "rl-042",
+      "category": "redirect",
+      "question": "Redirect query after login.",
+      "answer": "Honored when profile is complete and the destination is allowed for that account/gate.",
+      "keywords": [
+        "redirect param"
+      ]
+    },
+    {
+      "id": "rl-043",
+      "category": "errors",
+      "question": "Registering... / Logging in... ",
+      "answer": "Loading labels while the request runs.",
+      "keywords": [
+        "loading"
+      ]
+    },
+    {
+      "id": "rl-044",
+      "category": "validation",
+      "question": "Region required?",
+      "answer": "Required when shown for Entrepreneur/Mentor/Marketplace register flows.",
+      "keywords": [
+        "region"
+      ]
+    },
+    {
+      "id": "rl-045",
+      "category": "validation",
+      "question": "Preferred Language required?",
+      "answer": "Required when shown (not for investor register fields).",
+      "keywords": [
+        "preferred language"
+      ]
+    },
+    {
+      "id": "rl-046",
+      "category": "overview",
+      "question": "FAQ for Registration modal.",
+      "answer": "May open first on Register; dismiss with Ok.",
+      "keywords": [
+        "registration faq"
+      ]
+    },
+    {
+      "id": "rl-047",
+      "category": "limits",
+      "question": "Sign Up on legacy signin page.",
+      "answer": "Primary Register/Login pages are the supported auth flows for end users.",
+      "keywords": [
+        "signin legacy"
+      ]
+    },
+    {
+      "id": "rl-048",
+      "category": "support",
+      "question": "Official support contact on login.",
+      "answer": "enquiries@tonyelumelufoundation.org",
+      "keywords": [
+        "enquiries@tonyelumelufoundation.org"
+      ]
+    }
+  ],
+  "faqCount": 48
+}

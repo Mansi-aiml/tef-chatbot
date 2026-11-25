@@ -1,0 +1,493 @@
+{
+  "module": "dashboard-programme-application",
+  "moduleLabel": "Dashboard & Programme Application",
+  "product": "TEFConnect",
+  "version": "2.0",
+  "language": "en",
+  "pairedDocument": "Dashboard_Programme_Application_Module_Knowledge.docx",
+  "instructions": "Dashboard and Programme Application FAQ only. Use for short Q&A; use the paired Word document for detailed how-tos and edge cases. Follow the common rule book for shared assistant behaviour across all modules.",
+  "faqs": [
+    {
+      "id": "dpa-001",
+      "category": "overview",
+      "question": "What is the Dashboard?",
+      "answer": "Dashboard is the signed-in TEFConnect hub. Entrepreneurs use My Application and All Programmes. Mentors see mentorship summary cards such as assigned mentees, pending requests, and messages.",
+      "keywords": [
+        "dashboard",
+        "overview"
+      ]
+    },
+    {
+      "id": "dpa-002",
+      "category": "overview",
+      "question": "What is a Programme Application?",
+      "answer": "It is the process to apply to a TEF programme: eligibility, overview, requirements, terms, multi-step form, preview, and submit. After submit you get a Programme ID and cannot edit the application.",
+      "keywords": [
+        "programme application",
+        "apply"
+      ]
+    },
+    {
+      "id": "dpa-003",
+      "category": "access",
+      "question": "Do I need a complete profile before applying?",
+      "answer": "Yes. Incomplete profiles go to My Profile. Dashboard may show: Kindly complete your profile before starting any Programmes.",
+      "keywords": [
+        "complete profile",
+        "my profile"
+      ]
+    },
+    {
+      "id": "dpa-004",
+      "category": "access",
+      "question": "Is there a fee to apply?",
+      "answer": "No. TEF programme applications are free to apply for.",
+      "keywords": [
+        "fee",
+        "free"
+      ]
+    },
+    {
+      "id": "dpa-005",
+      "category": "dashboard",
+      "question": "What is My Application vs All Programmes?",
+      "answer": "My Application shows your primary application focus. All Programmes lists programmes so you can search, start, continue, or preview.",
+      "keywords": [
+        "my application",
+        "all programmes"
+      ]
+    },
+    {
+      "id": "dpa-006",
+      "category": "apply",
+      "question": "How do I start a programme application?",
+      "answer": "Dashboard → All Programmes → Start Application on an eligible open programme → eligibility → Overview → Requirements → Terms → Accept & Start Application → complete the form.",
+      "keywords": [
+        "start application"
+      ]
+    },
+    {
+      "id": "dpa-007",
+      "category": "apply",
+      "question": "What are the application form steps?",
+      "answer": "Business Information → Business Industry → Business acumen → Declaration → Programme Preview → Submit. After submit you see Application submitted with your Programme ID.",
+      "keywords": [
+        "steps",
+        "acumen",
+        "declaration"
+      ]
+    },
+    {
+      "id": "dpa-008",
+      "category": "apply",
+      "question": "How do I continue or preview my application?",
+      "answer": "Use Continue Application while in progress. Use Preview Application or View Application for submitted/review/final states.",
+      "keywords": [
+        "continue application",
+        "preview"
+      ]
+    },
+    {
+      "id": "dpa-009",
+      "category": "apply",
+      "question": "Can I edit my application after submission?",
+      "answer": "No. Once submitted it cannot be edited. Review carefully on Programme Preview before Submit Application.",
+      "keywords": [
+        "cannot edit",
+        "after submit"
+      ]
+    },
+    {
+      "id": "dpa-010",
+      "category": "apply",
+      "question": "Can I apply to more than one programme?",
+      "answer": "Yes, each separately. My Application focuses on the primary card; use All Programmes for other programmes.",
+      "keywords": [
+        "multiple programmes"
+      ]
+    },
+    {
+      "id": "dpa-011",
+      "category": "apply",
+      "question": "Why can’t I start a programme?",
+      "answer": "Profile incomplete; not eligible; Programme Closed; Upcoming Programme; or Terms not accepted yet.",
+      "keywords": [
+        "cannot start",
+        "closed",
+        "upcoming",
+        "not eligible"
+      ]
+    },
+    {
+      "id": "dpa-012",
+      "category": "apply",
+      "question": "What happens after I submit?",
+      "answer": "You see confirmation with Programme ID — save it. The application enters screening/review and email contact may follow.",
+      "keywords": [
+        "after submit",
+        "programme id"
+      ]
+    },
+    {
+      "id": "dpa-013",
+      "category": "status",
+      "question": "What application statuses might I see?",
+      "answer": "In Progress, Under Review, Approved, Rejected/Application Rejected. Progress % may appear. LMS PASSED can show Training Completed Successfully, proceed to Pitching; FAILED shows Did not Complete Training.",
+      "keywords": [
+        "status",
+        "lms"
+      ]
+    },
+    {
+      "id": "dpa-014",
+      "category": "acumen",
+      "question": "What is the Business acumen step?",
+      "answer": "A timed test with Start Test, navigation, Submit, and Retake Test when allowed. Declarations and the test must be done before preview when required.",
+      "keywords": [
+        "business acumen",
+        "test",
+        "retake"
+      ]
+    },
+    {
+      "id": "dpa-015",
+      "category": "terms",
+      "question": "What happens on Terms & Conditions?",
+      "answer": "Overview → Requirements → Terms. Tick acceptance, then Accept & Start Application. Decline & Exit leaves without starting.",
+      "keywords": [
+        "terms",
+        "accept",
+        "decline"
+      ]
+    },
+    {
+      "id": "dpa-016",
+      "category": "dashboard",
+      "question": "What else is on the entrepreneur Dashboard?",
+      "answer": "Notice Board, search on All Programmes (up to 50 words), Read More/Less, and links into Training/Pitching when available.",
+      "keywords": [
+        "notice board",
+        "search"
+      ]
+    },
+    {
+      "id": "dpa-017",
+      "category": "mentor",
+      "question": "What does the mentor Dashboard show?",
+      "answer": "Select Programme filter and cards: Total Assigned Mentee, Pending Mentee Requests, Total Messages, Responded Messages, Not Responded Messages. No entrepreneur application tabs. Unapproved mentors go to Mentorship profile.",
+      "keywords": [
+        "mentor dashboard"
+      ]
+    },
+    {
+      "id": "dpa-018",
+      "category": "uploads",
+      "question": "What files can I upload in the application?",
+      "answer": "Where offered: images JPG/PNG/GIF/WEBP; documents JPG/JPEG/PNG/PDF/DOC/DOCX. Exact fields and size rules depend on the programme form and server.",
+      "keywords": [
+        "upload",
+        "document"
+      ]
+    },
+    {
+      "id": "dpa-019",
+      "category": "limits",
+      "question": "What should I not expect on Dashboard / Application?",
+      "answer": "Do not expect to edit after submit. Mentor Dashboard does not run entrepreneur applications. My Application is not a full multi-application switcher. Questions are programme-specific.",
+      "keywords": [
+        "cannot",
+        "limits"
+      ]
+    },
+    {
+      "id": "dpa-020",
+      "category": "home",
+      "question": "How do I apply from Home?",
+      "answer": "Use Apply To Open Programmes or Start Programme / Continue / Preview on cards, or View All Programmes, then follow eligibility and overview into the form.",
+      "keywords": [
+        "home",
+        "apply to open programmes"
+      ]
+    },
+    {
+      "id": "dpa-021",
+      "category": "apply",
+      "question": "What does Accept & Start Application do?",
+      "answer": "It accepts terms, creates your application, and opens the application form with an application/Programme ID.",
+      "keywords": [
+        "accept and start"
+      ]
+    },
+    {
+      "id": "dpa-022",
+      "category": "apply",
+      "question": "What is Programme Preview?",
+      "answer": "A read-only review of your answers before Submit Application, with Edit Application if you still need changes before submit.",
+      "keywords": [
+        "programme preview",
+        "edit application"
+      ]
+    },
+    {
+      "id": "dpa-023",
+      "category": "apply",
+      "question": "Why am I told I am not eligible?",
+      "answer": "The eligibility check blocked the start. Follow the blocking reasons shown, or You are not eligible for this programme.",
+      "keywords": [
+        "not eligible",
+        "eligibility"
+      ]
+    },
+    {
+      "id": "dpa-024",
+      "category": "dashboard",
+      "question": "What does Programme Closed mean?",
+      "answer": "The programme end date has passed and Start Application is not available.",
+      "keywords": [
+        "programme closed"
+      ]
+    },
+    {
+      "id": "dpa-025",
+      "category": "dashboard",
+      "question": "What does Upcoming Programme mean?",
+      "answer": "The programme is not open to start yet; the button is disabled.",
+      "keywords": [
+        "upcoming programme"
+      ]
+    },
+    {
+      "id": "dpa-026",
+      "category": "dashboard",
+      "question": "How many programmes show per page in All Programmes?",
+      "answer": "12 per page.",
+      "keywords": [
+        "page size",
+        "12"
+      ]
+    },
+    {
+      "id": "dpa-027",
+      "category": "status",
+      "question": "Training shows FAILED on My Application. What now?",
+      "answer": "Did not Complete Training messaging appears and Preview/Continue for that LMS outcome state is hidden. Mentorship is also disabled in TEFConnect when LMS is FAILED.",
+      "keywords": [
+        "lms failed",
+        "training"
+      ]
+    },
+    {
+      "id": "dpa-028",
+      "category": "status",
+      "question": "Training shows PASSED. What next?",
+      "answer": "Dashboard may say Training Completed Successfully, proceed to Pitching. Open Pitching when pitching status allows.",
+      "keywords": [
+        "lms passed",
+        "pitching"
+      ]
+    },
+    {
+      "id": "dpa-029",
+      "category": "apply",
+      "question": "Are application questions the same for every programme?",
+      "answer": "No. Questions come from each programme’s form structure.",
+      "keywords": [
+        "programme specific",
+        "dynamic form"
+      ]
+    },
+    {
+      "id": "dpa-030",
+      "category": "apply",
+      "question": "Where do I find my Programme ID?",
+      "answer": "On the Application submitted success screen after Submit Application. Save it for later programme stages.",
+      "keywords": [
+        "programme id",
+        "application id"
+      ]
+    },
+    {
+      "id": "dpa-031",
+      "category": "dashboard",
+      "question": "Can mentors start programmes from Dashboard?",
+      "answer": "No. Mentors do not get entrepreneur application tabs.",
+      "keywords": [
+        "mentor cannot apply"
+      ]
+    },
+    {
+      "id": "dpa-032",
+      "category": "apply",
+      "question": "What buttons appear on Programme Overview before terms?",
+      "answer": "Continue and Cancel on earlier steps; on terms: Decline & Exit and Accept & Start Application.",
+      "keywords": [
+        "continue",
+        "cancel"
+      ]
+    },
+    {
+      "id": "dpa-033",
+      "category": "apply",
+      "question": "I already submitted. Can Continue Application edit it?",
+      "answer": "No. Submitted applications reopen as non-editable submitted/preview states.",
+      "keywords": [
+        "submitted continue"
+      ]
+    },
+    {
+      "id": "dpa-034",
+      "category": "dashboard",
+      "question": "How do I open All Programmes quickly?",
+      "answer": "Dashboard tab All Programmes, or Home Apply To Open Programmes / View All Programmes paths into Dashboard programmes.",
+      "keywords": [
+        "all programmes"
+      ]
+    },
+    {
+      "id": "dpa-035",
+      "category": "apply",
+      "question": "What is Declaration?",
+      "answer": "A Yes/No declaration step with required follow-ups as configured before preview.",
+      "keywords": [
+        "declaration"
+      ]
+    },
+    {
+      "id": "dpa-036",
+      "category": "apply",
+      "question": "Can I retake the acumen test?",
+      "answer": "Retake Test appears when retakes are allowed by the programme/test rules.",
+      "keywords": [
+        "retake test"
+      ]
+    },
+    {
+      "id": "dpa-037",
+      "category": "limits",
+      "question": "Is there a fixed max file size on application uploads?",
+      "answer": "No fixed member-facing MB cap is defined in this application form area; server rules may still reject oversized files.",
+      "keywords": [
+        "file size"
+      ]
+    },
+    {
+      "id": "dpa-038",
+      "category": "dashboard",
+      "question": "What is Notice Board?",
+      "answer": "A Dashboard notice area entrepreneurs can open for notices.",
+      "keywords": [
+        "notice board"
+      ]
+    },
+    {
+      "id": "dpa-039",
+      "category": "status",
+      "question": "What does Application Rejected mean?",
+      "answer": "Your application was rejected. You can Preview Application or View Application as offered.",
+      "keywords": [
+        "application rejected"
+      ]
+    },
+    {
+      "id": "dpa-040",
+      "category": "apply",
+      "question": "Do I need to accept terms every time?",
+      "answer": "You accept terms when starting an application via Accept & Start Application after ticking the acceptance checkbox.",
+      "keywords": [
+        "accept terms"
+      ]
+    },
+    {
+      "id": "dpa-041",
+      "category": "dashboard",
+      "question": "Why does My Application show only one programme?",
+      "answer": "My Application focuses on the primary application card. Use All Programmes for other programmes.",
+      "keywords": [
+        "one programme",
+        "primary"
+      ]
+    },
+    {
+      "id": "dpa-042",
+      "category": "home",
+      "question": "What is Start Programme on Home?",
+      "answer": "A card action that starts or continues into the programme application flow similar to Dashboard Start/Continue.",
+      "keywords": [
+        "start programme"
+      ]
+    },
+    {
+      "id": "dpa-043",
+      "category": "apply",
+      "question": "What emails might I get after applying?",
+      "answer": "You may be contacted by email about eligibility and next steps after screening/review.",
+      "keywords": [
+        "email after apply"
+      ]
+    },
+    {
+      "id": "dpa-044",
+      "category": "mentor",
+      "question": "Are mentor Dashboard cards clickable into Mentorship?",
+      "answer": "Mentor summary cards are display summaries; detailed mentee management is under Mentorship sections.",
+      "keywords": [
+        "mentor cards"
+      ]
+    },
+    {
+      "id": "dpa-045",
+      "category": "apply",
+      "question": "Can I go Back to Dashboard during the form?",
+      "answer": "Yes. Back to Dashboard is available among navigation actions during the application wizard.",
+      "keywords": [
+        "back to dashboard"
+      ]
+    },
+    {
+      "id": "dpa-046",
+      "category": "apply",
+      "question": "What does Save & Continue do?",
+      "answer": "It saves the current step and moves to the next named step (Business Industry, Acumen, Declaration, or Programme Preview).",
+      "keywords": [
+        "save and continue"
+      ]
+    },
+    {
+      "id": "dpa-047",
+      "category": "status",
+      "question": "Does Pitching under Dashboard mean the same as Pitching module?",
+      "answer": "Pitching reached from Dashboard is the Pitching module area, separate from filling the application form.",
+      "keywords": [
+        "dashboard pitching"
+      ]
+    },
+    {
+      "id": "dpa-048",
+      "category": "access",
+      "question": "Unapproved mentor tried Dashboard.",
+      "answer": "Unapproved mentors are redirected to Mentorship profile with a pending-approval message.",
+      "keywords": [
+        "mentor pending approval"
+      ]
+    },
+    {
+      "id": "dpa-049",
+      "category": "apply",
+      "question": "Can I apply without Accept & Start Application?",
+      "answer": "No. Starting the live application requires accepting Terms & Conditions when that step is shown.",
+      "keywords": [
+        "must accept terms"
+      ]
+    },
+    {
+      "id": "dpa-050",
+      "category": "overview",
+      "question": "Is /application the live wizard?",
+      "answer": "The live entrepreneur application wizard is Programme Overview then complete-application form. Do not treat legacy/mock application previews as the live flow.",
+      "keywords": [
+        "live wizard"
+      ]
+    }
+  ],
+  "faqCount": 50
+}

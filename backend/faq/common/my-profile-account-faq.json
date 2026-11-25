@@ -1,0 +1,430 @@
+{
+  "module": "my-profile-account",
+  "moduleLabel": "My Profile / Account",
+  "product": "TEFConnect",
+  "version": "2.0",
+  "language": "en",
+  "pairedDocument": "My_Profile_Account_Module_Knowledge.docx",
+  "instructions": "My Profile / Account FAQ only (entrepreneur TEFConnect My Profile). Other profiles are separate modules. Follow the common rule book for shared assistant behaviour.",
+  "faqs": [
+    {
+      "id": "mpa-001",
+      "category": "overview",
+      "question": "What is My Profile on TEFConnect?",
+      "answer": "Entrepreneur TEFConnect account personal information: Personal Information, Next of Kin, Contact & Education, Social Media. Not Marketplace/Alumni/Mentorship profiles.",
+      "keywords": [
+        "my profile",
+        "overview"
+      ]
+    },
+    {
+      "id": "mpa-002",
+      "category": "access",
+      "question": "Why am I forced to complete My Profile?",
+      "answer": "Incomplete TEFConnect profile redirects you here before most programme areas. Dashboard: Kindly complete your profile before starting any Programmes.",
+      "keywords": [
+        "incomplete",
+        "forced"
+      ]
+    },
+    {
+      "id": "mpa-003",
+      "category": "edit",
+      "question": "How do I edit My Profile?",
+      "answer": "My Profile → Edit or Complete Personal Information → update sections → Update Profile. Cancel discards unsaved edits.",
+      "keywords": [
+        "edit",
+        "update profile"
+      ]
+    },
+    {
+      "id": "mpa-004",
+      "category": "sections",
+      "question": "What sections are on My Profile?",
+      "answer": "Personal Information; Provide Details of Your Next of Kin; Contact & Education Details; Social Media Profile ID Details.",
+      "keywords": [
+        "sections"
+      ]
+    },
+    {
+      "id": "mpa-005",
+      "category": "personal",
+      "question": "What is required in Personal Information?",
+      "answer": "Title (Mr/Mrs/Miss/Dr), Surname, First Name, DOB (18+), Gender (Male/Female), Preferred Language, Email (display only), medical None/Yes (+ disability name if Yes), ID card, passport photo. Match government ID.",
+      "keywords": [
+        "personal information",
+        "id"
+      ]
+    },
+    {
+      "id": "mpa-006",
+      "category": "uploads",
+      "question": "ID and passport upload rules?",
+      "answer": "JPG/PNG/JPEG/PDF only; each under 5 MB. Valid govt ID and clear passport-size photo.",
+      "keywords": [
+        "5 mb",
+        "upload"
+      ]
+    },
+    {
+      "id": "mpa-007",
+      "category": "kin",
+      "question": "Next of kin required fields?",
+      "answer": "Name, Phone, Relationship, Email — all required.",
+      "keywords": [
+        "next of kin"
+      ]
+    },
+    {
+      "id": "mpa-008",
+      "category": "contact",
+      "question": "Contact & education required fields?",
+      "answer": "Home Address, Country of Origin, State/Province/Region, Mobile Number, Highest Level of Education (+ Other specify). City/Town and Major Area optional if blank.",
+      "keywords": [
+        "contact",
+        "education"
+      ]
+    },
+    {
+      "id": "mpa-009",
+      "category": "social",
+      "question": "Are all social fields required?",
+      "answer": "At least one valid http/https URL among Facebook, Twitter, LinkedIn, Instagram.",
+      "keywords": [
+        "social media",
+        "at least one"
+      ]
+    },
+    {
+      "id": "mpa-010",
+      "category": "frozen",
+      "question": "Why can’t I change name/DOB/ID?",
+      "answer": "After approval/verification, Surname, First Name, DOB, Gender, and ID card can freeze. Email always frozen. Passport photo can still be replaced. Other/Middle Name stays editable.",
+      "keywords": [
+        "frozen",
+        "approved"
+      ]
+    },
+    {
+      "id": "mpa-011",
+      "category": "marketplace",
+      "question": "Where is Access Marketplace on My Profile?",
+      "answer": "Shown while TEF profile is incomplete. After completion, use side menu Access Marketplace. It enrols Marketplace from TEF session.",
+      "keywords": [
+        "access marketplace"
+      ]
+    },
+    {
+      "id": "mpa-012",
+      "category": "success",
+      "question": "After successful profile update?",
+      "answer": "If complete: Profile Updated success → Ok → Dashboard. If still incomplete: success toast and preview to finish remaining fields.",
+      "keywords": [
+        "profile updated"
+      ]
+    },
+    {
+      "id": "mpa-013",
+      "category": "other-profiles",
+      "question": "Same as Marketplace/Alumni profile?",
+      "answer": "No. Separate Mentorship, Marketplace, and Alumni Community profiles exist.",
+      "keywords": [
+        "difference"
+      ]
+    },
+    {
+      "id": "mpa-014",
+      "category": "limits",
+      "question": "What can I not do on My Profile?",
+      "answer": "Cannot change email, manage password/security here, upload CV (mentor), manage Marketplace/Alumni feed settings, or select Gender Other.",
+      "keywords": [
+        "cannot",
+        "limits"
+      ]
+    },
+    {
+      "id": "mpa-015",
+      "category": "help",
+      "question": "Profile help?",
+      "answer": "Profile FAQ's from Need Help when shown.",
+      "keywords": [
+        "faq",
+        "need help"
+      ]
+    },
+    {
+      "id": "mpa-016",
+      "category": "personal",
+      "question": "Title options?",
+      "answer": "Mr, Mrs, Miss, Dr.",
+      "keywords": [
+        "title"
+      ]
+    },
+    {
+      "id": "mpa-017",
+      "category": "personal",
+      "question": "Minimum age?",
+      "answer": "18 years old.",
+      "keywords": [
+        "age",
+        "18"
+      ]
+    },
+    {
+      "id": "mpa-018",
+      "category": "personal",
+      "question": "Email editable?",
+      "answer": "No. Email is always frozen on My Profile.",
+      "keywords": [
+        "email frozen"
+      ]
+    },
+    {
+      "id": "mpa-019",
+      "category": "personal",
+      "question": "Medical conditions field.",
+      "answer": "None or Yes; if Yes, disability name is required.",
+      "keywords": [
+        "disability",
+        "medical"
+      ]
+    },
+    {
+      "id": "mpa-020",
+      "category": "uploads",
+      "question": "Invalid file type.",
+      "answer": "Use JPG, PNG, or PDF only.",
+      "keywords": [
+        "invalid file type"
+      ]
+    },
+    {
+      "id": "mpa-021",
+      "category": "uploads",
+      "question": "File larger than 5 MB.",
+      "answer": "File size must be less than 5 MB.",
+      "keywords": [
+        "file too large"
+      ]
+    },
+    {
+      "id": "mpa-022",
+      "category": "contact",
+      "question": "Education Other.",
+      "answer": "Choose Other then specify other highest level of education.",
+      "keywords": [
+        "other education"
+      ]
+    },
+    {
+      "id": "mpa-023",
+      "category": "contact",
+      "question": "Changing country.",
+      "answer": "Clears state/province in edit mode — select region again.",
+      "keywords": [
+        "country change"
+      ]
+    },
+    {
+      "id": "mpa-024",
+      "category": "marketplace",
+      "question": "Access General Training on My Profile.",
+      "answer": "Shown with Access Marketplace while TEF profile incomplete; opens Training link in a new tab.",
+      "keywords": [
+        "access general training"
+      ]
+    },
+    {
+      "id": "mpa-025",
+      "category": "edit",
+      "question": "Complete Personal Information vs Edit.",
+      "answer": "Incomplete profiles show Complete Personal Information; completed profiles show Edit.",
+      "keywords": [
+        "complete personal information"
+      ]
+    },
+    {
+      "id": "mpa-026",
+      "category": "frozen",
+      "question": "Can I still change passport photo after approval?",
+      "answer": "Yes. Passport photo can still be replaced when other fields are frozen.",
+      "keywords": [
+        "passport after approval"
+      ]
+    },
+    {
+      "id": "mpa-027",
+      "category": "social",
+      "question": "Social URL format.",
+      "answer": "Valid http/https URLs.",
+      "keywords": [
+        "http",
+        "https"
+      ]
+    },
+    {
+      "id": "mpa-028",
+      "category": "validation",
+      "question": "Name length rules.",
+      "answer": "Surname/first/middle(if filled): 2–50 letters and spaces.",
+      "keywords": [
+        "name length"
+      ]
+    },
+    {
+      "id": "mpa-029",
+      "category": "validation",
+      "question": "Email length rules.",
+      "answer": "5–100 characters with valid structure.",
+      "keywords": [
+        "email length"
+      ]
+    },
+    {
+      "id": "mpa-030",
+      "category": "limits",
+      "question": "Password change on My Profile?",
+      "answer": "Not on this page — use Registration/Login password flows where available.",
+      "keywords": [
+        "password"
+      ]
+    },
+    {
+      "id": "mpa-031",
+      "category": "limits",
+      "question": "CV upload on My Profile?",
+      "answer": "No. CV belongs on Mentorship profile for mentors.",
+      "keywords": [
+        "cv"
+      ]
+    },
+    {
+      "id": "mpa-032",
+      "category": "other-profiles",
+      "question": "Mentor where is profile?",
+      "answer": "Mentorship profile — see Mentorship document.",
+      "keywords": [
+        "mentor profile"
+      ]
+    },
+    {
+      "id": "mpa-033",
+      "category": "access",
+      "question": "Dashboard banner about profile.",
+      "answer": "Kindly complete your profile before starting any Programmes → Complete your profile.",
+      "keywords": [
+        "dashboard banner"
+      ]
+    },
+    {
+      "id": "mpa-034",
+      "category": "edit",
+      "question": "Cancel while editing.",
+      "answer": "Exits edit and restores saved data; clears temp uploads.",
+      "keywords": [
+        "cancel"
+      ]
+    },
+    {
+      "id": "mpa-035",
+      "category": "personal",
+      "question": "Other/Middle Name required?",
+      "answer": "No, optional.",
+      "keywords": [
+        "middle name"
+      ]
+    },
+    {
+      "id": "mpa-036",
+      "category": "contact",
+      "question": "City/Town required?",
+      "answer": "Optional in the form; validated if filled (max 100).",
+      "keywords": [
+        "city"
+      ]
+    },
+    {
+      "id": "mpa-037",
+      "category": "contact",
+      "question": "Major Area of Study required?",
+      "answer": "Optional; validated if filled (max 100).",
+      "keywords": [
+        "major"
+      ]
+    },
+    {
+      "id": "mpa-038",
+      "category": "education",
+      "question": "What education levels exist?",
+      "answer": "No Formal Education through Doctorate Degree options plus Other, including diploma/bachelor/master/PhD equivalents listed on the form.",
+      "keywords": [
+        "education levels"
+      ]
+    },
+    {
+      "id": "mpa-039",
+      "category": "marketplace",
+      "question": "Access Marketplace disappeared after I completed profile.",
+      "answer": "Those My Profile header buttons show while incomplete; use side menu afterward.",
+      "keywords": [
+        "marketplace button gone"
+      ]
+    },
+    {
+      "id": "mpa-040",
+      "category": "frozen",
+      "question": "Gender frozen.",
+      "answer": "Gender may freeze after approval along with name/DOB/ID.",
+      "keywords": [
+        "gender frozen"
+      ]
+    },
+    {
+      "id": "mpa-041",
+      "category": "help",
+      "question": "No FAQs available.",
+      "answer": "Shown when Profile FAQ list is empty.",
+      "keywords": [
+        "no faqs"
+      ]
+    },
+    {
+      "id": "mpa-042",
+      "category": "overview",
+      "question": "Is My Profile a social profile?",
+      "answer": "No. It is TEFConnect account personal information, not a feed/connections profile.",
+      "keywords": [
+        "not social"
+      ]
+    },
+    {
+      "id": "mpa-043",
+      "category": "validation",
+      "question": "Enter details as on government ID.",
+      "answer": "Please enter the details exactly as they appear on your government-issued ID.",
+      "keywords": [
+        "government id"
+      ]
+    },
+    {
+      "id": "mpa-044",
+      "category": "uploads",
+      "question": "ID card hint.",
+      "answer": "Upload valid govt approved ID card / less than 5 MB.",
+      "keywords": [
+        "id card hint"
+      ]
+    },
+    {
+      "id": "mpa-045",
+      "category": "uploads",
+      "question": "Passport hint.",
+      "answer": "Upload a clear passport photo of you / less than 5 MB.",
+      "keywords": [
+        "passport hint"
+      ]
+    }
+  ],
+  "faqCount": 45
+}

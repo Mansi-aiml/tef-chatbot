@@ -1,0 +1,474 @@
+{
+  "module": "training-lms",
+  "moduleLabel": "Training (LMS)",
+  "product": "TEFConnect / TEF LMS",
+  "version": "2.0",
+  "language": "en",
+  "pairedDocument": "Training_LMS_Module_Knowledge.docx",
+  "instructions": "Training (LMS) FAQ only. Use for short Q&A; use the paired Word document for detailed how-tos and edge cases. Follow the common rule book for shared assistant behaviour across all modules.",
+  "faqs": [
+    {
+      "id": "lms-001",
+      "category": "overview",
+      "question": "What is Training / LMS?",
+      "answer": "Training is the TEF LMS e-learning experience for the TEF Entrepreneurship Programme: sequenced courses with agreement, assessments, lessons, quizzes, feedback, and progress tracking. Branding uses TEFCONNECT.",
+      "keywords": [
+        "lms",
+        "training",
+        "e-learning"
+      ]
+    },
+    {
+      "id": "lms-002",
+      "category": "access",
+      "question": "How do I open Training from TEFConnect?",
+      "answer": "Side menu Training/LMS when LMS status is active opens the external training site (often a new tab) via a secure link. You may also use LMS login or SSO.",
+      "keywords": [
+        "open training",
+        "tefconnect",
+        "sso"
+      ]
+    },
+    {
+      "id": "lms-003",
+      "category": "access",
+      "question": "Who can use learner Training?",
+      "answer": "Entrepreneur and partner learner accounts. Staff use admin Training. Mentors are not a standard learner Training role.",
+      "keywords": [
+        "entrepreneur",
+        "partner",
+        "roles"
+      ]
+    },
+    {
+      "id": "lms-004",
+      "category": "start",
+      "question": "What happens first time I enter Training?",
+      "answer": "If training has not started: Welcome to the TEF 2026 Entrepreneurship Programme → Start Training → accept Training Participation Agreement if required → E-Learning Dashboard / My Courses.",
+      "keywords": [
+        "welcome",
+        "start training",
+        "agreement"
+      ]
+    },
+    {
+      "id": "lms-005",
+      "category": "courses",
+      "question": "What is Programmes Training vs General Training?",
+      "answer": "Programmes Training shows My Program Courses when you have programme courses. General Training shows General Courses and is always available. Use Find a course / Search.",
+      "keywords": [
+        "programmes training",
+        "general training"
+      ]
+    },
+    {
+      "id": "lms-006",
+      "category": "courses",
+      "question": "Why is a course locked?",
+      "answer": "Programme courses unlock in order — complete the previous course first. A course may also be Not Available before start or Expired after access ends.",
+      "keywords": [
+        "locked",
+        "expired",
+        "not available"
+      ]
+    },
+    {
+      "id": "lms-007",
+      "category": "flow",
+      "question": "What is the learning order inside a course?",
+      "answer": "Pre-Assessment when required → modules/lessons in sequence → Module Feedback & Rating → Post-Assessment when curriculum complete.",
+      "keywords": [
+        "order",
+        "pre-assessment",
+        "post-assessment"
+      ]
+    },
+    {
+      "id": "lms-008",
+      "category": "assessment",
+      "question": "How do Pre/Post-Assessment work?",
+      "answer": "Configured per course; attempted only once; timed; do not refresh/close; tab-switch warnings may appear; pass/fail from training system; score may be hidden.",
+      "keywords": [
+        "assessment",
+        "once",
+        "timer"
+      ]
+    },
+    {
+      "id": "lms-009",
+      "category": "quiz",
+      "question": "How do module quizzes work?",
+      "answer": "Timed quiz lessons; if already attempted you cannot retake and should continue; Submit Quiz before time ends; messaging may reference ~70% performance but progress follows completion flags.",
+      "keywords": [
+        "quiz",
+        "retake"
+      ]
+    },
+    {
+      "id": "lms-010",
+      "category": "lessons",
+      "question": "What can I do in a lesson?",
+      "answer": "View video/document content, attachments, Mark as Complete, Set Reminder. Languages: English, French, Portuguese, Arabic.",
+      "keywords": [
+        "lesson",
+        "mark as complete",
+        "reminder"
+      ]
+    },
+    {
+      "id": "lms-011",
+      "category": "feedback",
+      "question": "What is Module Feedback & Rating?",
+      "answer": "After module lessons, rate 1–5 stars with optional feedback. May be locked until other module lessons are complete.",
+      "keywords": [
+        "module feedback",
+        "rating"
+      ]
+    },
+    {
+      "id": "lms-012",
+      "category": "profile",
+      "question": "How do I update my Training profile?",
+      "answer": "My Profile from learner menu: name, email, phone, country, city, about, preferred language, profile image (JPEG/JPG/PNG under 2 MB).",
+      "keywords": [
+        "my profile",
+        "2 mb"
+      ]
+    },
+    {
+      "id": "lms-013",
+      "category": "navigation",
+      "question": "How do I return to TEFConnect from Training?",
+      "answer": "Application Home or Sign Out from the learner header (configured destinations).",
+      "keywords": [
+        "application home",
+        "sign out"
+      ]
+    },
+    {
+      "id": "lms-014",
+      "category": "tefconnect-impact",
+      "question": "What if Training fails in TEFConnect?",
+      "answer": "Dashboard may show Did not Complete Training. Mentorship is disabled when LMS status is FAILED.",
+      "keywords": [
+        "lms failed",
+        "mentorship disabled"
+      ]
+    },
+    {
+      "id": "lms-015",
+      "category": "certificate",
+      "question": "Can I download a Training certificate?",
+      "answer": "Certificate preview/download is not a working learner action yet; certificate route returns to course details.",
+      "keywords": [
+        "certificate"
+      ]
+    },
+    {
+      "id": "lms-016",
+      "category": "limits",
+      "question": "What is not available for learners?",
+      "answer": "LMS Marketplace Coming Soon; separate My Courses page Coming Soon; certificate download not working; no admin Course Management for learners.",
+      "keywords": [
+        "coming soon",
+        "limits"
+      ]
+    },
+    {
+      "id": "lms-017",
+      "category": "deadline",
+      "question": "Is there a training deadline?",
+      "answer": "Programme courses may show a deadline before the training end date to continue the entrepreneurship journey with Tony Elumelu Foundation.",
+      "keywords": [
+        "deadline"
+      ]
+    },
+    {
+      "id": "lms-018",
+      "category": "discussion",
+      "question": "Is there a discussion forum?",
+      "answer": "Yes. Learners can create topics and reply in course discussion. Admins also manage forums.",
+      "keywords": [
+        "discussion",
+        "forum"
+      ]
+    },
+    {
+      "id": "lms-019",
+      "category": "courses",
+      "question": "What buttons appear on courses?",
+      "answer": "Start Learning, Continue Learning, Expired, Not Available.",
+      "keywords": [
+        "start learning",
+        "continue learning"
+      ]
+    },
+    {
+      "id": "lms-020",
+      "category": "courses",
+      "question": "How many courses per page?",
+      "answer": "9 courses per page on the learner grid.",
+      "keywords": [
+        "page size",
+        "9"
+      ]
+    },
+    {
+      "id": "lms-021",
+      "category": "assessment",
+      "question": "Default assessment length?",
+      "answer": "Course setup defaults often use 20 questions and 30 minutes unless the course defines otherwise. A 20-minute fallback timer may apply if duration is missing; 5-minute warning can appear.",
+      "keywords": [
+        "20 questions",
+        "30 minutes"
+      ]
+    },
+    {
+      "id": "lms-022",
+      "category": "assessment",
+      "question": "Can I retake pre-assessment?",
+      "answer": "Instructions say attempted only once; start is disabled if already attempted.",
+      "keywords": [
+        "retake pre-assessment"
+      ]
+    },
+    {
+      "id": "lms-023",
+      "category": "quiz",
+      "question": "Quiz already attempted.",
+      "answer": "You cannot retake; proceed to the next lesson.",
+      "keywords": [
+        "quiz already attempted"
+      ]
+    },
+    {
+      "id": "lms-024",
+      "category": "flow",
+      "question": "No pre-assessment configured.",
+      "answer": "You may go directly to lessons.",
+      "keywords": [
+        "no pre-assessment"
+      ]
+    },
+    {
+      "id": "lms-025",
+      "category": "flow",
+      "question": "No post-assessment configured.",
+      "answer": "A dedicated empty state is shown.",
+      "keywords": [
+        "no post-assessment"
+      ]
+    },
+    {
+      "id": "lms-026",
+      "category": "courses",
+      "question": "Please complete the previous course to unlock this course.",
+      "answer": "Finish the previous programme course in order, then the next unlocks.",
+      "keywords": [
+        "previous course"
+      ]
+    },
+    {
+      "id": "lms-027",
+      "category": "access",
+      "question": "Training missing from TEFConnect menu.",
+      "answer": "Training shows when a programme has active LMS status (not pending/not started).",
+      "keywords": [
+        "missing training"
+      ]
+    },
+    {
+      "id": "lms-028",
+      "category": "overview",
+      "question": "What is E-Learning Dashboard?",
+      "answer": "The learner home for My Courses / training dashboard after agreement.",
+      "keywords": [
+        "e-learning dashboard"
+      ]
+    },
+    {
+      "id": "lms-029",
+      "category": "lessons",
+      "question": "Set Reminder.",
+      "answer": "From lesson/quiz/pre-assessment pages, set a reminder message and date/time.",
+      "keywords": [
+        "set reminder"
+      ]
+    },
+    {
+      "id": "lms-030",
+      "category": "courses",
+      "question": "Status filters on My Courses?",
+      "answer": "All, In Progress, Not Started, Completed.",
+      "keywords": [
+        "filters"
+      ]
+    },
+    {
+      "id": "lms-031",
+      "category": "assessment",
+      "question": "Do not refresh during assessment.",
+      "answer": "Assessment instructions warn not to refresh/close; browser back is disabled on the quiz; timer can auto-submit.",
+      "keywords": [
+        "refresh",
+        "auto submit"
+      ]
+    },
+    {
+      "id": "lms-032",
+      "category": "tefconnect-impact",
+      "question": "Training PASSED — Mentorship still disabled?",
+      "answer": "Mentorship disables on LMS FAILED. If PASSED and Mentorship missing, check application_approved and Mentorship rules.",
+      "keywords": [
+        "passed mentorship"
+      ]
+    },
+    {
+      "id": "lms-033",
+      "category": "limits",
+      "question": "Can learners publish courses?",
+      "answer": "No. Course Management is admin-only.",
+      "keywords": [
+        "publish course"
+      ]
+    },
+    {
+      "id": "lms-034",
+      "category": "access",
+      "question": "Application Home goes where?",
+      "answer": "Toward TEFConnect application home from the learner header.",
+      "keywords": [
+        "application home"
+      ]
+    },
+    {
+      "id": "lms-035",
+      "category": "profile",
+      "question": "Profile photo too large.",
+      "answer": "Use JPEG/JPG/PNG under 2 MB.",
+      "keywords": [
+        "photo too large"
+      ]
+    },
+    {
+      "id": "lms-036",
+      "category": "courses",
+      "question": "General Training always available?",
+      "answer": "Yes. General Courses are always available; Program tab needs programme courses.",
+      "keywords": [
+        "general always"
+      ]
+    },
+    {
+      "id": "lms-037",
+      "category": "feedback",
+      "question": "Course reviews.",
+      "answer": "Course details may offer reviews and ratings where available.",
+      "keywords": [
+        "reviews"
+      ]
+    },
+    {
+      "id": "lms-038",
+      "category": "flow",
+      "question": "Post-assessment locked.",
+      "answer": "Complete the curriculum’s required lessons first.",
+      "keywords": [
+        "post locked"
+      ]
+    },
+    {
+      "id": "lms-039",
+      "category": "assessment",
+      "question": "Failed post-assessment.",
+      "answer": "You may be returned to post-assessment result; certificate-oriented checks can be blocked.",
+      "keywords": [
+        "failed post"
+      ]
+    },
+    {
+      "id": "lms-040",
+      "category": "overview",
+      "question": "Unlock your Entrepreneurial Potentials.",
+      "answer": "Learner hero positioning copy for Training.",
+      "keywords": [
+        "hero"
+      ]
+    },
+    {
+      "id": "lms-041",
+      "category": "limits",
+      "question": "Is Marketplace inside LMS real?",
+      "answer": "Marketplace in LMS is a Coming Soon placeholder, not the TEFConnect Marketplace module.",
+      "keywords": [
+        "lms marketplace"
+      ]
+    },
+    {
+      "id": "lms-042",
+      "category": "access",
+      "question": "SSO into LMS.",
+      "answer": "You can arrive via SSO callback token as well as email/password login on LMS.",
+      "keywords": [
+        "sso"
+      ]
+    },
+    {
+      "id": "lms-043",
+      "category": "courses",
+      "question": "Course progress percentage.",
+      "answer": "Shown from learner progress for each course.",
+      "keywords": [
+        "progress"
+      ]
+    },
+    {
+      "id": "lms-044",
+      "category": "lessons",
+      "question": "Video types.",
+      "answer": "Native video or YouTube/Vimeo embeds may be used.",
+      "keywords": [
+        "youtube",
+        "vimeo"
+      ]
+    },
+    {
+      "id": "lms-045",
+      "category": "admin",
+      "question": "What do admins do in Training?",
+      "answer": "Entrepreneurs List, Course Management, Discussion Forum, Agreement Management, Reports. Learners should not expect these tools.",
+      "keywords": [
+        "admin"
+      ]
+    },
+    {
+      "id": "lms-046",
+      "category": "limits",
+      "question": "My Courses page Coming Soon.",
+      "answer": "Header My Courses opens the e-learning dashboard; a separate My Courses page is Coming Soon.",
+      "keywords": [
+        "my courses coming soon"
+      ]
+    },
+    {
+      "id": "lms-047",
+      "category": "agreement",
+      "question": "Training Participation Agreement title.",
+      "answer": "TEF 2026 Entrepreneurship Programme Participation Agreement.",
+      "keywords": [
+        "agreement title"
+      ]
+    },
+    {
+      "id": "lms-048",
+      "category": "courses",
+      "question": "Blocked/expired contact administrator.",
+      "answer": "If access is blocked/expired, follow the message and contact an administrator when instructed.",
+      "keywords": [
+        "blocked",
+        "administrator"
+      ]
+    }
+  ],
+  "faqCount": 48
+}

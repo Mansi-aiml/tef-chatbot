@@ -1,0 +1,490 @@
+{
+  "module": "mentorship",
+  "moduleLabel": "Mentorship",
+  "product": "TEFConnect",
+  "version": "2.0",
+  "language": "en",
+  "pairedDocument": "Mentorship_Module_Knowledge.docx",
+  "instructions": "Mentorship FAQ only. Use for short Q&A; use the paired Word document for detailed how-tos and edge cases. Follow the common rule book for shared assistant behaviour across all modules.",
+  "faqs": [
+    {
+      "id": "ms-001",
+      "category": "overview",
+      "question": "What is Mentorship on TEFConnect?",
+      "answer": "Mentorship is where assigned mentors and mentees engage: view the assigned mentor or mentees, exchange messages, request changes, and complete surveys. It is not a self-serve browse-and-pick matching directory.",
+      "keywords": [
+        "what is mentorship",
+        "overview"
+      ]
+    },
+    {
+      "id": "ms-002",
+      "category": "overview",
+      "question": "Can I browse and choose my own mentor?",
+      "answer": "No. Mentees see the mentor already assigned. There is no logged-in browse directory to pick mentors. Public Find the right mentor copy opens registration/login, not a mentor catalogue.",
+      "keywords": [
+        "find mentor",
+        "browse",
+        "choose mentor"
+      ]
+    },
+    {
+      "id": "ms-003",
+      "category": "overview",
+      "question": "Is Mentorship the same as Alumni Community?",
+      "answer": "No. Alumni Community is the alumni hub. Mentorship is assigned mentor–mentee engagement. Alumni can become a TEF Coach and open Mentorship.",
+      "keywords": [
+        "difference",
+        "alumni"
+      ]
+    },
+    {
+      "id": "ms-004",
+      "category": "access",
+      "question": "Who can open Mentorship as a mentee?",
+      "answer": "Entrepreneurs need at least one programme with application_approved for Mentorship to appear. If LMS status is FAILED, Mentorship is disabled or redirects away from My Mentorship.",
+      "keywords": [
+        "access",
+        "application approved",
+        "lms failed"
+      ]
+    },
+    {
+      "id": "ms-005",
+      "category": "access",
+      "question": "Why is Mentorship disabled or missing?",
+      "answer": "It may be hidden if no programme is application_approved. If LMS is FAILED, the menu is disabled and My Mentorship redirects to Dashboard.",
+      "keywords": [
+        "disabled",
+        "missing",
+        "lms"
+      ]
+    },
+    {
+      "id": "ms-006",
+      "category": "access",
+      "question": "Who can access Mentorship as a mentor?",
+      "answer": "Mentors sign in with a mentor account, complete Mentorship profile, and await admin approval when required. Then they use Dashboard, Mentee Requests, and My Mentee List.",
+      "keywords": [
+        "mentor login",
+        "approval"
+      ]
+    },
+    {
+      "id": "ms-007",
+      "category": "access",
+      "question": "What is the difference between Mentorship mentor and Alumni Community mentor?",
+      "answer": "Mentorship mentor accounts use Mentorship menus. Alumni Community may show a Mentor/community mentor role for the alumni hub — that is not the same as Mentorship portal mentee-management menus.",
+      "keywords": [
+        "community mentor",
+        "mentor role"
+      ]
+    },
+    {
+      "id": "ms-008",
+      "category": "mentee",
+      "question": "What can I do on My Mentorship?",
+      "answer": "View My Mentor, use My Messages / Engage With Your Mentor, submit Mentor Change Request, and Start Survey when available.",
+      "keywords": [
+        "my mentorship",
+        "what can i do"
+      ]
+    },
+    {
+      "id": "ms-009",
+      "category": "mentee",
+      "question": "What if I have no mentor assigned?",
+      "answer": "My Mentorship shows No mentor assigned. Messaging and mentor-linked actions depend on assignment. Mentees cannot self-assign a mentor.",
+      "keywords": [
+        "no mentor assigned"
+      ]
+    },
+    {
+      "id": "ms-010",
+      "category": "mentee",
+      "question": "Why do I only see one mentor?",
+      "answer": "The mentee hub shows the primary assigned mentor. There is no multi-mentor switcher in this area.",
+      "keywords": [
+        "one mentor",
+        "primary mentor"
+      ]
+    },
+    {
+      "id": "ms-011",
+      "category": "messages",
+      "question": "How do mentee messages work?",
+      "answer": "Use Engage With Your Mentor to Submit Message. Filter Responded/Not Responded. Edit/delete own unanswered mentee-initiated messages. Replies to mentor-initiated messages cannot be modified/deleted after sending. Attachments: up to 5; video ≤50 MB; other ≤10 MB.",
+      "keywords": [
+        "messages",
+        "engage with your mentor"
+      ]
+    },
+    {
+      "id": "ms-012",
+      "category": "messages",
+      "question": "What file types can I attach in Mentorship messages?",
+      "answer": "PDF, DOC, DOCX, PNG, JPG, JPEG, MP4, XLSX, XLS, PPT, PPTX, TXT, within the size limits.",
+      "keywords": [
+        "attachments",
+        "file types"
+      ]
+    },
+    {
+      "id": "ms-013",
+      "category": "change-request",
+      "question": "How do I request a mentor change?",
+      "answer": "Open Mentor Change Request and choose a reason: Mentor indicated unavailability to continue; I am not satisfied with the mentorship support; Mentor is unresponsive; Delayed responses; Lack of domain expertise; or Others (Please specify).",
+      "keywords": [
+        "mentor change request"
+      ]
+    },
+    {
+      "id": "ms-014",
+      "category": "survey",
+      "question": "How do mentorship surveys work for mentees?",
+      "answer": "When notified, use Start Survey or Not Now. Statuses include Upcoming, Active, Expired. After submission, responses are not editable.",
+      "keywords": [
+        "survey",
+        "start survey",
+        "mentee"
+      ]
+    },
+    {
+      "id": "ms-015",
+      "category": "survey",
+      "question": "Can I edit survey answers after submitting?",
+      "answer": "No. Submitted mentorship survey responses are not editable.",
+      "keywords": [
+        "edit survey",
+        "immutable"
+      ]
+    },
+    {
+      "id": "ms-016",
+      "category": "mentor-profile",
+      "question": "What do mentors complete on Mentorship profile?",
+      "answer": "Name, email, gender, country, region, sector, preferred language, date of birth (18+), phone (8–15 digits), bio (max 200 words), government ID/passport (PNG/JPG/JPEG ≤5 MB), and CV (PDF/DOC/DOCX ≤5 MB). After submit, admin review may be required.",
+      "keywords": [
+        "mentor profile",
+        "documents"
+      ]
+    },
+    {
+      "id": "ms-017",
+      "category": "mentor-profile",
+      "question": "Why am I stuck on Mentorship profile as a mentor?",
+      "answer": "Your profile may be incomplete, or your mentor account may not be approved yet. Dashboard use is blocked until approved.",
+      "keywords": [
+        "not approved",
+        "incomplete mentor profile"
+      ]
+    },
+    {
+      "id": "ms-018",
+      "category": "mentor",
+      "question": "What is Mentee Requests?",
+      "answer": "Manage Mentee Requests lets mentors filter by programme, language, sector, and gender, search, and view Pending/Approved/Rejected. Open View then Approve, or Reject with Reject Reason and Submit.",
+      "keywords": [
+        "mentee requests",
+        "approve",
+        "reject"
+      ]
+    },
+    {
+      "id": "ms-019",
+      "category": "mentor",
+      "question": "What is My Mentee List?",
+      "answer": "Manage Mentee List shows assigned mentees. Mentors can Request More Mentees, Change Mentee, Start Survey, and View details for Engage With Your Mentee messaging.",
+      "keywords": [
+        "my mentee list",
+        "request more mentees"
+      ]
+    },
+    {
+      "id": "ms-020",
+      "category": "mentor",
+      "question": "How do mentor messages work?",
+      "answer": "From mentee details, mentors can message, update/delete eligible messages, and answer questions with the same attachment limits as mentees.",
+      "keywords": [
+        "engage with your mentee"
+      ]
+    },
+    {
+      "id": "ms-021",
+      "category": "survey",
+      "question": "How do mentorship surveys work for mentors?",
+      "answer": "From My Mentee List, Start Survey for a mentee. Complete Active surveys. Upcoming/Expired are shown by status. Submitted responses are not editable.",
+      "keywords": [
+        "mentor survey"
+      ]
+    },
+    {
+      "id": "ms-022",
+      "category": "tef-coach",
+      "question": "How do I become a TEF Coach from Alumni Community?",
+      "answer": "Alumni profile → Become a TEF Coach or Re-apply (email required). Pending may show Complete Mentorship profile. After approval: Certified TEF Coach and Open Mentorship.",
+      "keywords": [
+        "tef coach",
+        "become a coach"
+      ]
+    },
+    {
+      "id": "ms-023",
+      "category": "tef-coach",
+      "question": "How do I return to Alumni Community from Mentorship?",
+      "answer": "Use Back to Alumni Portal when available.",
+      "keywords": [
+        "back to alumni portal"
+      ]
+    },
+    {
+      "id": "ms-024",
+      "category": "limits",
+      "question": "Are there live sessions, video calls, or certificates?",
+      "answer": "Mentorship does not provide scheduling, calendar, or video call sessions. Certificates appears for mentors as Upcoming and is not a working feature yet.",
+      "keywords": [
+        "sessions",
+        "certificates",
+        "upcoming"
+      ]
+    },
+    {
+      "id": "ms-025",
+      "category": "limits",
+      "question": "What can members not do in Mentorship?",
+      "answer": "Mentees cannot browse/self-select mentors or self-assign when none is assigned. No multi-mentor switcher. No live session tools. Certificates is Upcoming only. Mentorship is disabled when LMS FAILED.",
+      "keywords": [
+        "cannot",
+        "limits"
+      ]
+    },
+    {
+      "id": "ms-026",
+      "category": "access",
+      "question": "I completed Training. Why is Mentorship still disabled?",
+      "answer": "Mentorship stays disabled while LMS status is FAILED. If status is not failed and Mentorship is still missing, check that a programme is application_approved.",
+      "keywords": [
+        "training completed",
+        "still disabled"
+      ]
+    },
+    {
+      "id": "ms-027",
+      "category": "messages",
+      "question": "Why can’t I edit my reply?",
+      "answer": "Once a reply is sent, Mentorship reply instructions say it cannot be modified or deleted.",
+      "keywords": [
+        "cannot edit reply"
+      ]
+    },
+    {
+      "id": "ms-028",
+      "category": "mentor",
+      "question": "How many results are on each mentee page?",
+      "answer": "Mentee Requests and My Mentee List use pages of 10. Messages also paginate by 10.",
+      "keywords": [
+        "page size",
+        "10"
+      ]
+    },
+    {
+      "id": "ms-029",
+      "category": "mentor",
+      "question": "What filters exist on mentee requests?",
+      "answer": "Programme, Language, Sector, Gender with Apply/Reset, plus search and Pending/Approved/Rejected views.",
+      "keywords": [
+        "filters"
+      ]
+    },
+    {
+      "id": "ms-030",
+      "category": "mentee",
+      "question": "Where do I find Survey Notification?",
+      "answer": "On My Mentorship you may see Survey Notification with Not Now or Start Survey.",
+      "keywords": [
+        "survey notification",
+        "not now"
+      ]
+    },
+    {
+      "id": "ms-031",
+      "category": "overview",
+      "question": "Does Find the right mentor on the public site open Mentorship matching?",
+      "answer": "No. That public marketing action opens registration or login, not an in-Mentorship mentor directory.",
+      "keywords": [
+        "marketing",
+        "find the right mentor"
+      ]
+    },
+    {
+      "id": "ms-032",
+      "category": "mentor",
+      "question": "Can I request more mentees?",
+      "answer": "Yes. On My Mentee List use Request More Mentees.",
+      "keywords": [
+        "request more mentees"
+      ]
+    },
+    {
+      "id": "ms-033",
+      "category": "mentor",
+      "question": "Can I change a mentee?",
+      "answer": "Yes. Use Change Mentee from My Mentee List when offered, with the mentee change request reasons form.",
+      "keywords": [
+        "change mentee"
+      ]
+    },
+    {
+      "id": "ms-034",
+      "category": "tef-coach",
+      "question": "What TEF Coach statuses exist?",
+      "answer": "None, Pending, Approved, and Rejected. Pending can still open Mentorship SSO to complete profile; badge appears after Approved.",
+      "keywords": [
+        "tef coach status"
+      ]
+    },
+    {
+      "id": "ms-035",
+      "category": "access",
+      "question": "Do mentors use the entrepreneur Mentorship menu?",
+      "answer": "No. Mentors use Mentorship mentor menus (requests, mentee list). Entrepreneurs use My Mentorship.",
+      "keywords": [
+        "mentor menu"
+      ]
+    },
+    {
+      "id": "ms-036",
+      "category": "messages",
+      "question": "Is Mentorship chat realtime like Marketplace chat?",
+      "answer": "Mentorship messaging is ask/reply message threads with attachments, not a separate Marketplace-style realtime chat product.",
+      "keywords": [
+        "realtime",
+        "ask reply"
+      ]
+    },
+    {
+      "id": "ms-037",
+      "category": "limits",
+      "question": "Can I schedule a Zoom session in Mentorship?",
+      "answer": "No. Live sessions/calendar/video calls are not available in Mentorship.",
+      "keywords": [
+        "zoom",
+        "schedule"
+      ]
+    },
+    {
+      "id": "ms-038",
+      "category": "mentor-profile",
+      "question": "What is the mentor bio limit?",
+      "answer": "Maximum 200 words.",
+      "keywords": [
+        "bio",
+        "200 words"
+      ]
+    },
+    {
+      "id": "ms-039",
+      "category": "mentor-profile",
+      "question": "What is the minimum mentor age?",
+      "answer": "18.",
+      "keywords": [
+        "age",
+        "18"
+      ]
+    },
+    {
+      "id": "ms-040",
+      "category": "overview",
+      "question": "Who assigns my mentor?",
+      "answer": "Assignment is handled through the programme / mentor-request process outside mentee self-serve browsing. Mentors Approve/Reject mapped requests.",
+      "keywords": [
+        "assignment",
+        "who assigns"
+      ]
+    },
+    {
+      "id": "ms-041",
+      "category": "access",
+      "question": "What if Alumni session restore fails when returning from Mentorship?",
+      "answer": "You may need to sign in to Alumni Community again if the Alumni session was not saved.",
+      "keywords": [
+        "alumni session",
+        "restore failed"
+      ]
+    },
+    {
+      "id": "ms-042",
+      "category": "survey",
+      "question": "Survey status filter on mentee list does nothing.",
+      "answer": "Survey status filtering on the mentee list may not change rows until survey data exists.",
+      "keywords": [
+        "survey filter"
+      ]
+    },
+    {
+      "id": "ms-043",
+      "category": "messages",
+      "question": "How do I search my Mentorship messages?",
+      "answer": "Use the message search on My Mentorship / mentee details messaging, and filter Responded or Not Responded.",
+      "keywords": [
+        "search messages"
+      ]
+    },
+    {
+      "id": "ms-044",
+      "category": "mentee",
+      "question": "What does Know more mean on my mentor card?",
+      "answer": "It expands or reveals more of the mentor bio beyond the short preview.",
+      "keywords": [
+        "know more",
+        "bio preview"
+      ]
+    },
+    {
+      "id": "ms-045",
+      "category": "limits",
+      "question": "Are Certificates available for mentors?",
+      "answer": "Certificates is listed as Upcoming and is not a working Mentorship feature yet.",
+      "keywords": [
+        "certificates upcoming"
+      ]
+    },
+    {
+      "id": "ms-046",
+      "category": "overview",
+      "question": "Can partners use Mentorship mentee hub?",
+      "answer": "Mentorship mentee hub is for entrepreneur Mentorship access rules described above. Partner Training roles are separate in LMS.",
+      "keywords": [
+        "partner"
+      ]
+    },
+    {
+      "id": "ms-047",
+      "category": "mentor",
+      "question": "What appears on mentor Dashboard?",
+      "answer": "Mentorship activity summaries such as assigned mentees, pending requests, and messages, for approved mentors.",
+      "keywords": [
+        "mentor dashboard"
+      ]
+    },
+    {
+      "id": "ms-048",
+      "category": "change-request",
+      "question": "What reasons can mentors use for mentee change / more mentees?",
+      "answer": "Mentors submit Request More Mentees or Change Mentee using the Mentorship request forms with the reasons provided in that form.",
+      "keywords": [
+        "mentee change reasons"
+      ]
+    },
+    {
+      "id": "ms-049",
+      "category": "access",
+      "question": "I am alumni and Mentorship appears but login fails.",
+      "answer": "My Mentorship primarily expects an entrepreneur Mentorship session. If access fails, sign in with the correct account type or use the TEF Coach / Mentorship path from Alumni when applicable.",
+      "keywords": [
+        "alumni mentorship mismatch"
+      ]
+    }
+  ],
+  "faqCount": 49
+}

@@ -1,0 +1,428 @@
+{
+  "module": "success-stories",
+  "moduleLabel": "Success Stories",
+  "product": "TEFConnect",
+  "version": "2.0",
+  "language": "en",
+  "pairedDocument": "Success_Stories_Module_Knowledge.docx",
+  "instructions": "Success Stories FAQ only (entrepreneur My Success Stories). Home testimonials are separate. Follow the common rule book for shared assistant behaviour.",
+  "faqs": [
+    {
+      "id": "ss-001",
+      "category": "overview",
+      "question": "What is Success Stories on TEFConnect?",
+      "answer": "My Success Stories lets entrepreneurs share how TEF impacted their business, track drafts/submissions, and submit one story for admin review. Not a public gallery here.",
+      "keywords": [
+        "my success stories",
+        "overview"
+      ]
+    },
+    {
+      "id": "ss-002",
+      "category": "overview",
+      "question": "Same as Home testimonials?",
+      "answer": "No. Home testimonials are a separate marketing carousel. Alumni profile success highlights are also separate.",
+      "keywords": [
+        "testimonials",
+        "difference"
+      ]
+    },
+    {
+      "id": "ss-003",
+      "category": "access",
+      "question": "Who can use Success Stories?",
+      "answer": "Entrepreneurs with completed profile see it in the side menu. Mentors do not. Sign-in required.",
+      "keywords": [
+        "access"
+      ]
+    },
+    {
+      "id": "ss-004",
+      "category": "create",
+      "question": "How many success stories can I submit?",
+      "answer": "One. Creating another redirects to the existing story. Edit/resubmit when allowed.",
+      "keywords": [
+        "one story",
+        "limit"
+      ]
+    },
+    {
+      "id": "ss-005",
+      "category": "create",
+      "question": "How do I share my success story?",
+      "answer": "Success Stories → Share your success story (if none yet) → complete Personal, Business, Story, Attachments → Save draft and/or Submit for review.",
+      "keywords": [
+        "share your success story"
+      ]
+    },
+    {
+      "id": "ss-006",
+      "category": "form",
+      "question": "What information is on the form?",
+      "answer": "Personal names/email/phone/gender; Business funding year/country/name/description; Story description, optional article URL, social handles, optional comments; Attachments 1–10 images/PDF on submit.",
+      "keywords": [
+        "form",
+        "sections"
+      ]
+    },
+    {
+      "id": "ss-007",
+      "category": "status",
+      "question": "What statuses can my story have?",
+      "answer": "Draft, Pending review, Approved, Rejected. List shows Business name, Status, Submitted, Response Date, Action.",
+      "keywords": [
+        "status"
+      ]
+    },
+    {
+      "id": "ss-008",
+      "category": "edit",
+      "question": "When can I edit or submit?",
+      "answer": "When canEdit/canSubmit allow. Pending/approved typically view-only on list. Detail confirm: Submit for review?",
+      "keywords": [
+        "edit",
+        "submit for review"
+      ]
+    },
+    {
+      "id": "ss-009",
+      "category": "rejected",
+      "question": "Story rejected — what next?",
+      "answer": "Open story → read Admin remark → revise → Submit for review again when allowed.",
+      "keywords": [
+        "rejected",
+        "admin remark"
+      ]
+    },
+    {
+      "id": "ss-010",
+      "category": "attachments",
+      "question": "Attachment rules?",
+      "answer": "Images or PDF; at least 1 and up to 10 on submit.",
+      "keywords": [
+        "attachments",
+        "1 to 10"
+      ]
+    },
+    {
+      "id": "ss-011",
+      "category": "limits",
+      "question": "What can I not do?",
+      "answer": "No multiple stories; no public feed here; no delete control; no dedicated video feature; Share means start your submission, not social network share.",
+      "keywords": [
+        "cannot",
+        "limits"
+      ]
+    },
+    {
+      "id": "ss-012",
+      "category": "draft",
+      "question": "Can I save a draft?",
+      "answer": "Yes. Save draft without all submit-required fields; filled values still length/format-checked. Continue draft from list/banner.",
+      "keywords": [
+        "save draft"
+      ]
+    },
+    {
+      "id": "ss-013",
+      "category": "list",
+      "question": "Empty list message?",
+      "answer": "No success stories yet.",
+      "keywords": [
+        "empty"
+      ]
+    },
+    {
+      "id": "ss-014",
+      "category": "list",
+      "question": "Edit vs View.",
+      "answer": "Edit when editable; View when pending/approved/read-only.",
+      "keywords": [
+        "edit",
+        "view"
+      ]
+    },
+    {
+      "id": "ss-015",
+      "category": "form",
+      "question": "Gender options?",
+      "answer": "Male or Female.",
+      "keywords": [
+        "gender"
+      ]
+    },
+    {
+      "id": "ss-016",
+      "category": "form",
+      "question": "Social media handles required on submit?",
+      "answer": "Yes on submit (max 2000).",
+      "keywords": [
+        "social media handles"
+      ]
+    },
+    {
+      "id": "ss-017",
+      "category": "form",
+      "question": "Article URL required?",
+      "answer": "Optional; must be http/https if provided.",
+      "keywords": [
+        "article url"
+      ]
+    },
+    {
+      "id": "ss-018",
+      "category": "form",
+      "question": "Business description max length?",
+      "answer": "Up to 10,000 characters for business/success/additional text fields.",
+      "keywords": [
+        "10000"
+      ]
+    },
+    {
+      "id": "ss-019",
+      "category": "form",
+      "question": "Unsafe HTML in text?",
+      "answer": "HTML tags / javascript: links are rejected.",
+      "keywords": [
+        "html",
+        "unsafe"
+      ]
+    },
+    {
+      "id": "ss-020",
+      "category": "status",
+      "question": "Pending review meaning?",
+      "answer": "Submitted and waiting for admin review; typically not editable on list.",
+      "keywords": [
+        "pending review"
+      ]
+    },
+    {
+      "id": "ss-021",
+      "category": "status",
+      "question": "Approved meaning?",
+      "answer": "Accepted; view submission; editing typically unavailable.",
+      "keywords": [
+        "approved"
+      ]
+    },
+    {
+      "id": "ss-022",
+      "category": "create",
+      "question": "I already have a story but clicked create.",
+      "answer": "You are redirected to the existing story detail.",
+      "keywords": [
+        "redirect existing"
+      ]
+    },
+    {
+      "id": "ss-023",
+      "category": "attachments",
+      "question": "Only PDF and images?",
+      "answer": "File picker accepts image/* and .pdf.",
+      "keywords": [
+        "pdf",
+        "images"
+      ]
+    },
+    {
+      "id": "ss-024",
+      "category": "form",
+      "question": "Admin remark where?",
+      "answer": "On the detail form when present — important after rejection.",
+      "keywords": [
+        "admin remark"
+      ]
+    },
+    {
+      "id": "ss-025",
+      "category": "list",
+      "question": "Columns on the table?",
+      "answer": "Business name, Status, Submitted, Response Date, Action.",
+      "keywords": [
+        "columns"
+      ]
+    },
+    {
+      "id": "ss-026",
+      "category": "overview",
+      "question": "Page title?",
+      "answer": "My Success Stories.",
+      "keywords": [
+        "page title"
+      ]
+    },
+    {
+      "id": "ss-027",
+      "category": "overview",
+      "question": "Subtitle meaning?",
+      "answer": "Share how TEF has impacted your business. Track drafts and submissions in one place.",
+      "keywords": [
+        "subtitle"
+      ]
+    },
+    {
+      "id": "ss-028",
+      "category": "limits",
+      "question": "Delete my success story?",
+      "answer": "No delete/withdraw control in this entrepreneur frontend.",
+      "keywords": [
+        "delete"
+      ]
+    },
+    {
+      "id": "ss-029",
+      "category": "limits",
+      "question": "Public browse of all stories?",
+      "answer": "Not in this Success Stories route tree.",
+      "keywords": [
+        "public gallery"
+      ]
+    },
+    {
+      "id": "ss-030",
+      "category": "limits",
+      "question": "Video upload feature?",
+      "answer": "No dedicated video feature in this submission form.",
+      "keywords": [
+        "video"
+      ]
+    },
+    {
+      "id": "ss-031",
+      "category": "draft",
+      "question": "Continue draft CTA.",
+      "answer": "Status banner/list can offer continue draft when the primary story is draft.",
+      "keywords": [
+        "continue draft"
+      ]
+    },
+    {
+      "id": "ss-032",
+      "category": "rejected",
+      "question": "Revise rejected CTA.",
+      "answer": "Banner/list can prompt revise rejected story.",
+      "keywords": [
+        "revise rejected"
+      ]
+    },
+    {
+      "id": "ss-033",
+      "category": "form",
+      "question": "First/last name max?",
+      "answer": "100 characters.",
+      "keywords": [
+        "name max"
+      ]
+    },
+    {
+      "id": "ss-034",
+      "category": "form",
+      "question": "Email max?",
+      "answer": "255; required on submit.",
+      "keywords": [
+        "email max"
+      ]
+    },
+    {
+      "id": "ss-035",
+      "category": "form",
+      "question": "Phone max?",
+      "answer": "50.",
+      "keywords": [
+        "phone max"
+      ]
+    },
+    {
+      "id": "ss-036",
+      "category": "form",
+      "question": "Business name max?",
+      "answer": "255.",
+      "keywords": [
+        "business name"
+      ]
+    },
+    {
+      "id": "ss-037",
+      "category": "form",
+      "question": "Year of funding max?",
+      "answer": "20 characters.",
+      "keywords": [
+        "year of funding"
+      ]
+    },
+    {
+      "id": "ss-038",
+      "category": "status",
+      "question": "Response Date column.",
+      "answer": "Shows review/response date when available.",
+      "keywords": [
+        "response date"
+      ]
+    },
+    {
+      "id": "ss-039",
+      "category": "create",
+      "question": "Submit on new vs detail.",
+      "answer": "New page can Submit; detail uses Submit for review with confirm dialog.",
+      "keywords": [
+        "submit confirm"
+      ]
+    },
+    {
+      "id": "ss-040",
+      "category": "overview",
+      "question": "Feed Success Story badge?",
+      "answer": "Post type badge in other modules — not this submission form.",
+      "keywords": [
+        "feed badge"
+      ]
+    },
+    {
+      "id": "ss-041",
+      "category": "access",
+      "question": "Mentors Success Stories menu?",
+      "answer": "No mentor menu item.",
+      "keywords": [
+        "mentor"
+      ]
+    },
+    {
+      "id": "ss-042",
+      "category": "access",
+      "question": "Profile must be complete?",
+      "answer": "Yes — incomplete profiles are redirected away.",
+      "keywords": [
+        "profile complete"
+      ]
+    },
+    {
+      "id": "ss-043",
+      "category": "form",
+      "question": "Country list source.",
+      "answer": "Business country options load from profile countries list.",
+      "keywords": [
+        "business country"
+      ]
+    },
+    {
+      "id": "ss-044",
+      "category": "attachments",
+      "question": "Read-only attachments.",
+      "answer": "Open as links in read-only view.",
+      "keywords": [
+        "attachment links"
+      ]
+    },
+    {
+      "id": "ss-045",
+      "category": "overview",
+      "question": "Alumni Success Stories tab?",
+      "answer": "Alumni Community profile highlights are separate from entrepreneur My Success Stories API.",
+      "keywords": [
+        "alumni success"
+      ]
+    }
+  ],
+  "faqCount": 45
+}

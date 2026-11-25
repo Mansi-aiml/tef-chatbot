@@ -1,0 +1,863 @@
+{
+  "module": "marketplace",
+  "moduleLabel": "Marketplace",
+  "product": "TEFConnect",
+  "version": "2.0",
+  "language": "en",
+  "pairedDocument": "Marketplace_Module_Knowledge.docx",
+  "instructions": "Marketplace FAQ only. Use for short Marketplace Q&A; use the paired Word document for detailed how-tos and edge cases. Follow the common rule book for shared assistant behaviour across all modules.",
+  "faqs": [
+    {
+      "id": "mp-001",
+      "category": "overview",
+      "question": "What is TEF Marketplace?",
+      "answer": "Marketplace is TEFConnect’s entrepreneur networking hub. Members can share updates, grow their network, join communities, attend events, open practical guides, and apply for opportunities.",
+      "keywords": [
+        "what is marketplace",
+        "overview"
+      ]
+    },
+    {
+      "id": "mp-002",
+      "category": "overview",
+      "question": "What can I do in Marketplace?",
+      "answer": "You can use Home Feed, My Network, Communities, Events, Knowledge Centre, Opportunities, Messages, Notifications, Settings, and Profile.",
+      "keywords": [
+        "features",
+        "sections",
+        "what can i do"
+      ]
+    },
+    {
+      "id": "mp-003",
+      "category": "overview",
+      "question": "Is Marketplace the same as Mentorship, Alumni Community, or Pitching?",
+      "answer": "No. Those are different parts of TEFConnect. Marketplace is for networking, communities, events, knowledge, and opportunities.",
+      "keywords": [
+        "difference",
+        "alumni",
+        "mentorship",
+        "pitching"
+      ]
+    },
+    {
+      "id": "mp-004",
+      "category": "overview",
+      "question": "What is TEF MARKETPLACE for?",
+      "answer": "It is a place to meet, learn, and do business with entrepreneurs — share updates, grow your network, join communities, attend events, open guides, and apply for opportunities.",
+      "keywords": [
+        "tef marketplace",
+        "purpose",
+        "tagline"
+      ]
+    },
+    {
+      "id": "mp-005",
+      "category": "access",
+      "question": "Do I need a TEF programme to use Marketplace?",
+      "answer": "No. You can register and use Marketplace without a TEF programme. TEF entrepreneurs can also enrol using Access Marketplace from TEFConnect.",
+      "keywords": [
+        "tef programme",
+        "eligibility",
+        "access"
+      ]
+    },
+    {
+      "id": "mp-006",
+      "category": "access",
+      "question": "How do TEF entrepreneurs access Marketplace?",
+      "answer": "From TEFConnect, choose Access Marketplace from the side menu or My Profile. After enrolment and approval, you can use Marketplace.",
+      "keywords": [
+        "access marketplace",
+        "enrol",
+        "tef entrepreneur"
+      ]
+    },
+    {
+      "id": "mp-007",
+      "category": "access",
+      "question": "How do I register for Marketplace?",
+      "answer": "Register or log in as a Marketplace member, verify your email, then complete any access or review steps. Full access is available after approval.",
+      "keywords": [
+        "register",
+        "sign up",
+        "login",
+        "verify email"
+      ]
+    },
+    {
+      "id": "mp-008",
+      "category": "access",
+      "question": "Why can’t I open the full Marketplace yet?",
+      "answer": "Your account may be under review, changes may have been requested, or registration may not have been approved. Open your Marketplace access status. Use Refresh status, Update profile, or Appeal decision as shown.",
+      "keywords": [
+        "blocked",
+        "pending",
+        "under review",
+        "status"
+      ]
+    },
+    {
+      "id": "mp-009",
+      "category": "access",
+      "question": "What does under review mean?",
+      "answer": "Your registration was flagged for Community Admin review. Wait for approval and use Refresh status to check again. Full Marketplace access comes after approval.",
+      "keywords": [
+        "under review",
+        "vetting",
+        "admin"
+      ]
+    },
+    {
+      "id": "mp-010",
+      "category": "access",
+      "question": "What should I do if changes were requested?",
+      "answer": "An admin asked you to update your Marketplace profile. Choose Update profile, save your changes, and wait for re-review. You can also use Appeals if needed.",
+      "keywords": [
+        "changes requested",
+        "update profile"
+      ]
+    },
+    {
+      "id": "mp-011",
+      "category": "access",
+      "question": "My Marketplace registration was not approved. What can I do?",
+      "answer": "Use Appeal decision, or contact official TEFConnect support. Track appeals under Appeals in Marketplace.",
+      "keywords": [
+        "rejected",
+        "not approved",
+        "appeal"
+      ]
+    },
+    {
+      "id": "mp-012",
+      "category": "access",
+      "question": "Does an incomplete profile block Marketplace access?",
+      "answer": "If your account is already approved for full access, an incomplete profile does not block Marketplace. Name and country already make you discoverable. Finish remaining details when ready. Flagged accounts still wait on the access status page until approved.",
+      "keywords": [
+        "incomplete profile",
+        "discoverable"
+      ]
+    },
+    {
+      "id": "mp-013",
+      "category": "access",
+      "question": "I deactivated my Marketplace account. How do I come back?",
+      "answer": "Sign in again with your Marketplace account. Reactivation is available after sign-in for deactivated accounts.",
+      "keywords": [
+        "reactivate",
+        "deactivate"
+      ]
+    },
+    {
+      "id": "mp-014",
+      "category": "access",
+      "question": "What pages can I open while my account is still under review?",
+      "answer": "You can use the access status page and Appeals. You can also verify email, unsubscribe from digests, and submit an appeal even before full access.",
+      "keywords": [
+        "pending paths",
+        "appeals while pending"
+      ]
+    },
+    {
+      "id": "mp-015",
+      "category": "tef-switch",
+      "question": "How do I register for a TEF programme from Marketplace?",
+      "answer": "If Register for TEF Programme appears in the header (for Marketplace members with moderate vetting or no TEF link yet), open it, complete the form, and continue to TEF My Profile.",
+      "keywords": [
+        "register for tef",
+        "tef programme"
+      ]
+    },
+    {
+      "id": "mp-016",
+      "category": "tef-switch",
+      "question": "How do I return to my TEF dashboard from Marketplace?",
+      "answer": "If your trust shows Currently in a TEF programme or TEF-verified and funded, use the header option for Dashboard or My Profile. Dashboard requires your TEF profile to be completed.",
+      "keywords": [
+        "dashboard",
+        "switch back",
+        "my profile"
+      ]
+    },
+    {
+      "id": "mp-017",
+      "category": "trust",
+      "question": "What do Marketplace trust labels mean?",
+      "answer": "Marketplace moderate vetting = standard Marketplace member. Currently in a TEF programme = linked to TEFConnect programme participation. TEF-verified and funded = TEF programme with verified funding status.",
+      "keywords": [
+        "trust",
+        "verified",
+        "moderate vetting"
+      ]
+    },
+    {
+      "id": "mp-018",
+      "category": "feed",
+      "question": "How do I share an update?",
+      "answer": "Go to Home Feed, write your update, optionally add photo, video, or poll, then choose Post. Use @ to mention people.",
+      "keywords": [
+        "post",
+        "home feed",
+        "share"
+      ]
+    },
+    {
+      "id": "mp-019",
+      "category": "feed",
+      "question": "What are the media limits for a post?",
+      "answer": "You can add up to 20 photos or videos in total on one post. Each image must be under 10 MB. Each video must be under 50 MB.",
+      "keywords": [
+        "photo",
+        "video",
+        "file size",
+        "media limit"
+      ]
+    },
+    {
+      "id": "mp-020",
+      "category": "feed",
+      "question": "How do polls work?",
+      "answer": "On Home Feed choose Poll. Add a question and 2 to 6 options. You may set an end date (not in the past) and allow multiple selections. After posting, members can Vote or Update vote until the poll is closed.",
+      "keywords": [
+        "poll",
+        "vote",
+        "options"
+      ]
+    },
+    {
+      "id": "mp-021",
+      "category": "feed",
+      "question": "Why can’t people comment on my post?",
+      "answer": "Comments may be turned off for that post. When creating a post you can turn Allow comments on or off.",
+      "keywords": [
+        "comments disabled",
+        "allow comments"
+      ]
+    },
+    {
+      "id": "mp-022",
+      "category": "feed",
+      "question": "How long can a comment be?",
+      "answer": "A comment can be up to 2000 characters.",
+      "keywords": [
+        "comment length",
+        "2000"
+      ]
+    },
+    {
+      "id": "mp-023",
+      "category": "feed",
+      "question": "How do I like, save, or share a post?",
+      "answer": "On a post you can Like/Unlike, open Comments and Reply, Save/Remove bookmark, Share/copy link, Report, or Delete if it is your post.",
+      "keywords": [
+        "like",
+        "save",
+        "share",
+        "delete",
+        "report"
+      ]
+    },
+    {
+      "id": "mp-024",
+      "category": "feed",
+      "question": "Are my posts public?",
+      "answer": "Feed posts are shared with the Marketplace community. Profile visibility (Public or Connections only) controls how much of your profile and posts others see before connecting.",
+      "keywords": [
+        "public",
+        "privacy",
+        "visibility"
+      ]
+    },
+    {
+      "id": "mp-025",
+      "category": "feed",
+      "question": "Why can’t I create an empty post?",
+      "answer": "You must write something or add a photo/video, or create a valid poll, before posting.",
+      "keywords": [
+        "empty post",
+        "require content"
+      ]
+    },
+    {
+      "id": "mp-026",
+      "category": "feed",
+      "question": "What post labels might I see?",
+      "answer": "Success Story, Mentor Insight, Community Poll, and Opportunity (with View opportunity).",
+      "keywords": [
+        "badges",
+        "success story",
+        "opportunity"
+      ]
+    },
+    {
+      "id": "mp-027",
+      "category": "network",
+      "question": "What is the difference between Connect and Follow?",
+      "answer": "Connect needs acceptance. Follow does not need approval and does not remove an existing connection.",
+      "keywords": [
+        "connect",
+        "follow",
+        "difference"
+      ]
+    },
+    {
+      "id": "mp-028",
+      "category": "network",
+      "question": "How do I connect with someone?",
+      "answer": "Go to My Network → Discover (or use a Home Feed suggestion), choose Connect, optionally add an intro note, then wait for Accept under Requests.",
+      "keywords": [
+        "connection request",
+        "discover"
+      ]
+    },
+    {
+      "id": "mp-029",
+      "category": "network",
+      "question": "Why can’t I send a connection intro note?",
+      "answer": "Your daily connection-note allowance is used up. You can still Connect without note and try notes again tomorrow. Notes are delivered in Messages and can be up to 500 characters.",
+      "keywords": [
+        "note limit",
+        "intro note",
+        "daily allowance"
+      ]
+    },
+    {
+      "id": "mp-030",
+      "category": "network",
+      "question": "Why doesn’t name search show results when I type one letter?",
+      "answer": "Name search needs at least 2 letters. Keep typing, or use filters such as country, region, sector, business stage, interests, looking for, or offering.",
+      "keywords": [
+        "search",
+        "two letters",
+        "discover"
+      ]
+    },
+    {
+      "id": "mp-031",
+      "category": "network",
+      "question": "How do connection requests work?",
+      "answer": "Incoming: Accept, Decline, or Ignore. Sent: Withdraw or Request again when available. Accepting creates a connection so you can message each other.",
+      "keywords": [
+        "accept",
+        "decline",
+        "withdraw",
+        "requests"
+      ]
+    },
+    {
+      "id": "mp-032",
+      "category": "network",
+      "question": "What happens when I block someone?",
+      "answer": "They are removed from your connections, requests, and follows. You can Unblock later from My Network → Blocked.",
+      "keywords": [
+        "block",
+        "unblock"
+      ]
+    },
+    {
+      "id": "mp-033",
+      "category": "network",
+      "question": "What sections are in My Network?",
+      "answer": "Discover, My Connections, Requests, Following, and Blocked.",
+      "keywords": [
+        "my network",
+        "segments"
+      ]
+    },
+    {
+      "id": "mp-034",
+      "category": "network",
+      "question": "What if my connection note failed to post into Messages?",
+      "answer": "The connection request may still succeed even if the intro note fails to appear in Messages. You can message after you are connected.",
+      "keywords": [
+        "note failed",
+        "request sent"
+      ]
+    },
+    {
+      "id": "mp-035",
+      "category": "communities",
+      "question": "How do I join a community?",
+      "answer": "Open Communities, open a community, choose Join Community, and accept the guidelines. After joining you can post, like, and comment in Discussions if participation is allowed.",
+      "keywords": [
+        "join community",
+        "guidelines"
+      ]
+    },
+    {
+      "id": "mp-036",
+      "category": "communities",
+      "question": "Can I create a community?",
+      "answer": "No. Members can browse and join existing communities. Creating communities is not available to members in Marketplace.",
+      "keywords": [
+        "create community",
+        "cannot create"
+      ]
+    },
+    {
+      "id": "mp-037",
+      "category": "communities",
+      "question": "Why are community discussions read-only for me?",
+      "answer": "You may not be a member yet, or you may still need to accept the community guidelines. Join or review and accept guidelines before participating. Community posts can be up to 2000 characters.",
+      "keywords": [
+        "read-only",
+        "guidelines",
+        "discussions"
+      ]
+    },
+    {
+      "id": "mp-038",
+      "category": "communities",
+      "question": "Can I leave a community?",
+      "answer": "Yes. Once you are a member, you can leave the community when that option is offered.",
+      "keywords": [
+        "leave community"
+      ]
+    },
+    {
+      "id": "mp-039",
+      "category": "events",
+      "question": "How do I join an event?",
+      "answer": "Open Events, open an event, then Join or Register while registration is open. For private events, request to participate. Status may be Registered, Waitlisted, or Pending.",
+      "keywords": [
+        "join event",
+        "register",
+        "waitlist",
+        "private"
+      ]
+    },
+    {
+      "id": "mp-040",
+      "category": "events",
+      "question": "Why can’t I register for an event?",
+      "answer": "Registration may be closed outside the registration window. When registration is not open, Join or Register is unavailable.",
+      "keywords": [
+        "registration closed",
+        "event window"
+      ]
+    },
+    {
+      "id": "mp-041",
+      "category": "events",
+      "question": "Can I create an event?",
+      "answer": "No. Members can browse and join or register for published events. Creating events is not available to members in Marketplace.",
+      "keywords": [
+        "create event",
+        "cannot create"
+      ]
+    },
+    {
+      "id": "mp-042",
+      "category": "events",
+      "question": "Can I cancel my event registration?",
+      "answer": "Yes when cancel is available for your status. Cancel can apply if you are Registered, Waitlisted, Pending, or Attended, when that option is offered.",
+      "keywords": [
+        "cancel registration",
+        "event"
+      ]
+    },
+    {
+      "id": "mp-043",
+      "category": "knowledge",
+      "question": "What can I do in Knowledge Centre?",
+      "answer": "Browse, search, or filter resources, open a resource, download it when available, and report a resource if inappropriate. Members cannot upload or create knowledge resources.",
+      "keywords": [
+        "knowledge centre",
+        "download",
+        "guides"
+      ]
+    },
+    {
+      "id": "mp-044",
+      "category": "opportunities",
+      "question": "How do I apply for an opportunity?",
+      "answer": "Open Opportunities, open a listing, review eligibility and documents, then Apply when the opportunity is published, applications are open, and it is not expired. You can Save it first.",
+      "keywords": [
+        "apply",
+        "opportunity",
+        "save"
+      ]
+    },
+    {
+      "id": "mp-045",
+      "category": "opportunities",
+      "question": "Why can’t I apply to an opportunity?",
+      "answer": "Applications may not be open, the opportunity may be expired, or it may not be published. When applications are not open, Apply is unavailable.",
+      "keywords": [
+        "cannot apply",
+        "deadline",
+        "expired"
+      ]
+    },
+    {
+      "id": "mp-046",
+      "category": "opportunities",
+      "question": "How do I withdraw an application?",
+      "answer": "Open the opportunity or the Applied view and choose Withdraw if your application status is Submitted and withdraw is available. After withdrawing you may be able to apply again later.",
+      "keywords": [
+        "withdraw",
+        "cancel application"
+      ]
+    },
+    {
+      "id": "mp-047",
+      "category": "opportunities",
+      "question": "Can I create or post an opportunity?",
+      "answer": "No. Members can save and apply to published opportunities. Creating listings is not available to members in Marketplace.",
+      "keywords": [
+        "create opportunity",
+        "post opportunity"
+      ]
+    },
+    {
+      "id": "mp-048",
+      "category": "opportunities",
+      "question": "How do opportunity digests and match alerts work?",
+      "answer": "In Settings → Notifications you can turn on Weekly opportunity digest (email) and Opportunity match alerts. You can also unsubscribe from digest emails using the link in the email.",
+      "keywords": [
+        "digest",
+        "match alerts",
+        "email"
+      ]
+    },
+    {
+      "id": "mp-049",
+      "category": "opportunities",
+      "question": "What views are in Opportunities?",
+      "answer": "All, Saved, and Applied, plus search and type/subtype filters.",
+      "keywords": [
+        "saved",
+        "applied",
+        "filters"
+      ]
+    },
+    {
+      "id": "mp-050",
+      "category": "messages",
+      "question": "How do I message someone?",
+      "answer": "Message people you are connected with from Messages or via Message on their profile or network card. If you are not connected, you may send a message request; accepting usually creates a connection.",
+      "keywords": [
+        "message",
+        "chat",
+        "message request"
+      ]
+    },
+    {
+      "id": "mp-051",
+      "category": "messages",
+      "question": "Why can’t I send a message?",
+      "answer": "You can only message a connection for full conversation. If you are not connected, use a message request or Connect first. Until full messaging is available, only a connection note may be allowed in some cases.",
+      "keywords": [
+        "cannot message",
+        "connection required"
+      ]
+    },
+    {
+      "id": "mp-052",
+      "category": "messages",
+      "question": "How long can a message request be?",
+      "answer": "A message request body can be up to 1000 characters.",
+      "keywords": [
+        "message request length",
+        "1000"
+      ]
+    },
+    {
+      "id": "mp-053",
+      "category": "messages",
+      "question": "Where do connection intro notes appear?",
+      "answer": "Introductory connection notes are delivered in Messages, not on the profile.",
+      "keywords": [
+        "intro note",
+        "messages"
+      ]
+    },
+    {
+      "id": "mp-054",
+      "category": "notifications",
+      "question": "How do I manage notifications?",
+      "answer": "Open Notifications to filter All, Unread, or Mentions, and use Mark all read. Use Manage preferences to open Settings → Notifications.",
+      "keywords": [
+        "notifications",
+        "preferences",
+        "mentions"
+      ]
+    },
+    {
+      "id": "mp-055",
+      "category": "settings",
+      "question": "Which notification emails cannot be turned off?",
+      "answer": "Account security, verification, vetting, and moderation emails stay on and cannot be turned off.",
+      "keywords": [
+        "required emails",
+        "security"
+      ]
+    },
+    {
+      "id": "mp-056",
+      "category": "settings",
+      "question": "What is the difference between deactivate and delete?",
+      "answer": "Deactivate hides your profile and signs you out; sign in again later to reactivate. Delete permanently closes your Marketplace account and soft-deletes your posts and comments from your side; you need a new registration to return. An optional reason of up to 500 characters can be provided for either action.",
+      "keywords": [
+        "deactivate",
+        "delete account"
+      ]
+    },
+    {
+      "id": "mp-057",
+      "category": "settings",
+      "question": "What notification preferences can I change?",
+      "answer": "Network catch-up updates, posting and commenting, mentions, weekly opportunity digest, and opportunity match alerts.",
+      "keywords": [
+        "settings",
+        "toggles"
+      ]
+    },
+    {
+      "id": "mp-058",
+      "category": "profile",
+      "question": "How do I edit my Marketplace profile?",
+      "answer": "Go to Profile → Edit profile. Update details, photo, optional cover, visibility (Public or Connections only), interests, looking for, offering, and optional businesses or ventures.",
+      "keywords": [
+        "edit profile",
+        "visibility",
+        "photo"
+      ]
+    },
+    {
+      "id": "mp-059",
+      "category": "profile",
+      "question": "What does Connections only mean?",
+      "answer": "Members who are not connected with you see limited profile details and may need to connect to see more. Posts may appear private until they connect.",
+      "keywords": [
+        "connections only",
+        "private profile"
+      ]
+    },
+    {
+      "id": "mp-060",
+      "category": "profile",
+      "question": "Are businesses required on my profile?",
+      "answer": "No. Businesses or ventures are optional. If you add a business, name, description, sector, stage, founding year, and at least one image are required. Website is optional. Business images must be under 10 MB.",
+      "keywords": [
+        "business",
+        "venture",
+        "optional"
+      ]
+    },
+    {
+      "id": "mp-061",
+      "category": "profile",
+      "question": "What tabs are on my own profile?",
+      "answer": "Posts, Communities, and Bookmarks, plus stats for Connections and Followers.",
+      "keywords": [
+        "tabs",
+        "bookmarks",
+        "stats"
+      ]
+    },
+    {
+      "id": "mp-062",
+      "category": "safety",
+      "question": "What can I report?",
+      "answer": "You can report users, posts, comments, community posts, community comments, messages, businesses, and knowledge resources. Reasons include Spam, Inappropriate language, Harassment, Misinformation, Hate speech, or Other.",
+      "keywords": [
+        "report",
+        "spam",
+        "harassment"
+      ]
+    },
+    {
+      "id": "mp-063",
+      "category": "safety",
+      "question": "How do I appeal a moderation decision?",
+      "answer": "Open Appeals (or Appeal decision from the access status page). Choose appeal type: Suspension, Removal, Mute, Warning, or Other. Explain why in at least 10 characters, submit, and track status.",
+      "keywords": [
+        "appeal",
+        "moderation",
+        "suspension",
+        "mute"
+      ]
+    },
+    {
+      "id": "mp-064",
+      "category": "safety",
+      "question": "Someone is harassing me. What should I do?",
+      "answer": "Report the content, profile, or message, and Block the person. If your account was moderated by mistake, use Appeals. For other help, use official TEFConnect support channels.",
+      "keywords": [
+        "harassment",
+        "block",
+        "report",
+        "safety"
+      ]
+    },
+    {
+      "id": "mp-065",
+      "category": "limits",
+      "question": "What can members not do in Marketplace?",
+      "answer": "Members cannot create communities, create events, upload knowledge resources, or create opportunity listings. Members also cannot turn off required account security emails.",
+      "keywords": [
+        "cannot",
+        "limits",
+        "non features"
+      ]
+    },
+    {
+      "id": "mp-066",
+      "category": "support",
+      "question": "How do I get help with Marketplace?",
+      "answer": "First use access status, Update profile, Refresh status, or Appeals when those options apply. For other account issues, use official TEFConnect support channels published on TEFConnect.",
+      "keywords": [
+        "support",
+        "help",
+        "contact"
+      ]
+    },
+    {
+      "id": "mp-067",
+      "category": "overview",
+      "question": "Is Marketplace free?",
+      "answer": "Marketplace is part of TEFConnect access for eligible members. TEF programme applications are separate and free to apply for. For billing questions outside Marketplace, contact official TEFConnect support.",
+      "keywords": [
+        "free",
+        "cost",
+        "fees"
+      ]
+    },
+    {
+      "id": "mp-068",
+      "category": "access",
+      "question": "Why am I stuck on the Marketplace status page?",
+      "answer": "Your account is not fully approved yet. Check whether you are under review, need to Update profile for changes requested, or need to Appeal a rejection. Use Refresh status after updates.",
+      "keywords": [
+        "stuck",
+        "status page",
+        "cannot enter feed"
+      ]
+    },
+    {
+      "id": "mp-069",
+      "category": "access",
+      "question": "I verified my email but still cannot use Marketplace.",
+      "answer": "Email verification alone may not grant full access if vetting is still pending, changes were requested, or registration was not approved. Check Marketplace access status.",
+      "keywords": [
+        "verified email",
+        "still pending"
+      ]
+    },
+    {
+      "id": "mp-070",
+      "category": "feed",
+      "question": "How do I delete my own post?",
+      "answer": "Open More options on your post and choose Delete. Deleting cannot be undone and removes the post from the community feed.",
+      "keywords": [
+        "delete post",
+        "own post"
+      ]
+    },
+    {
+      "id": "mp-071",
+      "category": "feed",
+      "question": "How do I mention someone?",
+      "answer": "In the post or comment text, type @ and choose the person from the suggestions.",
+      "keywords": [
+        "mention",
+        "@"
+      ]
+    },
+    {
+      "id": "mp-072",
+      "category": "feed",
+      "question": "The poll says Poll closed. Can I still vote?",
+      "answer": "No. When a poll is closed it no longer accepts votes.",
+      "keywords": [
+        "poll closed",
+        "cannot vote"
+      ]
+    },
+    {
+      "id": "mp-073",
+      "category": "network",
+      "question": "How do I unfollow someone?",
+      "answer": "From their network card or profile actions, choose Unfollow. Unfollow does not need approval.",
+      "keywords": [
+        "unfollow"
+      ]
+    },
+    {
+      "id": "mp-074",
+      "category": "network",
+      "question": "How do I remove a connection?",
+      "answer": "In My Connections, use Remove on that person. You can also Block if needed.",
+      "keywords": [
+        "remove connection",
+        "disconnect"
+      ]
+    },
+    {
+      "id": "mp-075",
+      "category": "communities",
+      "question": "What tabs are inside a community?",
+      "answer": "About, Discussions, and Members.",
+      "keywords": [
+        "community tabs",
+        "about",
+        "members"
+      ]
+    },
+    {
+      "id": "mp-076",
+      "category": "events",
+      "question": "What event formats exist?",
+      "answer": "Events may be virtual, physical, or hybrid. Details can include agenda, speakers, attachments, maps, or meeting links depending on format.",
+      "keywords": [
+        "virtual",
+        "physical",
+        "hybrid"
+      ]
+    },
+    {
+      "id": "mp-077",
+      "category": "events",
+      "question": "What does Waitlisted mean?",
+      "answer": "The event registration placed you on the waiting list instead of confirming a regular registered spot.",
+      "keywords": [
+        "waitlisted",
+        "waiting list"
+      ]
+    },
+    {
+      "id": "mp-078",
+      "category": "messages",
+      "question": "My chat session seems wrong after switching accounts.",
+      "answer": "If messaging does not match the signed-in Marketplace account, sign out and sign in again, then reopen Messages.",
+      "keywords": [
+        "sign out",
+        "session",
+        "chat mismatch"
+      ]
+    },
+    {
+      "id": "mp-079",
+      "category": "profile",
+      "question": "What activity can others see on my profile?",
+      "answer": "Depending on visibility and connection status, others may see posts and limited profile details. Connections only profiles show limited information until connected.",
+      "keywords": [
+        "activity",
+        "others see"
+      ]
+    },
+    {
+      "id": "mp-080",
+      "category": "opportunities",
+      "question": "Do I create saved opportunity alert rules myself?",
+      "answer": "In Marketplace you manage digest and match-alert preferences in Settings. Creating custom named saved-alert rules is not available as a member action in Marketplace.",
+      "keywords": [
+        "saved alerts",
+        "custom alerts"
+      ]
+    }
+  ],
+  "faqCount": 80
+}

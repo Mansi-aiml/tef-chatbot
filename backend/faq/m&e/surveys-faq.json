@@ -1,0 +1,431 @@
+{
+  "module": "surveys",
+  "moduleLabel": "Surveys",
+  "product": "TEFConnect",
+  "version": "2.0",
+  "language": "en",
+  "pairedDocument": "Surveys_Module_Knowledge.docx",
+  "instructions": "Surveys FAQ only. Mentorship surveys are separate. Use the paired Word document for detail. Follow the common rule book for shared assistant behaviour across all modules.",
+  "faqs": [
+    {
+      "id": "sv-001",
+      "category": "overview",
+      "question": "What are Surveys on TEFConnect?",
+      "answer": "Entrepreneurs open assigned programme surveys, accept Terms, answer multi-step questions, and submit. Mentors do not have Surveys in their side menu.",
+      "keywords": [
+        "surveys",
+        "overview"
+      ]
+    },
+    {
+      "id": "sv-002",
+      "category": "overview",
+      "question": "Are Mentorship surveys the same as Surveys?",
+      "answer": "No. Mentorship Start Survey is separate. Surveys menu is for entrepreneur programme surveys.",
+      "keywords": [
+        "mentorship survey",
+        "difference"
+      ]
+    },
+    {
+      "id": "sv-003",
+      "category": "access",
+      "question": "How do I open Surveys?",
+      "answer": "Sign in → side menu Surveys. Incomplete profiles go to My Profile first.",
+      "keywords": [
+        "access",
+        "side menu"
+      ]
+    },
+    {
+      "id": "sv-004",
+      "category": "list",
+      "question": "What do I see on the Surveys list?",
+      "answer": "Survey Name, Programme, Submitted Date & Time, Survey Status, Action. Filters: All/Not Started/In Progress/Completed. Search on current page. 10 per page.",
+      "keywords": [
+        "list",
+        "filter",
+        "search"
+      ]
+    },
+    {
+      "id": "sv-005",
+      "category": "start",
+      "question": "How do I start a survey?",
+      "answer": "Start → agree I agree to the Terms and Conditions → Accept & Start Programme. Decline & Exit returns to list. Already accepted terms may skip to questions.",
+      "keywords": [
+        "start",
+        "terms"
+      ]
+    },
+    {
+      "id": "sv-006",
+      "category": "fill",
+      "question": "How do I answer and submit?",
+      "answer": "Answer required questions → Next to save/continue → Submit on last step → Survey submitted successfully → back to list. Survey Progress shows %.",
+      "keywords": [
+        "next",
+        "submit",
+        "progress"
+      ]
+    },
+    {
+      "id": "sv-007",
+      "category": "view",
+      "question": "Can I view a submitted survey?",
+      "answer": "When View is available, open read-only answers. Previous/Next if multiple steps. Empty answers: No answer provided.",
+      "keywords": [
+        "view",
+        "read-only"
+      ]
+    },
+    {
+      "id": "sv-008",
+      "category": "fill",
+      "question": "Can I go back while filling?",
+      "answer": "Authenticated fill offers Next/Submit, not Previous. Guest drop-off surveys allow Previous. Next saves the step.",
+      "keywords": [
+        "previous",
+        "back"
+      ]
+    },
+    {
+      "id": "sv-009",
+      "category": "uploads",
+      "question": "What files can I upload?",
+      "answer": "Formats from the survey; defaults often jpg/jpeg/png/pdf; doc/docx may appear when allowed. No fixed max size shown in Surveys UI.",
+      "keywords": [
+        "upload"
+      ]
+    },
+    {
+      "id": "sv-010",
+      "category": "drop-off",
+      "question": "What is a drop-off survey link?",
+      "answer": "Email/link with token, not side menu. Start Survey if needed → answer → Thank you. Invalid/expired links show errors and may offer Go to portal login.",
+      "keywords": [
+        "drop-off",
+        "token"
+      ]
+    },
+    {
+      "id": "sv-011",
+      "category": "status",
+      "question": "What statuses might I see?",
+      "answer": "Filters: All/Not Started/In Progress/Completed. Rows may also show Submitted/Approved/Rejected.",
+      "keywords": [
+        "status"
+      ]
+    },
+    {
+      "id": "sv-012",
+      "category": "limits",
+      "question": "What can I not do in Surveys?",
+      "answer": "Cannot create templates; no Save & Exit beyond Next; no Previous on authenticated fill; no countdown timer UI; mentors no menu; Mentorship surveys elsewhere.",
+      "keywords": [
+        "cannot",
+        "limits"
+      ]
+    },
+    {
+      "id": "sv-013",
+      "category": "errors",
+      "question": "Why can’t I start or open a survey?",
+      "answer": "Complete profile first; agree to terms; use View if only viewable; drop-off token may be invalid/expired.",
+      "keywords": [
+        "cannot start",
+        "invalid link"
+      ]
+    },
+    {
+      "id": "sv-014",
+      "category": "list",
+      "question": "No surveys found.",
+      "answer": "Empty list message when you have no surveys in the current filter/page.",
+      "keywords": [
+        "no surveys found"
+      ]
+    },
+    {
+      "id": "sv-015",
+      "category": "start",
+      "question": "You must agree to the terms…",
+      "answer": "Tick I agree to the Terms and Conditions before Accept & Start Programme.",
+      "keywords": [
+        "must agree"
+      ]
+    },
+    {
+      "id": "sv-016",
+      "category": "fill",
+      "question": "This field is required.",
+      "answer": "Answer all required questions before Next/Submit.",
+      "keywords": [
+        "required"
+      ]
+    },
+    {
+      "id": "sv-017",
+      "category": "fill",
+      "question": "Please answer all required questions.",
+      "answer": "Validation failed on the step — complete required fields.",
+      "keywords": [
+        "validation"
+      ]
+    },
+    {
+      "id": "sv-018",
+      "category": "drop-off",
+      "question": "Invalid survey link.",
+      "answer": "mapping id/token missing or invalid.",
+      "keywords": [
+        "invalid survey link"
+      ]
+    },
+    {
+      "id": "sv-019",
+      "category": "drop-off",
+      "question": "Survey unavailable.",
+      "answer": "Guest survey cannot be loaded; Go to portal login may be offered.",
+      "keywords": [
+        "survey unavailable"
+      ]
+    },
+    {
+      "id": "sv-020",
+      "category": "drop-off",
+      "question": "This survey link is invalid or has expired.",
+      "answer": "Token unauthorized/expired.",
+      "keywords": [
+        "expired link"
+      ]
+    },
+    {
+      "id": "sv-021",
+      "category": "drop-off",
+      "question": "Survey not found.",
+      "answer": "Guest survey mapping not found.",
+      "keywords": [
+        "survey not found"
+      ]
+    },
+    {
+      "id": "sv-022",
+      "category": "view",
+      "question": "Viewing submitted responses.",
+      "answer": "Read-only mode label when viewing submitted/read-only survey answers.",
+      "keywords": [
+        "viewing submitted"
+      ]
+    },
+    {
+      "id": "sv-023",
+      "category": "list",
+      "question": "Start vs View.",
+      "answer": "canStart shows Start; otherwise canView shows View survey.",
+      "keywords": [
+        "start vs view"
+      ]
+    },
+    {
+      "id": "sv-024",
+      "category": "list",
+      "question": "How many surveys per page?",
+      "answer": "10.",
+      "keywords": [
+        "page size"
+      ]
+    },
+    {
+      "id": "sv-025",
+      "category": "list",
+      "question": "Search not finding a survey on later pages.",
+      "answer": "List search is on the current page of results only.",
+      "keywords": [
+        "search current page"
+      ]
+    },
+    {
+      "id": "sv-026",
+      "category": "fill",
+      "question": "What question types exist?",
+      "answer": "Text, rich text, date, dropdown, radio/yes-no/MCQ, checkbox, multi-select, file/image/document.",
+      "keywords": [
+        "question types"
+      ]
+    },
+    {
+      "id": "sv-027",
+      "category": "start",
+      "question": "Survey started successfully.",
+      "answer": "Toast after Accept & Start Programme succeeds.",
+      "keywords": [
+        "started successfully"
+      ]
+    },
+    {
+      "id": "sv-028",
+      "category": "fill",
+      "question": "Survey submitted successfully.",
+      "answer": "Toast after Submit succeeds.",
+      "keywords": [
+        "submitted successfully"
+      ]
+    },
+    {
+      "id": "sv-029",
+      "category": "drop-off",
+      "question": "Thank you after drop-off submit.",
+      "answer": "Guest success message with Survey submitted successfully.",
+      "keywords": [
+        "thank you"
+      ]
+    },
+    {
+      "id": "sv-030",
+      "category": "overview",
+      "question": "Do mentors have Surveys?",
+      "answer": "No Surveys item in mentor side menu.",
+      "keywords": [
+        "mentor surveys"
+      ]
+    },
+    {
+      "id": "sv-031",
+      "category": "overview",
+      "question": "Where is Mentorship Start Survey?",
+      "answer": "My Mentorship or My Mentee List — see Mentorship document.",
+      "keywords": [
+        "mentorship start survey"
+      ]
+    },
+    {
+      "id": "sv-032",
+      "category": "drop-off",
+      "question": "Already submitted drop-off survey.",
+      "answer": "May open read-only depending on mapping status.",
+      "keywords": [
+        "already submitted"
+      ]
+    },
+    {
+      "id": "sv-033",
+      "category": "fill",
+      "question": "No options available for this question.",
+      "answer": "Shown when a choice question has no options/unknown type.",
+      "keywords": [
+        "no options"
+      ]
+    },
+    {
+      "id": "sv-034",
+      "category": "list",
+      "question": "Submitted Date & Time blank.",
+      "answer": "Shows — when no date is available.",
+      "keywords": [
+        "submitted date"
+      ]
+    },
+    {
+      "id": "sv-035",
+      "category": "access",
+      "question": "Surveys without completed profile.",
+      "answer": "Redirected to My Profile before protected Surveys pages.",
+      "keywords": [
+        "profile gate"
+      ]
+    },
+    {
+      "id": "sv-036",
+      "category": "limits",
+      "question": "Can I create a survey?",
+      "answer": "No. Members only respond to assigned surveys.",
+      "keywords": [
+        "create survey"
+      ]
+    },
+    {
+      "id": "sv-037",
+      "category": "limits",
+      "question": "Draft Save & Exit?",
+      "answer": "Not available beyond Next saving the current step.",
+      "keywords": [
+        "save and exit"
+      ]
+    },
+    {
+      "id": "sv-038",
+      "category": "drop-off",
+      "question": "Start Survey vs Accept & Start Programme.",
+      "answer": "Drop-off accept CTA is Start Survey; authenticated terms CTA is Accept & Start Programme.",
+      "keywords": [
+        "start survey button"
+      ]
+    },
+    {
+      "id": "sv-039",
+      "category": "list",
+      "question": "Approved/Rejected on list.",
+      "answer": "May appear as status badges even if filter chips are All/Not Started/In Progress/Completed.",
+      "keywords": [
+        "approved",
+        "rejected"
+      ]
+    },
+    {
+      "id": "sv-040",
+      "category": "fill",
+      "question": "Progress bar meaning.",
+      "answer": "Survey Progress percentage 0–100 for the survey fill.",
+      "keywords": [
+        "survey progress"
+      ]
+    },
+    {
+      "id": "sv-041",
+      "category": "drop-off",
+      "question": "Language on drop-off pages.",
+      "answer": "Guest chrome includes language selection with TEFConnect branding.",
+      "keywords": [
+        "language"
+      ]
+    },
+    {
+      "id": "sv-042",
+      "category": "limits",
+      "question": "Countdown timer for survey window?",
+      "answer": "Not shown in this Surveys UI.",
+      "keywords": [
+        "timer"
+      ]
+    },
+    {
+      "id": "sv-043",
+      "category": "list",
+      "question": "Pagination text.",
+      "answer": "Showing {start}-{end} of {total} Results.",
+      "keywords": [
+        "showing results"
+      ]
+    },
+    {
+      "id": "sv-044",
+      "category": "start",
+      "question": "Decline & Exit.",
+      "answer": "Leaves terms and returns to Surveys list without starting.",
+      "keywords": [
+        "decline and exit"
+      ]
+    },
+    {
+      "id": "sv-045",
+      "category": "fill",
+      "question": "Enter here / Select placeholders.",
+      "answer": "Shown on text/select fields where offered.",
+      "keywords": [
+        "placeholders"
+      ]
+    }
+  ],
+  "faqCount": 45
+}

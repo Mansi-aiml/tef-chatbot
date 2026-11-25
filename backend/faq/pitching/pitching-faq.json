@@ -1,0 +1,443 @@
+{
+  "module": "pitching",
+  "moduleLabel": "Pitching",
+  "product": "TEFConnect",
+  "version": "2.0",
+  "language": "en",
+  "pairedDocument": "Pitching_Module_Knowledge.docx",
+  "instructions": "Pitching FAQ only. Use for short Q&A; use the paired Word document for detailed how-tos and edge cases. Follow the common rule book for shared assistant behaviour across all modules.",
+  "faqs": [
+    {
+      "id": "pt-001",
+      "category": "overview",
+      "question": "What is Pitching on TEFConnect?",
+      "answer": "Pitching is the Business Plan & Pitch area: agreement and identity steps, Business Plan Phase documents (including executive summary), then Seed Capital Phase documents and bank details when open.",
+      "keywords": [
+        "what is pitching",
+        "business plan and pitch"
+      ]
+    },
+    {
+      "id": "pt-002",
+      "category": "overview",
+      "question": "What phases are in Pitching?",
+      "answer": "Business Plan Phase and Seed Capital Phase. Complete Business Plan work to unlock Seed Capital when dates and status allow.",
+      "keywords": [
+        "phases",
+        "seed capital"
+      ]
+    },
+    {
+      "id": "pt-003",
+      "category": "access",
+      "question": "Who can see Pitching in the menu?",
+      "answer": "Entrepreneurs/alumni when a programme has active pitching status (not pending/not started). Mentors do not. Open My Application at least once before Pitching.",
+      "keywords": [
+        "access",
+        "menu",
+        "my application"
+      ]
+    },
+    {
+      "id": "pt-004",
+      "category": "access",
+      "question": "Why am I told to open My Application before Pitching?",
+      "answer": "Pitching needs application and programme details. Message: Please open My Application once before continuing to Pitching.",
+      "keywords": [
+        "my application first"
+      ]
+    },
+    {
+      "id": "pt-005",
+      "category": "access",
+      "question": "Do I need to finish Training before Pitching?",
+      "answer": "Dashboard may encourage proceeding to Pitching after training passes. Pitching menu access itself follows pitching status, not a separate LMS-passed lock in this product area.",
+      "keywords": [
+        "lms",
+        "training"
+      ]
+    },
+    {
+      "id": "pt-006",
+      "category": "flow",
+      "question": "What is the order of steps in Pitching?",
+      "answer": "1) Pitching Agreement — I Agree & Continue. 2) Identity Verification — ID card if needed, WhatsApp Number + Save. 3) Business Plan Phase — executive summary then documents. 4) Seed Capital Phase when unlocked — seed docs + bank details.",
+      "keywords": [
+        "steps",
+        "order"
+      ]
+    },
+    {
+      "id": "pt-007",
+      "category": "identity",
+      "question": "How does Identity Verification work?",
+      "answer": "Full Name, Email, Country are read-only. Upload new ID card if required (JPG/JPEG/PNG/PDF). Enter WhatsApp Number (at least 6 digits) and Save.",
+      "keywords": [
+        "identity",
+        "whatsapp",
+        "id card"
+      ]
+    },
+    {
+      "id": "pt-008",
+      "category": "business-plan",
+      "question": "How do I complete Business Plan Phase?",
+      "answer": "Submit Summary for Business Executive Summary first to unlock uploads, then upload required documents (Drag & Drop / Browse files), Download sample when offered, Submit documents, then submit the phase.",
+      "keywords": [
+        "business plan phase",
+        "executive summary"
+      ]
+    },
+    {
+      "id": "pt-009",
+      "category": "business-plan",
+      "question": "Why can’t I upload business documents yet?",
+      "answer": "Submit your business executive summary above to unlock document uploads.",
+      "keywords": [
+        "unlock",
+        "cannot upload"
+      ]
+    },
+    {
+      "id": "pt-010",
+      "category": "seed-capital",
+      "question": "When does Seed Capital Phase unlock?",
+      "answer": "When phase status and dates allow. It may stay locked until Business Plan is complete, before seed start, after end date, or when status is locked. Locked deep links return to Business Plan Phase.",
+      "keywords": [
+        "seed capital",
+        "locked"
+      ]
+    },
+    {
+      "id": "pt-011",
+      "category": "seed-capital",
+      "question": "What do I submit in Seed Capital Phase?",
+      "answer": "Required seed documents plus Bank Details, then Submit. UBA countries use United Bank for Africa fields; other countries include SWIFT/intermediary fields as required.",
+      "keywords": [
+        "bank details",
+        "uba",
+        "swift"
+      ]
+    },
+    {
+      "id": "pt-012",
+      "category": "limits",
+      "question": "What are file size and type limits?",
+      "answer": "Document types, min/max sizes, and any video duration guidance come from programme document requirements shown per upload. ID cards: JPG/JPEG/PNG/PDF.",
+      "keywords": [
+        "file size",
+        "document type"
+      ]
+    },
+    {
+      "id": "pt-013",
+      "category": "edit",
+      "question": "When can I edit Pitching submissions?",
+      "answer": "When phase status is In Process, or when a reviewer requested changes. Otherwise read-only. Resubmission may require replacing flagged items by a given date.",
+      "keywords": [
+        "edit",
+        "resubmission",
+        "in process"
+      ]
+    },
+    {
+      "id": "pt-014",
+      "category": "resubmission",
+      "question": "What if I am asked to resubmit?",
+      "answer": "Follow the banner. Re-upload ID if needed, replace flagged documents and/or bank details, replace at least one business-plan document when required, and resubmit by the date shown if provided.",
+      "keywords": [
+        "resubmit",
+        "flagged"
+      ]
+    },
+    {
+      "id": "pt-015",
+      "category": "navigation",
+      "question": "How do I open Pitching and go back?",
+      "answer": "Side menu Pitching opens Business Plan Phase. Switch to Seed Capital when unlocked. Application Dashboard returns to Dashboard.",
+      "keywords": [
+        "navigation",
+        "application dashboard"
+      ]
+    },
+    {
+      "id": "pt-016",
+      "category": "limits",
+      "question": "What is not available in Pitching?",
+      "answer": "No separate Save Bank Details action; no Download Bank Letter Format button; mentors cannot use Pitching.",
+      "keywords": [
+        "cannot",
+        "limits"
+      ]
+    },
+    {
+      "id": "pt-017",
+      "category": "identity",
+      "question": "Is SMS OTP required after WhatsApp Save?",
+      "answer": "In the member flow, Save on WhatsApp Number successfully completes the identity step.",
+      "keywords": [
+        "otp",
+        "save"
+      ]
+    },
+    {
+      "id": "pt-018",
+      "category": "seed-capital",
+      "question": "Is there a Save Bank Details button?",
+      "answer": "No. Bank details are submitted with the seed phase Submit.",
+      "keywords": [
+        "save bank details"
+      ]
+    },
+    {
+      "id": "pt-019",
+      "category": "business-plan",
+      "question": "What does the Business Plan banner say?",
+      "answer": "Business Plan Phase (Business Plan & Video) with programme start–end dates when provided.",
+      "keywords": [
+        "banner",
+        "video"
+      ]
+    },
+    {
+      "id": "pt-020",
+      "category": "seed-capital",
+      "question": "What lock messages might I see?",
+      "answer": "Complete Business Plan Phase to unlock; or locked before start / after end based on dates and status.",
+      "keywords": [
+        "phase locked"
+      ]
+    },
+    {
+      "id": "pt-021",
+      "category": "access",
+      "question": "Can mentors use Pitching?",
+      "answer": "No. Mentors do not get the Pitching menu.",
+      "keywords": [
+        "mentor"
+      ]
+    },
+    {
+      "id": "pt-022",
+      "category": "edit",
+      "question": "What does In Process mean?",
+      "answer": "The phase is editable (unless other locks apply). Other states may be read-only unless resubmission/reviewer access applies.",
+      "keywords": [
+        "in process"
+      ]
+    },
+    {
+      "id": "pt-023",
+      "category": "business-plan",
+      "question": "Are document lists the same for every programme?",
+      "answer": "No. Required document names, types, and sizes come from the programme.",
+      "keywords": [
+        "programme specific documents"
+      ]
+    },
+    {
+      "id": "pt-024",
+      "category": "seed-capital",
+      "question": "What bank fields do UBA countries use?",
+      "answer": "United Bank for Africa plus business account name/number/type, bank address, beneficiary name and address.",
+      "keywords": [
+        "uba fields"
+      ]
+    },
+    {
+      "id": "pt-025",
+      "category": "seed-capital",
+      "question": "What bank fields do non-UBA countries use?",
+      "answer": "Business account name/number, business address, bank address, beneficiary name/address, SWIFT, and intermediary bank fields as required.",
+      "keywords": [
+        "non-uba",
+        "swift",
+        "iban"
+      ]
+    },
+    {
+      "id": "pt-026",
+      "category": "resubmission",
+      "question": "ID card resubmission is requested.",
+      "answer": "Re-upload the ID card before continuing to documents; then continue to the flagged phase.",
+      "keywords": [
+        "id resubmission"
+      ]
+    },
+    {
+      "id": "pt-027",
+      "category": "business-plan",
+      "question": "Can the executive summary be empty?",
+      "answer": "No. Non-empty executive summary is required before uploads unlock. No fixed word max is defined in this product area.",
+      "keywords": [
+        "empty summary"
+      ]
+    },
+    {
+      "id": "pt-028",
+      "category": "limits",
+      "question": "Does Pitching enforce video duration on upload?",
+      "answer": "Duration guidance may be shown from programme rules; follow the on-screen requirement.",
+      "keywords": [
+        "video duration"
+      ]
+    },
+    {
+      "id": "pt-029",
+      "category": "navigation",
+      "question": "I opened Seed Capital but landed on Business Plan.",
+      "answer": "Seed Capital was locked, so you were returned to Business Plan Phase.",
+      "keywords": [
+        "redirect",
+        "locked seed"
+      ]
+    },
+    {
+      "id": "pt-030",
+      "category": "access",
+      "question": "Pitching missing from menu.",
+      "answer": "Pitching shows when pitching status is active (not pending/not started). Mentors never see it.",
+      "keywords": [
+        "missing pitching"
+      ]
+    },
+    {
+      "id": "pt-031",
+      "category": "flow",
+      "question": "Do I need to agree to Pitching Agreement every time?",
+      "answer": "You complete Pitching Agreement with I Agree & Continue before identity/phase work when that gate is required.",
+      "keywords": [
+        "agreement"
+      ]
+    },
+    {
+      "id": "pt-032",
+      "category": "overview",
+      "question": "Is Pitching part of the programme application form?",
+      "answer": "No. Application is separate. Pitching starts after programme progression opens pitching status.",
+      "keywords": [
+        "not application"
+      ]
+    },
+    {
+      "id": "pt-033",
+      "category": "edit",
+      "question": "Approved/read-only phase — can I change files?",
+      "answer": "Only if resubmission/reviewer access makes the phase editable for flagged items.",
+      "keywords": [
+        "read-only"
+      ]
+    },
+    {
+      "id": "pt-034",
+      "category": "business-plan",
+      "question": "What upload controls exist per document?",
+      "answer": "Download sample when offered, Drag & Drop, Browse files, View current file, Submit.",
+      "keywords": [
+        "drag and drop",
+        "browse files"
+      ]
+    },
+    {
+      "id": "pt-035",
+      "category": "seed-capital",
+      "question": "Where do bank details prefill from?",
+      "answer": "Previously saved user form bank details may prefill when available.",
+      "keywords": [
+        "prefill bank"
+      ]
+    },
+    {
+      "id": "pt-036",
+      "category": "limits",
+      "question": "Can I assume max 5MB for all pitching docs?",
+      "answer": "No. Do not assume one fixed max size; follow each document’s shown min/max guidance.",
+      "keywords": [
+        "5mb myth"
+      ]
+    },
+    {
+      "id": "pt-037",
+      "category": "access",
+      "question": "Does LMS FAILED disable Pitching like Mentorship?",
+      "answer": "Pitching is not disabled by an LMS-failed menu lock the same way Mentorship is; pitching status and phase locks apply.",
+      "keywords": [
+        "lms failed pitching"
+      ]
+    },
+    {
+      "id": "pt-038",
+      "category": "flow",
+      "question": "After business plan submit, where do I go?",
+      "answer": "You may move to Seed Capital Phase when that phase is accessible.",
+      "keywords": [
+        "after submit"
+      ]
+    },
+    {
+      "id": "pt-039",
+      "category": "identity",
+      "question": "WhatsApp number validation?",
+      "answer": "At least 6 digits.",
+      "keywords": [
+        "whatsapp",
+        "6 digits"
+      ]
+    },
+    {
+      "id": "pt-040",
+      "category": "overview",
+      "question": "What is Business Plan & Pitch?",
+      "answer": "The in-product title for the Pitching module.",
+      "keywords": [
+        "business plan and pitch title"
+      ]
+    },
+    {
+      "id": "pt-041",
+      "category": "resubmission",
+      "question": "Please resubmit by a date.",
+      "answer": "Complete required replacements and submit before the date shown on the resubmission banner.",
+      "keywords": [
+        "resubmit by date"
+      ]
+    },
+    {
+      "id": "pt-042",
+      "category": "seed-capital",
+      "question": "End of submitting seed documents banner.",
+      "answer": "Shows seed document submission window dates from the programme.",
+      "keywords": [
+        "seed docs end"
+      ]
+    },
+    {
+      "id": "pt-043",
+      "category": "limits",
+      "question": "Download Bank Letter Format?",
+      "answer": "Not available in Pitching.",
+      "keywords": [
+        "bank letter"
+      ]
+    },
+    {
+      "id": "pt-044",
+      "category": "business-plan",
+      "question": "Submit Summary button.",
+      "answer": "Submits the Business Executive Summary and unlocks document uploads when successful.",
+      "keywords": [
+        "submit summary"
+      ]
+    },
+    {
+      "id": "pt-045",
+      "category": "access",
+      "question": "I never opened My Application.",
+      "answer": "Open Dashboard → My Application once, then try Pitching again so programme/application details are available.",
+      "keywords": [
+        "open my application"
+      ]
+    }
+  ],
+  "faqCount": 45
+}
