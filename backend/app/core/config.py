@@ -6,6 +6,9 @@ class Settings(BaseSettings):
 
     openai_api_key: str = ""
     openai_model: str = "gpt-4o-mini"
+    # USD per 1M tokens, used for the cost estimate in token usage logs (gpt-4o-mini defaults)
+    llm_input_cost_per_1m: float = 0.15
+    llm_output_cost_per_1m: float = 0.60
 
     database_url: str = "postgresql://postgres:postgres@localhost:5432/tef_chatbot"
 

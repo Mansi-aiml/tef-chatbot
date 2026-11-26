@@ -23,3 +23,7 @@ Comment: Replaced automatic ticket escalation with a warm out-of-scope reply (no
 ## 2026-11-25 00:00
 Files Modified: frontend/src/App.jsx
 Comment: Added a "Continue chat" option to the first feedback prompt alongside "Yes, all good" and "Not quite".
+
+## 2026-11-26 10:26
+Files Modified: backend/app/services/llm.py, backend/app/services/pipeline.py, backend/app/api/routes/chat.py, backend/app/core/config.py
+Comment: Added per-call and per-request LLM token usage tracking with cost estimate (logged to terminal and returned as token_usage in /chat response).

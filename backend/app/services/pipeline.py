@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session
 
 from app.services.graph.pipeline_graph import build_graph
 from app.services.language import normalize_language
+from app.services.llm import estimate_cost, track_usage
 
 logger = logging.getLogger("app.services.pipeline")
 
@@ -18,9 +19,14 @@ class ChatResult:
     out_of_scope: bool = False
     sources: list[str] = field(default_factory=list)
     followup_suggestions: list[str] = field(default_factory=list)
+    token_usage: dict | None = None
 
 
 _MAX_HISTORY_TURNS = 10
+
+
+def _step_cost(s: dict) -> float:
+    return estimate_cost(s["prompt_tokens"], s["completion_tokens"])
 
 
 def handle_message(
@@ -33,15 +39,26 @@ def handle_message(
     logger.info("Pipeline: Handling message for User %s. Message preview: '%s'", user_id, message[:60])
 
     graph = build_graph()
-    result = graph.invoke(
-        {
-            "user_id": user_id,
-            "raw_message": message,
-            "chat_history": (history or [])[-_MAX_HISTORY_TURNS:],
-            "language": normalize_language(language),
-            "faq_attempt": 0,
-            "kb_attempt": 0,
-        }
+    with track_usage() as usage:
+        result = graph.invoke(
+            {
+                "user_id": user_id,
+                "raw_message": message,
+                "chat_history": (history or [])[-_MAX_HISTORY_TURNS:],
+                "language": normalize_language(language),
+                "faq_attempt": 0,
+                "kb_attempt": 0,
+            }
+        )
+
+    breakdown = "\n".join(
+        f"    {step:<22} calls={s['calls']:<2} prompt={s['prompt_tokens']:<6} completion={s['completion_tokens']:<5} "
+        f"total={s['total_tokens']:<6} cost=${_step_cost(s):.6f}"
+        for step, s in usage.by_step.items()
+    )
+    logger.info(
+        "Pipeline: Token usage for User %s -> calls=%d prompt=%d completion=%d total=%d tokens | cost=$%.6f\n%s",
+        user_id, usage.calls, usage.prompt_tokens, usage.completion_tokens, usage.total_tokens, usage.cost_usd, breakdown,
     )
 
     logger.info(
@@ -57,4 +74,5 @@ def handle_message(
         out_of_scope=bool(result.get("out_of_scope")),
         sources=result.get("sources", []),
         followup_suggestions=result.get("followup_suggestions", []),
+        token_usage=usage.to_dict(),
     )
